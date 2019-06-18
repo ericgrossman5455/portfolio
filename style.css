@@ -1,0 +1,154 @@
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{display:block;}body{line-height:1;}ol, ul{list-style:none;}blockquote, q{quotes:none;}blockquote:before, blockquote:after,q:before, q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}img{width:100%;}
+
+/*---------------------NAVIGATION-----------------------*/
+
+
+
+
+/*---------------------NAVIGATION-----------------------*/
+.desk_nav{
+    height: 100%;
+    width: 12em;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 0 2em rgba(0, 0, 0, 0.1);
+    transition: ease .3s;
+}
+
+.desk_nav:hover{
+    padding-left: 1em;
+    background-color: white;
+    box-shadow: 0 0 4em rgba(0, 0, 0, 0.2);
+}
+
+.logo{
+    width: 4em;
+    margin: 2em;
+    transition: ease .3s;
+}
+
+.desk_nav ul{
+    position: absolute;
+    top: 40%;
+    list-style: none;
+    padding-left: 1.6em;
+    font-size: 1.2em;
+    transition: ease .3s;
+}
+
+.desk_nav a{
+    text-decoration: none;
+    line-height: 2em;
+    font-family: proxima-nova, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: #242424;
+    transition: ease .3s;
+}
+
+.social img{
+    width: 1.1em;
+    padding: 0 .8em;
+}
+
+.social{
+    position: absolute;
+    bottom: 1.5em;
+    padding-left: 1.4em;
+    transition: ease .3s;
+}
+
+            @media only screen and (min-width: 100em) {
+                .desk_nav{padding-left: 2em}
+                .desk_nav:hover{padding-left: 3em}
+                .social{padding-left: .3em}
+
+            }
+
+            @media only screen and (max-height: 30em) {
+                .logo{width: 2.5em}
+                .desk_nav ul{top: 33%}
+                .social{bottom: .5em}
+
+            }
+
+            @media only screen and (max-height: 20em) {
+                .desk_nav ul{top: 10%}
+                .logo{display: none}
+                .social{bottom: .5em}
+            }
+
+            @media only screen and (max-height: 15em) {.social{display: none;}}
+
+/*---------------------NAVIGATION-----------------------*/
+
+
+
+
+/*---------------------CONTENT-----------------------*/
+
+h1{
+    font-family: proxima-nova, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 7vw;
+    transition: ease .3s;
+}
+
+p{
+    font-family: depot-new-web, sans-serif;
+    font-weight: 300;
+    font-size: 1.4em;
+    line-height: 1.6em;
+    margin-top: .2em;
+    transition: ease .3s;
+}
+
+.content{padding-left: 12em;}
+
+.masthead{
+    padding: 5% 5%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 40vh 20vh 20vh;
+    column-gap: 2em;
+}
+
+.me{
+    background-image: url(media/me2.jpg);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column: 1/5;
+    grid-row: 1/4;
+    box-shadow: 0 1.3em 1.5em rgba(0, 0, 0, 0.2);
+}
+
+.intro{
+    align-content: end;
+    grid-column: 5/8;
+    grid-row: 3;
+    align-self: end;
+}
+
+            @media only screen and (min-width: 100em){
+                .me{grid-column: 2/5;}
+                .intro{grid-column: 5/7;}
+            }
+
+            @media only screen and (max-width: 55em){
+                .me{
+                    grid-column: 1/8;
+                    grid-row: 1/3;
+                        
+                }
+                .intro{
+                    grid-column: 1/7;
+                    align-self: start;
+                    padding-top: 1.5em;
+                }
+}
+    
