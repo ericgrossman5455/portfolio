@@ -86,7 +86,7 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
             }
 
 .mobile_nav{
-    background-color: #FFF;
+    background-color: rgba(255, 255, 255, 0.781);
     box-shadow: 0 0 2em rgba(0, 0, 0, 0.1);
     height: 5em;
     display: flex;
