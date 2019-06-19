@@ -90,7 +90,6 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
     box-shadow: 0 0 2em rgba(0, 0, 0, 0.1);
     height: 5em;
     display: flex;
-    
 }
 
 .drawer{
@@ -129,7 +128,7 @@ p{
     color: #242424;
 }
 
-.content{padding-left: 12em;}
+/* .content{padding-left: 12em;} */
 
 .masthead{
     padding: 5%;
