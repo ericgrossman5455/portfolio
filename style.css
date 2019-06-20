@@ -1,11 +1,12 @@
 html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{display:block;}body{line-height:1;}ol, ul{list-style:none;}blockquote, q{quotes:none;}blockquote:before, blockquote:after,q:before, q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}img{width:100%;}
 
-/*---------------------NAVIGATION-----------------------*/
-
-
 
 
 /*---------------------NAVIGATION-----------------------*/
+@media only screen and (min-width: 40em) {
+
+    .mobile_nav{display: none;}
+    
 .desk_nav{
     height: 100%;
     width: 12em;
@@ -16,8 +17,9 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
     background-color: white;
     box-shadow: 0 0 2em rgba(0, 0, 0, 0.1);
     transition: ease .3s;
-    display: none;
 }
+
+ .content{padding-left: 12em;} 
 
 .desk_nav:hover{
     padding-left: 1em;
@@ -84,25 +86,39 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
             @media only screen and (max-height: 15em) {
                 .social{display: none}
             }
-
-.mobile_nav{
-    background-color: rgba(255, 255, 255, 0.781);
-    box-shadow: 0 0 2em rgba(0, 0, 0, 0.1);
-    height: 5em;
-    display: flex;
 }
+/*-----------------MOBILE TOP BAR----------------*/
 
-.drawer{
-    margin-left: 2em;
-    width:33px;
-}
+@media only screen and (max-width: 40em) {
+    
+    .desk_nav{display: none;}
+    
+    .mobile_nav{
+        background-color: rgba(255, 255, 255, 0.781);
+        box-shadow: 0 0 2em rgba(0, 0, 0, 0.1);
+        height: 5em;
+        display: flex;
+        position: fixed;
+        width: 100%;
+    }
 
-.logo_mobile{
-    position: absolute;
-    width: 3em;
-    margin: 1em 50%;
-}
+    .drawer{
+        position: absolute;
+        margin-top: 1.5em;
+        margin-left: 2em;
+        width:33px;
+    }
 
+    .logo_mobile{
+        width: 3em;
+        margin: 1em auto;
+    }
+
+    .content{
+        padding-top: 5em;
+        padding-left: 0em;
+    }
+    }
 /*---------------------NAVIGATION-----------------------*/
 
 
@@ -127,8 +143,6 @@ p{
     transition: ease .3s;
     color: #242424;
 }
-
-/* .content{padding-left: 12em;} */
 
 .masthead{
     padding: 5%;
@@ -157,7 +171,7 @@ p{
     align-self: end;
 }
 
-            @media only screen and (max-width: 55em){
+            @media only screen and (max-width: 60em){
                 .me{
                     grid-column: 1/6;
                     grid-row: 1;     
