@@ -3,66 +3,68 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
 
 
 /*---------------------NAVIGATION-----------------------*/
+
+/*DESKTOP*/
 @media only screen and (min-width: 40em) {
 
     .mobile_nav{display: none;}
-    
-.desk_nav{
-    height: 100%;
-    width: 12em;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: white;
-    box-shadow: 0 0 2em rgba(0, 0, 0, 0.1);
-    transition: ease .3s;
-}
 
- .content{padding-left: 12em;} 
+    .desk_nav{
+        height: 100%;
+        width: 12em;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: white;
+        box-shadow: 0 0 2em rgba(0, 0, 0, 0.1);
+        transition: ease .3s;
+    }
 
-.desk_nav:hover{
-    padding-left: 1em;
-    background-color: white;
-    box-shadow: 0 0 4em rgba(0, 0, 0, 0.2);
-}
+    .content{padding-left: 12em;} 
 
-.logo{
-    width: 4em;
-    margin: 2em;
-    transition: ease .3s;
-}
+    .desk_nav:hover{
+        padding-left: 1em;
+        background-color: white;
+        box-shadow: 0 0 4em rgba(0, 0, 0, 0.2);
+    }
 
-.desk_nav ul{
-    position: absolute;
-    top: 40%;
-    list-style: none;
-    padding-left: 1.6em;
-    font-size: 1.2em;
-    transition: ease .3s;
-}
+    .logo{
+        width: 4em;
+        margin: 2em;
+        transition: ease .3s;
+    }
 
-.desk_nav a{
-    text-decoration: none;
-    line-height: 2em;
-    font-family: proxima-nova, sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    color: #242424;
-    transition: ease .3s;
-}
+    .desk_nav ul{
+        position: absolute;
+        top: 40%;
+        list-style: none;
+        padding-left: 1.6em;
+        font-size: 1.2em;
+        transition: ease .3s;
+    }
 
-.social img{
-    width: 1.1em;
-    padding: 0 .8em;
-}
+    .desk_nav a{
+        text-decoration: none;
+        line-height: 2em;
+        font-family: proxima-nova, sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        color: #242424;
+        transition: ease .3s;
+    }
 
-.social{
-    position: absolute;
-    bottom: 1.5em;
-    padding-left: 1.4em;
-    transition: ease .3s;
-}
+    .social img{
+        width: 1.1em;
+        padding: 0 .8em;
+    }
+
+    .social{
+        position: absolute;
+        bottom: 1.5em;
+        padding-left: 1.4em;
+        transition: ease .3s;
+    }
 
             @media only screen and (min-width: 100em) {
                 .desk_nav{padding-left: 2em}
@@ -87,8 +89,7 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
                 .social{display: none}
             }
 }
-/*-----------------MOBILE TOP BAR----------------*/
-
+/*MOBILE*/
 @media only screen and (max-width: 40em) {
     
     .desk_nav{display: none;}
@@ -112,11 +113,6 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
     .logo_mobile{
         width: 3em;
         margin: 1em auto;
-    }
-
-    .content{
-        padding-top: 5em;
-        padding-left: 0em;
     }
     }
 /*---------------------NAVIGATION-----------------------*/
@@ -171,17 +167,17 @@ p{
     align-self: end;
 }
 
-            @media only screen and (max-width: 60em){
-                .me{
-                    grid-column: 1/6;
-                    grid-row: 1;     
-                }
-                
-                .intro{
-                    grid-column: 1/6;
-                    align-self: start;
-                    padding-top: 1.5em;
-                    padding-right: 15%;
-                }
+        @media only screen and (max-width: 60em){
+            .me{
+                grid-column: 1/6;
+                grid-row: 1;     
+            }
+
+            .intro{
+                grid-column: 1/6;
+                align-self: start;
+                padding-top: 1.5em;
+                padding-right: 15%;
+            }
 }
     
