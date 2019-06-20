@@ -5,7 +5,7 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
 /*---------------------NAVIGATION-----------------------*/
 
 /*DESKTOP*/
-@media only screen and (min-width: 40em) {
+@media only screen and (min-width: 50em) {
 
     .mobile_nav{display: none;}
 
@@ -77,8 +77,10 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
                 .logo{width: 2.5em}
                 .desk_nav ul{top: 33%}
                 .social{bottom: .5em}
+
             }
 
+/*
             @media only screen and (max-height: 20em) {
                 .desk_nav ul{top: 10%}
                 .logo{display: none}
@@ -88,14 +90,21 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
             @media only screen and (max-height: 15em) {
                 .social{display: none}
             }
+*/
+
 }
+
 /*MOBILE*/
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 50em) {
     
     .desk_nav{display: none;}
     
+    .content{
+        padding-top: 5em;
+    }
+    
     .mobile_nav{
-        background-color: rgba(255, 255, 255, 0.781);
+        background-color: #FFF;
         box-shadow: 0 0 2em rgba(0, 0, 0, 0.1);
         height: 5em;
         display: flex;
@@ -114,7 +123,7 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
         width: 3em;
         margin: 1em auto;
     }
-    }
+}
 /*---------------------NAVIGATION-----------------------*/
 
 
@@ -148,6 +157,7 @@ p{
     column-gap: 2em;
     max-width: 65em;
     margin: 0 auto;
+
 }
 
 .me{
@@ -167,7 +177,12 @@ p{
     align-self: end;
 }
 
-        @media only screen and (max-width: 60em){
+        @media only screen and (max-width: 65em){
+            
+            .masthead{
+                grid-template-rows: 60vh auto;
+            }
+            
             .me{
                 grid-column: 1/6;
                 grid-row: 1;     
@@ -179,5 +194,14 @@ p{
                 padding-top: 1.5em;
                 padding-right: 15%;
             }
-}
+        }
     
+
+footer p{
+    position:static;
+    bottom: 1em;
+    margin: 2em;
+    font-size: .7em;
+    color: #5555;
+    text-align: center;
+}
