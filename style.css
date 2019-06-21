@@ -104,6 +104,11 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
         width: 100%;
     }
     
+    @media only screen and (max-height: 30em) {
+        nav ul{top: 25%;}
+        nav a{line-height: 2em}
+                
+    }
     /*moving the logo and adding the back arrow button*/
     .logo{
         display: none;
@@ -113,7 +118,7 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
         position: absolute;
         margin-top: 1.5em;
         margin-left: 1.5em;
-        width:30px;
+        width: 30px;
         cursor: pointer;
         display: block;
     }
