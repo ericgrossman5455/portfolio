@@ -70,27 +70,13 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
                 .desk_nav{padding-left: 2em}
                 .desk_nav:hover{padding-left: 3em}
                 .social{padding-left: .3em}
-
             }
 
             @media only screen and (max-height: 30em) {
                 .logo{width: 2.5em}
                 .desk_nav ul{top: 33%}
                 .social{bottom: .5em}
-
             }
-
-/*
-            @media only screen and (max-height: 20em) {
-                .desk_nav ul{top: 10%}
-                .logo{display: none}
-                .social{bottom: .5em}
-            }
-
-            @media only screen and (max-height: 15em) {
-                .social{display: none}
-            }
-*/
 
 }
 
@@ -162,7 +148,7 @@ p{
 
 .me{
     background-image: url(media/me2.jpg);
-    background-position: right;
+    background-position: 0% 40%;
     background-repeat: no-repeat;
     background-size: cover;
     grid-column: 1/4;
