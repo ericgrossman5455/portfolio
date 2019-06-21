@@ -60,7 +60,7 @@ nav a{
 .social{
     position: absolute;
     bottom: 1.5em;
-    padding-left: 1.4em;
+    padding-left: 1.5em;
 }
 
 /*Optimizing for wide and short monitors*/
@@ -90,7 +90,7 @@ nav a{
     
     nav:hover{
         padding-left: 0;
-        box-shadow: none;
+        box-shadow: 0 0 2em rgba(0, 0, 0, 0.1);
     }
     
     main{
@@ -160,7 +160,10 @@ nav a{
 }
 
 /*For Javascript to toggle*/
-.nav_active{transform: translateX(0%);}
+.nav_active{
+    transform: translateX(0%);
+    box-shadow: 0 0 2em rgba(0, 0, 0, 0.1);
+}
 
 .nav_shadow_active{display: block;}
 
