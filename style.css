@@ -4,84 +4,88 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
 
 /*---------------------NAVIGATION-----------------------*/
 
-    .top_bar{display: none;}
+.top_bar{display: none;}
 
-    .nav_back_arrow{display: none;}
+.nav_back_arrow{display: none;}
 
-    main{padding-left: 12em;} 
+main{padding-left: 12em;} 
 
-    nav{
-        height: 100%;
-        width: 12em;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        background-color: white;
-        box-shadow: 0 0 2em rgba(0, 0, 0, 0.1);
-        transition: ease .3s;
-    }
+nav{
+    height: 100%;
+    width: 12em;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 0 2em rgba(0, 0, 0, 0.1);
+    transition: ease .3s;
+}
 
-    nav:hover{
-        padding-left: 1em;
-        box-shadow: 0 0 4em rgba(0, 0, 0, 0.2);
-    }
+nav:hover{
+    padding-left: 1em;
+    box-shadow: 0 0 4em rgba(0, 0, 0, 0.2);
+}
 
-    .logo{
-        width: 4em;
-        margin: 2em;
-    }
+.logo{
+    width: 4em;
+    margin: 2em;
+}
 
-    nav ul{
-        position: absolute;
-        top: 40%;
-        list-style: none;
-        padding-left: 1.6em;
-        font-size: 1.2em;
-    }
+nav ul{
+    position: absolute;
+    top: 40%;
+    list-style: none;
+    padding-left: 1.6em;
+    font-size: 1.2em;
+}
 
-    nav a{
-        text-decoration: none;
-        line-height: 2.5em;
-        font-family: proxima-nova, sans-serif;
-        font-weight: 300;
-        font-style: normal;
-        color: #242424;
-        transition: ease .3s;
-    }
+nav a{
+    text-decoration: none;
+    line-height: 2.5em;
+    font-family: proxima-nova, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: #242424;
+    transition: ease .3s;
+}
 
-    .social img{
-        width: 1.1em;
-        padding: 0 .8em;
-    }
+.social img{
+    width: 1.1em;
+    padding: 0 .8em;
+}
 
-    .social{
-        position: absolute;
-        bottom: 1.5em;
-        padding-left: 1.4em;
-    }
-            /*Optimizing for wide and short screens*/
-            @media only screen and (min-width: 100em) {
-                nav{padding-left: 2em}
-                nav:hover{padding-left: 3em}
-                .social{padding-left: .3em}
-            }
+.social{
+    position: absolute;
+    bottom: 1.5em;
+    padding-left: 1.4em;
+}
 
-            @media only screen and (max-height: 30em) {
-                .logo{width: 2.5em}
-                nav ul{top: 25%}
-                .social{bottom: .5em}
-            }
+/*Optimizing for wide and short monitors*/
+@media only screen and (min-width: 100em) {
+    nav{padding-left: 2em}
+    nav:hover{padding-left: 3em}
+    .social{padding-left: .3em}
+}
+
+@media only screen and (max-height: 30em) {
+    .logo{width: 2.5em}
+    nav ul{top: 25%}
+    .social{bottom: .5em}
+}
+
 
 /*Implementing sliding navigation drawer*/
 @media only screen and (max-width: 50em) {
-    
     nav{
         transform: translateX(-100%);
         box-shadow: none;
     }
     
-    nav:hover{padding-left: 0;}
+    nav:hover{
+        padding-left: 0;
+        box-shadow: none;
+    }
     
     main{
         padding-left: 0;
@@ -104,12 +108,26 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
         width: 100%;
     }
     
+    .drawer{
+        position: absolute;
+        margin-top: 1.5em;
+        margin-left: 2em;
+        width:33px;
+        cursor: pointer;
+    }
+
+    .logo_bar{
+        width: 3em;
+        margin: 1em auto;
+    }
+    
+    /*Optimizing landscape mobile screens*/
     @media only screen and (max-height: 30em) {
         nav ul{top: 25%;}
         nav a{line-height: 2em}
-                
     }
-    /*moving the logo and adding the back arrow button*/
+    
+    /*"Moving" the logo by removing nav logo and now showing top bar logo*/
     .logo{
         display: none;
     }
@@ -133,27 +151,12 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
         height: 100%;
         width: 100%;
 }
-
-    .drawer{
-        position: absolute;
-        margin-top: 1.5em;
-        margin-left: 2em;
-        width:33px;
-        cursor: pointer;
-    }
-
-    .logo_bar{
-        width: 3em;
-        margin: 1em auto;
-    }
 }
 
-/*For Javascript to use and toggle*/
+/*For Javascript to toggle*/
 .nav_active{transform: translateX(0%);}
 
-.nav_shadow_active{
-    display: block;
-}
+.nav_shadow_active{display: block;}
 
 /*---------------------CONTENT-----------------------*/
 
@@ -201,24 +204,23 @@ p{
     grid-row: 2;
     align-self: end;
 }
-        /*Converting masthead to single column*/
-        @media only screen and (max-width: 65em){
-            .masthead{
-                grid-template-rows: 60vh auto;
-            }
-            
-            .me{
-                grid-column: 1/6;
-                grid-row: 1;     
-            }
 
-            .intro{
-                grid-column: 1/6;
-                align-self: start;
-                padding-top: 1.5em;
-                padding-right: 15%;
-            }
-        }
+/*Converting masthead to single column*/
+@media only screen and (max-width: 65em){
+    .masthead{grid-template-rows: 60vh auto;}
+
+    .me{
+        grid-column: 1/6;
+        grid-row: 1;     
+    }
+
+    .intro{
+        grid-column: 1/6;
+        align-self: start;
+        padding-top: 1.5em;
+        padding-right: 15%;
+    }
+}
     
 /*----------------FOOTER-----------------*/
 footer p{
