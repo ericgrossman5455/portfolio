@@ -2,8 +2,8 @@ const navSlide = () => {
     const drawer = document.querySelector('.drawer');
     const nav = document.querySelector('nav');
     
-    drawer.addEventListener('click',() => {
-        nav.classList.toggle('nav-active');
+    drawer.addEventListener('click', () => {
+        nav.classList.toggle('nav_active');
     });
 }
 
