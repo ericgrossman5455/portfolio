@@ -6,6 +6,8 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
 
     .top_bar{display: none;}
 
+    .nav_back_arrow{display: none;}
+
     main{padding-left: 12em;} 
 
     nav{
@@ -22,7 +24,6 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
 
     nav:hover{
         padding-left: 1em;
-        background-color: white;
         box-shadow: 0 0 4em rgba(0, 0, 0, 0.2);
     }
 
@@ -41,7 +42,7 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
 
     nav a{
         text-decoration: none;
-        line-height: 2em;
+        line-height: 2.5em;
         font-family: proxima-nova, sans-serif;
         font-weight: 300;
         font-style: normal;
@@ -59,7 +60,7 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
         bottom: 1.5em;
         padding-left: 1.4em;
     }
-
+            /*Optimizing for wide and short screens*/
             @media only screen and (min-width: 100em) {
                 nav{padding-left: 2em}
                 nav:hover{padding-left: 3em}
@@ -68,17 +69,30 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
 
             @media only screen and (max-height: 30em) {
                 .logo{width: 2.5em}
-                nav ul{top: 33%}
+                nav ul{top: 25%}
                 .social{bottom: .5em}
             }
 
+/*Implementing sliding navigation drawer*/
 @media only screen and (max-width: 50em) {
     
-    nav{transform: translateX(-100%)}
+    nav{
+        transform: translateX(-100%);
+        box-shadow: none;
+    }
+    
+    nav:hover{padding-left: 0;}
     
     main{
         padding-left: 0;
         padding-top: 5em;
+    }
+    
+    nav ul{top: 30%}
+    
+    nav a{
+        text-decoration: none;
+        line-height: 3em;
     }
     
     .top_bar{
@@ -89,6 +103,31 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
         position: fixed;
         width: 100%;
     }
+    
+    /*moving the logo and adding the back arrow button*/
+    .logo{
+        display: none;
+    }
+    
+    .nav_back_arrow{
+        position: absolute;
+        margin-top: 1.5em;
+        margin-left: 1.5em;
+        width:30px;
+        cursor: pointer;
+        display: block;
+    }
+    
+    .nav_shadow{
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.3);
+        height: 100%;
+        width: 100%;
+}
 
     .drawer{
         position: absolute;
@@ -104,26 +143,12 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
     }
 }
 
-
+/*For Javascript to use and toggle*/
 .nav_active{transform: translateX(0%);}
-
-.nav_shadow{
-    display: none;
-    z-index: 1;
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.3);
-    height: 100%;
-    width: 100%;
-    
-}
 
 .nav_shadow_active{
     display: block;
 }
-/*---------------------NAVIGATION-----------------------*/
-
-
-
 
 /*---------------------CONTENT-----------------------*/
 
@@ -171,9 +196,8 @@ p{
     grid-row: 2;
     align-self: end;
 }
-
+        /*Converting masthead to single column*/
         @media only screen and (max-width: 65em){
-            
             .masthead{
                 grid-template-rows: 60vh auto;
             }
@@ -191,7 +215,7 @@ p{
             }
         }
     
-
+/*----------------FOOTER-----------------*/
 footer p{
     margin: 2em;
     font-size: 1em;
