@@ -4,12 +4,11 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
 
 /*---------------------NAVIGATION-----------------------*/
 
-/*DESKTOP*/
-@media only screen and (min-width: 50em) {
+    .top_bar{display: none;}
 
-    .mobile_nav{display: none;}
+    main{padding-left: 12em;} 
 
-    .desk_nav{
+    nav{
         height: 100%;
         width: 12em;
         position: fixed;
@@ -21,9 +20,7 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
         transition: ease .3s;
     }
 
-    .content{padding-left: 12em;} 
-
-    .desk_nav:hover{
+    nav:hover{
         padding-left: 1em;
         background-color: white;
         box-shadow: 0 0 4em rgba(0, 0, 0, 0.2);
@@ -32,19 +29,17 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
     .logo{
         width: 4em;
         margin: 2em;
-        transition: ease .3s;
     }
 
-    .desk_nav ul{
+    nav ul{
         position: absolute;
         top: 40%;
         list-style: none;
         padding-left: 1.6em;
         font-size: 1.2em;
-        transition: ease .3s;
     }
 
-    .desk_nav a{
+    nav a{
         text-decoration: none;
         line-height: 2em;
         font-family: proxima-nova, sans-serif;
@@ -63,33 +58,30 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
         position: absolute;
         bottom: 1.5em;
         padding-left: 1.4em;
-        transition: ease .3s;
     }
 
             @media only screen and (min-width: 100em) {
-                .desk_nav{padding-left: 2em}
-                .desk_nav:hover{padding-left: 3em}
+                nav{padding-left: 2em}
+                nav:hover{padding-left: 3em}
                 .social{padding-left: .3em}
             }
 
             @media only screen and (max-height: 30em) {
                 .logo{width: 2.5em}
-                .desk_nav ul{top: 33%}
+                nav ul{top: 33%}
                 .social{bottom: .5em}
             }
 
-}
-
-/*MOBILE*/
 @media only screen and (max-width: 50em) {
     
-    .desk_nav{display: none;}
+    nav{transform: translateX(-100%)}
     
-    .content{
+    main{
+        padding-left: 0;
         padding-top: 5em;
     }
     
-    .mobile_nav{
+    .top_bar{
         background-color: #FFF;
         box-shadow: 0 0 2em rgba(0, 0, 0, 0.1);
         height: 5em;
@@ -103,12 +95,29 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
         margin-top: 1.5em;
         margin-left: 2em;
         width:33px;
+        cursor: pointer;
     }
 
-    .logo_mobile{
+    .logo_bar{
         width: 3em;
         margin: 1em auto;
     }
+}
+
+
+.nav_active{transform: translateX(100%);}
+
+.nav_shadow{
+    display: none;
+    z-index: 1;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 100%;
+    width: 100%;
+}
+
+.nav_shadow_active{
+    display: block;
 }
 /*---------------------NAVIGATION-----------------------*/
 
@@ -143,7 +152,6 @@ p{
     column-gap: 2em;
     max-width: 65em;
     margin: 0 auto;
-
 }
 
 .me{
@@ -184,10 +192,8 @@ p{
     
 
 footer p{
-    position:static;
-    bottom: 1em;
     margin: 2em;
-    font-size: .7em;
+    font-size: 1em;
     color: #5555;
     text-align: center;
 }
