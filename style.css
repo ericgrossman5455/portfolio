@@ -30,6 +30,7 @@ nav:hover{
 .logo{
     width: 4em;
     margin: 2em;
+    transition: ease .3s;
 }
 
 nav ul{
@@ -38,6 +39,7 @@ nav ul{
     list-style: none;
     padding-left: 1.6em;
     font-size: 1.2em;
+    transition: ease .3s;
 }
 
 nav a{
@@ -73,6 +75,10 @@ nav a{
     nav ul{top: 25%}
     .social{bottom: .5em}
 }
+@media only screen and (max-height: 30em) {
+    nav ul{top: 30%;}
+    nav a{line-height: 2em}
+    }
 
 
 /*Implementing sliding navigation drawer*/
@@ -123,8 +129,8 @@ nav a{
     
     /*Optimizing landscape mobile screens*/
     @media only screen and (max-height: 30em) {
-        nav ul{top: 25%;}
-        nav a{line-height: 2em}
+        nav ul{top: 23%;}
+        nav a{line-height: 2.2em}
     }
     
     /*"Moving" the logo by removing nav logo and now showing top bar logo*/
