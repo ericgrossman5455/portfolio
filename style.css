@@ -14,7 +14,7 @@ nav{
     height: 100%;
     width: 12em;
     position: fixed;
-    z-index: 100;
+    z-index: 101;
     top: 0;
     left: 0;
     background-color: white;
@@ -52,24 +52,24 @@ nav a{
     transition: ease .3s;
 }
 
-.social img{
-    width: 1.1em;
-    padding: 0 .8em;
-}
-
 .social{
     position: absolute;
     bottom: 1.5em;
     padding-left: 1.5em;
 }
 
+.social img{
+    width: 1.1em;
+    padding: 0 .8em;
+}
+
 /*Optimizing for wide and short monitors*/
-@media only screen and (min-width: 100em) {
+@media only screen and (min-width: 90em) {
     nav{padding-left: 2em}
     nav:hover{padding-left: 3em}
     .social{padding-left: .3em}
+    main{padding-left: 14em}
 }
-
 @media only screen and (max-height: 30em) {
     .logo{width: 2.5em}
     nav ul{top: 25%}
@@ -79,7 +79,6 @@ nav a{
     nav ul{top: 30%;}
     nav a{line-height: 2em}
     }
-
 
 /*Implementing sliding navigation drawer*/
 @media only screen and (max-width: 50em) {
@@ -106,7 +105,7 @@ nav a{
     }
     
     .top_bar{
-        z-index: 100;
+        z-index: 99;
         background-color: #FFF;
         box-shadow: 0 0 2em rgba(0, 0, 0, 0.1);
         height: 5em;
@@ -153,7 +152,7 @@ nav a{
         position: fixed;
         top: 0;
         left: 0;
-        z-index: 1;
+        z-index: 100;
         background-color: rgba(0, 0, 0, 0.3);
         height: 100%;
         width: 100%;
@@ -165,7 +164,6 @@ nav a{
     transform: translateX(0%);
     box-shadow: 0 0 2em rgba(0, 0, 0, 0.1);
 }
-
 .nav_shadow_active{display: block;}
 
 /*---------------------CONTENT-----------------------*/
@@ -188,59 +186,54 @@ p{
     color: #242424;
 }
 
-.hero{
-    padding: 5%;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 60vh 20vh;
-    column-gap: 2em;
-    max-width: 65em;
-    margin: 0 auto; 
-}
+        .hero{
+            padding: 5%;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: 60vh 20vh;
+            column-gap: 2em;
+            max-width: 65em;
+            margin: 0 auto; 
+        }
 
-.me{
-    background-image: url(media/hero.jpg);
-    background-position: 0% 40%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    grid-column: 1/4;
-    grid-row: 1/3;
-/*    box-shadow: 0 1.3em 1.5em rgba(0, 0, 0, 0.2);*/
-}
+        .me{
+            background-image: url(media/hero.jpg);
+            background-position: 0% 40%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            grid-column: 1/4;
+            grid-row: 1/3;
+        }
 
-.intro{
-    align-content: end;
-    grid-column: 4/6;
-    grid-row: 2;
-    align-self: end;
-}
+        .intro{
+            align-content: end;
+            grid-column: 4/6;
+            grid-row: 2;
+            align-self: end;
+        }
 
-/*Converting hero to single column*/
-@media only screen and (max-width: 65em){
-    .hero{grid-template-rows: 60vh auto;}
+        /*Converting hero to single column*/
+        @media only screen and (max-width: 70em){
+            .hero{grid-template-rows: 60vh auto;}
 
-    .me{
-        grid-column: 1/6;
-        grid-row: 1;     
-    }
+            .me{
+                grid-column: 1/6;
+                grid-row: 1;     
+            }
 
-    .intro{
-        grid-column: 1/6;
-        align-self: start;
-        padding-top: 1.5em;
-        padding-right: 15%;
-    }
-}
+            .intro{
+                grid-column: 1/6;
+                align-self: start;
+                padding-top: 1.5em;
+                padding-right: 15%;
+            }
+        }
 
 .ux_banner{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(6, 7em);
     column-gap: 5%;
-}
-
-.ux_banner_text p, .ux_banner_text h1{
-    color: #FFF;
 }
 
 .ux_banner_text{
@@ -251,40 +244,11 @@ p{
     padding-right: 10%
 }
 
-.ux_banner_bg{
-    grid-column: 1/-1;
-    grid-row: 2/6;
-    background-image: url(media/mobell_banner_bg.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.ux_banner p, .ux_banner h1{
+    color: #FFF;
 }
 
-.dim{
-    z-index: 1;
-    grid-row: 2/6;
-    grid-column: 1/6;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5)
-}
-
-.product_shot{
-    grid-column: 1/3;
-    grid-row: 1/-1;
-    z-index: 3;
-    margin-left: 10%;
-    align-self: center
-}
-
-.product_shot img{
-    display: table-cell;
-    object-fit: contain;
-    max-height: 42em;
-    filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.2));
-}
-
-.ux_banner button{
+.button{
     margin-top: 2em;
     cursor: pointer;
     background: none;
@@ -296,8 +260,49 @@ p{
     border: #FFF solid 2px;
     border-radius: 4px;
     color: white;
-    
 }
+
+.product_shot{
+    grid-column: 1/3;
+    grid-row: 1/-1;
+    z-index: 3;
+    margin-left: 10%;
+    align-self: center;  
+}
+
+.product_shot img{
+    object-fit: contain;
+    max-height: 40em;
+    filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.2));
+}
+
+/*Helps avoid awkward spacing with wide displays*/
+@media only screen and (min-width: 90em){
+    .product_shot img{transform: translateX(20%)}
+}
+
+.mobell_color{
+    z-index: 1;
+    grid-row: 2/6;
+    grid-column: 1/6;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(221, 162, 0, 0.9)
+}
+
+.ux_banner_bg{
+    grid-column: 1/-1;
+    grid-row: 2/6;
+    background: rgba(0, 0, 0, 0.5)
+}
+
+.ux_banner_bg img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;   
+}
+
+
     
 /*----------------FOOTER-----------------*/
 footer p{
