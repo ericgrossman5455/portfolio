@@ -14,7 +14,7 @@ nav{
     height: 100%;
     width: 12em;
     position: fixed;
-    z-index: 1;
+    z-index: 100;
     top: 0;
     left: 0;
     background-color: white;
@@ -187,24 +187,24 @@ p{
     color: #242424;
 }
 
-.masthead{
+.hero{
     padding: 5%;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 60vh 20vh;
     column-gap: 2em;
     max-width: 65em;
-    margin: 0 auto;
+    margin: 0 auto; 
 }
 
 .me{
-    background-image: url(media/me2.jpg);
+    background-image: url(media/hero.jpg);
     background-position: 0% 40%;
     background-repeat: no-repeat;
     background-size: cover;
     grid-column: 1/4;
     grid-row: 1/3;
-    box-shadow: 0 1.3em 1.5em rgba(0, 0, 0, 0.2);
+/*    box-shadow: 0 1.3em 1.5em rgba(0, 0, 0, 0.2);*/
 }
 
 .intro{
@@ -214,9 +214,9 @@ p{
     align-self: end;
 }
 
-/*Converting masthead to single column*/
+/*Converting hero to single column*/
 @media only screen and (max-width: 65em){
-    .masthead{grid-template-rows: 60vh auto;}
+    .hero{grid-template-rows: 60vh auto;}
 
     .me{
         grid-column: 1/6;
@@ -229,6 +229,69 @@ p{
         padding-top: 1.5em;
         padding-right: 15%;
     }
+}
+
+.ux_banner{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 7em);
+    column-gap: 5%;
+}
+
+.ux_banner_text p, .ux_banner_text h1{
+    color: #FFF;
+}
+
+.ux_banner_text{
+    z-index: 2;
+    color: white;
+    grid-column: 3/6;
+    grid-row: 3;
+    padding-right: 10%
+}
+
+.ux_banner_bg{
+    grid-column: 1/-1;
+    grid-row: 2/6;
+    background-image: url(media/mobell_banner_bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.dim{
+    z-index: 1;
+    grid-row: 2/6;
+    grid-column: 1/6;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5)
+}
+
+.product_shot{
+    background-image: url(media/mobell_product_shot.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    grid-column: 1/3;
+    grid-row: 1/-1;
+    z-index: 3;
+    margin-left: 10%;
+}
+
+.ux_banner button{
+    margin-top: 2em;
+    cursor: pointer;
+    background: none;
+    padding: .5em 1em;
+    font-family: proxima-nova, sans-serif;
+    font-weight: 400;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    border: #FFF solid 2px;
+    border-radius: 4px;
+    color: white;
+    
 }
     
 /*----------------FOOTER-----------------*/
