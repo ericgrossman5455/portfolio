@@ -218,14 +218,15 @@ p{
 
             .me{
                 grid-column: 1/6;
-                grid-row: 1;     
+                grid-row: 1;
+                transform: translateX(-3em);
             }
 
             .intro{
                 grid-column: 1/6;
                 align-self: start;
                 padding-top: 1.5em;
-                padding-right: 15%;
+                max-width: 60ch;
             }
         }
 
@@ -242,12 +243,10 @@ p{
     grid-column: 1/-1;
     padding-left: 5%;
     padding-top: 3.5em;
-    vertical-align: middle;
     font-family: proxima-nova, sans-serif;
-    font-weight: 500;
+    font-weight: 400;
     font-size: .9em;
     text-transform: uppercase;
-    opacity: 80%
 }
 
 .ux_banner_text{
@@ -275,7 +274,7 @@ p{
     font-family: proxima-nova, sans-serif;
     font-weight: 400;
     font-size: 1.1em;
-    text-transform: uppercase;
+/*    text-transform: uppercase;*/
     border: #FFF solid 2px;
     border-radius: 4px;
     color: white;
@@ -286,13 +285,14 @@ p{
     grid-row: 1/-1;
     z-index: 3;
     margin-right: 10%;
-    align-self: center;  
+    align-self: center;
+    
 }
 
 .product_shot img{
     object-fit: contain;
     max-height: 40em;
-    filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.2));
+    -webkit-filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.2));
 }
 
 /*Helps avoid awkward spacing with wide displays*/
