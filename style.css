@@ -219,7 +219,7 @@ p{
             .me{
                 grid-column: 1/6;
                 grid-row: 1;
-                transform: translateX(-3em);
+                /* transform: translateX(-3em); */
             }
 
             .intro{
@@ -274,7 +274,6 @@ p{
     font-family: proxima-nova, sans-serif;
     font-weight: 400;
     font-size: 1.1em;
-/*    text-transform: uppercase;*/
     border: #FFF solid 2px;
     border-radius: 4px;
     color: white;
