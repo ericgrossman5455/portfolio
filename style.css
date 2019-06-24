@@ -176,12 +176,11 @@ h1{
     color: #242424;
 }
 
-p{
+h2{
     font-family: depot-new-web, sans-serif;
-    font-weight: 300;
-    font-size: 1.4em;
+    font-weight: 400;
+    font-size: 1.5em;
     line-height: 1.6em;
-    margin-top: .2em;
     transition: ease .3s;
     color: #242424;
 }
@@ -193,7 +192,8 @@ p{
             grid-template-rows: 60vh 20vh;
             column-gap: 2em;
             max-width: 65em;
-            margin: 0 auto 3em; 
+            margin: 0 auto 3em;
+            
         }
 
         .me{
@@ -206,7 +206,6 @@ p{
         }
 
         .intro{
-            align-content: end;
             grid-column: 4/6;
             grid-row: 2;
             align-self: end;
@@ -214,12 +213,11 @@ p{
 
         /*Converting hero to single column*/
         @media only screen and (max-width: 70em){
-            .hero{grid-template-rows: 60vh auto;}
+            .hero{grid-template-rows: 50vh auto;}
 
             .me{
                 grid-column: 1/6;
                 grid-row: 1;
-                /* transform: translateX(-3em); */
             }
 
             .intro{
@@ -230,14 +228,14 @@ p{
             }
         }
 
-.ux_banner{
+.ux_banners{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(6, 7em);
+    grid-template-rows: repeat(10, 7em);
     column-gap: 5%;
 }
 
-.ux_banner_section_heading{
+.uxb_section_heading{
     background-color: #F3F3F3;
     grid-row: 1;
     grid-column: 1/-1;
@@ -249,20 +247,7 @@ p{
     text-transform: uppercase;
 }
 
-.ux_banner_text{
-    z-index: 2;
-    grid-column: 1/4;
-    grid-row: 3;
-    padding-left: 10%;
-    text-align: end;
-}
-
-/*Avoid long line length with wide displays*/
-@media only screen and (min-width: 80em){
-    .ux_banner_text{grid-column: 2/4;}
-}
-
-.ux_banner p, .ux_banner h1{
+.ux_banners h2, .ux_banners h1{
     color: #FFF;
 }
 
@@ -279,24 +264,61 @@ p{
     color: white;
 }
 
-.product_shot{
+.mobell_text{
+    z-index: 2;
+    grid-column: 1/4;
+    grid-row: 3;
+    padding-left: 10%;
+    text-align: end;
+}
+
+.cp_events_text{
+    z-index: 2;
+    grid-column: 3/6;
+    grid-row: 7;
+    padding-right: 10%;
+}
+
+/*Avoid long line length with wide displays*/
+@media only screen and (min-width: 80em){
+    .mobell_text{grid-column: 2/4;}
+    .cp_events_text{grid-column: 3/5;}
+}
+
+.mobell_app{
     grid-column: 4/6;
-    grid-row: 1/-1;
+    grid-row: 1/7;
     z-index: 3;
     margin-right: 10%;
     align-self: center;
-    
 }
 
-.product_shot img{
+.cp_events_app{
+    grid-column: 1/3;
+    grid-row: 5/12;
+    z-index: 3;
+    margin-left: 10%;
+    align-self: center;
+}
+
+.mobell_app img{
     object-fit: contain;
     max-height: 40em;
     -webkit-filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.2));
+}
+
+.cp_events_app img{
+    object-fit: contain;
+    max-height: 40em;
+    -webkit-filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.2));
 }
 
 /*Helps avoid awkward spacing with wide displays*/
 @media only screen and (min-width: 90em){
-    .product_shot{transform: translateX(-20%)}
+    .mobell_app{transform: translateX(-20%)}
+    .cp_events_app{transform: translateX(20%)}
 }
 
 .mobell_color{
@@ -308,13 +330,32 @@ p{
     background-color: rgba(248, 181, 0, 0.9)
 }
 
-.ux_banner_bg{
-    grid-column: 1/-1;
-    grid-row: 2/6;
-    background: rgba(0, 0, 0, 0.5)
+.cp_events_color{
+    z-index: 1;
+    grid-row: 6/10;
+    grid-column: 1/6;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(3, 86, 66, 0.9)
 }
 
-.ux_banner_bg img{
+.mobell_bg{
+    grid-column: 1/-1;
+    grid-row: 2/6;
+}
+
+.cp_events_bg{
+    grid-column: 1/-1;
+    grid-row: 6/10;
+}
+
+.mobell_bg img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;   
+}
+
+.cp_events_bg img{
     object-fit: cover;
     height: 100%;
     width: 100%;   
