@@ -265,12 +265,14 @@ nav a{
 .ux_banners{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(10, 7em);
+    grid-template-rows: repeat(14, 7em);
     column-gap: 5%;
+    max-width: 80em;
+    margin: 0 auto;
 }
 
 .uxb_section_heading{
-/*    background-color: #F3F3F3;*/
+    background-color: #FAFAFA;
     grid-row: 1;
     grid-column: 1/-1;
     padding-left: 5%;
@@ -296,8 +298,8 @@ nav a{
 .ux_banners button:hover{
     color: #242424;
     background-color: #FFF;
-    transform: scale(4em);
     box-shadow: 0 .5em 1em rgba(0, 0, 0, 0.2);
+    transform: translateY(-.2em)
 
 }
 
@@ -335,7 +337,7 @@ nav a{
 
 .cp_events_app{
     grid-column: 1/3;
-    grid-row: 5/12;
+    grid-row: 5/11;
     z-index: 3;
     margin-left: 10%;
     align-self: center;
@@ -343,14 +345,14 @@ nav a{
 
 .mobell_app img{
     object-fit: contain;
-    max-height: 40em;
+    max-height: 38em;
     -webkit-filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.2));
     filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.2));
 }
 
 .cp_events_app img{
     object-fit: contain;
-    max-height: 40em;
+    max-height: 38em;
     -webkit-filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.2));
     filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.2));
 }
@@ -368,6 +370,7 @@ nav a{
     width: 100%;
     height: 100%;
     background-color: rgba(238, 171, 0, 0.9);
+/*    background-color: rgba(0, 0, 0, 0.6);*/
 }
 
 .cp_events_color{
@@ -376,7 +379,8 @@ nav a{
     grid-column: 1/6;
     width: 100%;
     height: 100%;
-    background-color: rgba(3, 86, 66, 0.9)
+    background-color: rgba(3, 86, 66, 0.9);
+/*    background-color: rgba(0, 0, 0, 0.6);*/
 }
 
 .mobell_bg{
@@ -401,6 +405,40 @@ nav a{
     width: 100%;   
 }
 
+.more_ux{
+    grid-column: 1/-1;
+    grid-row: 10/14;
+    background-color: #FAFAFA;
+    background-image: url(media/more_ux.png);
+    background-position: 40% 100%;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+.more_ux_text{
+    margin-top: 9em;
+    margin-left: 10%;
+    grid-column: 1/-1;
+    grid-row: 12/15;
+    
+}
+
+.more_ux_text h1{
+    color: #242424;
+/*    font-size: 4em;*/
+}
+
+.more_ux_text button{
+    color: #242424;
+    border: #242424 solid 2px;
+    margin-top: 1em;
+}
+
+.more_ux_text button:hover{
+    background-color: #242424;
+    color: #FAFAFA;
+    border: #242424 solid 2px;
+}
 
     
 /*----------------FOOTER-----------------*/
