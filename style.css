@@ -25,6 +25,17 @@ p{
     color: #242424;
 }
 
+button{
+    cursor: pointer;
+    background: none;
+    padding: .5em 1em;
+    font-family: proxima-nova, sans-serif;
+    font-weight: 500;
+    font-size: 1.1em;
+    border: #242424 solid 2px;
+    border-radius: 4px;
+}
+
 @media only screen and (max-width: 70em) {
     h1{font-size: 4em}
     h2{font-size: 1.2em}
@@ -248,7 +259,7 @@ nav a{
                 max-width: 60ch;
             }
             
-            .intro h1{font-size: 4.5em;}
+            .intro h1{font-size: 4em;}
         }
 
 .ux_banners{
@@ -259,7 +270,7 @@ nav a{
 }
 
 .uxb_section_heading{
-    background-color: #F3F3F3;
+/*    background-color: #F3F3F3;*/
     grid-row: 1;
     grid-column: 1/-1;
     padding-left: 5%;
@@ -268,23 +279,26 @@ nav a{
     font-weight: 400;
     font-size: .9em;
     text-transform: uppercase;
+    color: #242424;
 }
 
 .ux_banners h2, .ux_banners h1{
     color: #FFF;
 }
 
-.button{
+.ux_banners button{
+    color: #FFF;
     margin-top: 2em;
-    cursor: pointer;
-    background: none;
-    padding: .5em 1em;
-    font-family: proxima-nova, sans-serif;
-    font-weight: 500;
-    font-size: 1.1em;
     border: #FFF solid 2px;
-    border-radius: 4px;
-    color: white;
+    transition: ease .3s;
+}
+
+.ux_banners button:hover{
+    color: #242424;
+    background-color: #FFF;
+    transform: scale(4em);
+    box-shadow: 0 .5em 1em rgba(0, 0, 0, 0.2);
+
 }
 
 .mobell_text{
@@ -353,7 +367,7 @@ nav a{
     grid-column: 1/6;
     width: 100%;
     height: 100%;
-    background-color: rgba(248, 181, 0, 0.9)
+    background-color: rgba(238, 171, 0, 0.9);
 }
 
 .cp_events_color{
