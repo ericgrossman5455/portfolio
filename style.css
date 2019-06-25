@@ -1,5 +1,39 @@
 html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{display:block;}body{line-height:1;}ol, ul{list-style:none;}blockquote, q{quotes:none;}blockquote:before, blockquote:after,q:before, q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}img{width:100%;}
 
+h1{
+    font-family: proxima-nova, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 6em;
+    color: #242424;
+    padding-bottom: .1em;
+}
+
+h2{
+    font-family: depot-new-web, sans-serif;
+    font-weight: 400;
+    font-size: 1.4em;
+    line-height: 1.5em;
+    color: #242424;
+}
+
+p{
+    font-family: depot-new-web, sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+    line-height: 1.5em;
+    color: #242424;
+}
+
+@media only screen and (max-width: 70em) {
+    h1{font-size: 4em}
+    h2{font-size: 1.2em}
+}
+
+@media only screen and (max-width: 50em) {
+    h1{font-size: 3.5em}
+    h2{font-size: 1.2em}
+}
 
 
 /*---------------------NAVIGATION-----------------------*/
@@ -30,7 +64,6 @@ nav:hover{
 .logo{
     width: 4em;
     margin: 2em;
-    transition: ease .3s;
 }
 
 nav ul{
@@ -39,7 +72,6 @@ nav ul{
     list-style: none;
     padding-left: 1.6em;
     font-size: 1.2em;
-    transition: ease .3s;
 }
 
 nav a{
@@ -49,7 +81,6 @@ nav a{
     font-weight: 300;
     font-style: normal;
     color: #242424;
-    transition: ease .3s;
 }
 
 .social{
@@ -168,23 +199,6 @@ nav a{
 
 /*---------------------CONTENT-----------------------*/
 
-h1{
-    font-family: proxima-nova, sans-serif;
-    font-weight: 800;
-    font-style: normal;
-    font-size: 7vmax;
-    color: #242424;
-}
-
-h2{
-    font-family: depot-new-web, sans-serif;
-    font-weight: 400;
-    font-size: 1.4em;
-    line-height: 1.6em;
-    transition: ease .3s;
-    color: #242424;
-}
-
         .hero{
             padding: 5%;
             display: grid;
@@ -193,7 +207,6 @@ h2{
             column-gap: 2em;
             max-width: 65em;
             margin: 0 auto 3em;
-            
         }
 
         .me{
@@ -211,6 +224,14 @@ h2{
             align-self: end;
         }
 
+        .intro h2{
+            font-weight: 300;
+            line-height: 1.6em;
+            font-size: 1.3em;
+        }
+
+        .intro h1{font-size: 7.5em;}
+
         /*Converting hero to single column*/
         @media only screen and (max-width: 70em){
             .hero{grid-template-rows: 50vh auto;}
@@ -226,6 +247,8 @@ h2{
                 padding-top: 1.5em;
                 max-width: 60ch;
             }
+            
+            .intro h1{font-size: 4.5em;}
         }
 
 .ux_banners{
@@ -257,7 +280,7 @@ h2{
     background: none;
     padding: .5em 1em;
     font-family: proxima-nova, sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 1.1em;
     border: #FFF solid 2px;
     border-radius: 4px;
@@ -270,20 +293,23 @@ h2{
     grid-row: 3;
     padding-left: 10%;
     text-align: end;
+    max-width: 
 }
 
 .cp_events_text{
     z-index: 2;
     grid-column: 3/6;
     grid-row: 7;
-    padding-right: 10%;
+    padding-right: 10%; 
+    max-width: 60ch;
 }
 
 /*Avoid long line length with wide displays*/
+/*
 @media only screen and (min-width: 80em){
     .mobell_text{grid-column: 2/4;}
-    .cp_events_text{grid-column: 3/5;}
 }
+*/
 
 .mobell_app{
     grid-column: 4/6;
