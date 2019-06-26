@@ -34,6 +34,12 @@ button{
     font-size: 1.1em;
     border: #242424 solid 2px;
     border-radius: 4px;
+    transition: ease .3s;
+}
+
+button:hover{
+    box-shadow: 0 .5em 1em rgba(0, 0, 0, 0.2);
+    transform: translateY(-.2em)
 }
 
 @media only screen and (max-width: 70em) {
@@ -43,7 +49,6 @@ button{
 
 @media only screen and (max-width: 50em) {
     h1{font-size: 3.5em}
-    h2{font-size: 1.2em}
 }
 
 
@@ -208,67 +213,69 @@ nav a{
 }
 .nav_shadow_active{display: block;}
 
-/*---------------------CONTENT-----------------------*/
+/*---------------------HERO-----------------------*/
 
-        .hero{
-            padding: 5%;
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            grid-template-rows: 60vh 20vh;
-            column-gap: 2em;
-            max-width: 65em;
-            margin: 0 auto 3em;
-        }
+.hero{
+    padding: 5%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 60vh 20vh;
+    column-gap: 2em;
+    max-width: 65em;
+    margin: 0 auto 3em;
+}
 
-        .me{
-            background-image: url(media/hero.jpg);
-            background-position: 0% 40%;
-            background-repeat: no-repeat;
-            background-size: cover;
-            grid-column: 1/4;
-            grid-row: 1/3;
-        }
+.me{
+    background-image: url(media/hero.jpg);
+    background-position: 0% 40%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column: 1/4;
+    grid-row: 1/3;
+}
 
-        .intro{
-            grid-column: 4/6;
-            grid-row: 2;
-            align-self: end;
-        }
+.intro{
+    grid-column: 4/6;
+    grid-row: 2;
+    align-self: end;
+}
 
-        .intro h2{
-            font-weight: 300;
-            line-height: 1.6em;
-            font-size: 1.3em;
-        }
+.intro h2{
+    font-weight: 300;
+    line-height: 1.6em;
+    font-size: 1.3em;
+}
 
-        .intro h1{font-size: 7.5em;}
+.intro h1{font-size: 7.5em;}
 
-        /*Converting hero to single column*/
-        @media only screen and (max-width: 70em){
-            .hero{grid-template-rows: 50vh auto;}
+/*Converting hero to single column*/
+@media only screen and (max-width: 70em){
+    .hero{grid-template-rows: 50vh auto;}
 
-            .me{
-                grid-column: 1/6;
-                grid-row: 1;
-            }
+    .me{
+        grid-column: 1/6;
+        grid-row: 1;
+    }
 
-            .intro{
-                grid-column: 1/6;
-                align-self: start;
-                padding-top: 1.5em;
-                max-width: 60ch;
-            }
-            
-            .intro h1{font-size: 4em;}
-        }
+    .intro{
+        grid-column: 1/6;
+        align-self: start;
+        padding-top: 1.5em;
+        max-width: 60ch;
+    }
+
+    .intro h1{font-size: 4em;}
+}
+
+/*---------------------UX BANNERS-----------------------*/
 
 .ux_banners{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(14, 7em);
-    column-gap: 5%;
+    grid-template-rows: repeat(13, 7em);
+    column-gap: 1.5em;
     max-width: 80em;
-    margin: 0 auto;
+    margin: 0 auto 6em auto;
 }
 
 .uxb_section_heading{
@@ -292,15 +299,23 @@ nav a{
     color: #FFF;
     margin-top: 2em;
     border: #FFF solid 2px;
-    transition: ease .3s;
 }
 
 .ux_banners button:hover{
     color: #242424;
     background-color: #FFF;
-    box-shadow: 0 .5em 1em rgba(0, 0, 0, 0.2);
-    transform: translateY(-.2em)
+}
 
+.ux_banners img{
+    object-fit: contain;
+    max-height: 38em;
+    -webkit-filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.2));
+    transition: ease .3s;
+}
+
+.ux_banners img:hover{
+    transform: translateY(-1.5em);
 }
 
 .mobell_text{
@@ -313,7 +328,7 @@ nav a{
 }
 
 .cp_events_text{
-    z-index: 2;
+    z-index: 3;
     grid-column: 3/6;
     grid-row: 7;
     padding-right: 10%; 
@@ -330,37 +345,18 @@ nav a{
 .mobell_app{
     grid-column: 4/6;
     grid-row: 1/7;
-    z-index: 3;
-    margin-right: 10%;
+    z-index: 2;
+    margin-right: 15%;
     align-self: center;
 }
+
 
 .cp_events_app{
     grid-column: 1/3;
     grid-row: 5/11;
     z-index: 3;
-    margin-left: 10%;
+    margin-left: 15%;
     align-self: center;
-}
-
-.mobell_app img{
-    object-fit: contain;
-    max-height: 38em;
-    -webkit-filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.2));
-    filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.2));
-}
-
-.cp_events_app img{
-    object-fit: contain;
-    max-height: 38em;
-    -webkit-filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.2));
-    filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.2));
-}
-
-/*Helps avoid awkward spacing with wide displays*/
-@media only screen and (min-width: 90em){
-    .mobell_app{transform: translateX(-20%)}
-    .cp_events_app{transform: translateX(20%)}
 }
 
 .mobell_color{
@@ -369,63 +365,38 @@ nav a{
     grid-column: 1/6;
     width: 100%;
     height: 100%;
-    background-color: rgba(238, 171, 0, 0.9);
-/*    background-color: rgba(0, 0, 0, 0.6);*/
+    background-color: rgba(238, 171, 0, 1.0);
 }
 
 .cp_events_color{
-    z-index: 1;
+    z-index: 2;
     grid-row: 6/10;
     grid-column: 1/6;
     width: 100%;
     height: 100%;
-    background-color: rgba(3, 86, 66, 0.9);
-/*    background-color: rgba(0, 0, 0, 0.6);*/
-}
-
-.mobell_bg{
-    grid-column: 1/-1;
-    grid-row: 2/6;
-}
-
-.cp_events_bg{
-    grid-column: 1/-1;
-    grid-row: 6/10;
-}
-
-.mobell_bg img{
-    object-fit: cover;
-    height: 100%;
-    width: 100%;   
-}
-
-.cp_events_bg img{
-    object-fit: cover;
-    height: 100%;
-    width: 100%;   
+    background-color: rgba(3, 86, 66, 1.0);
 }
 
 .more_ux{
+    z-index: 3;
     grid-column: 1/-1;
     grid-row: 10/14;
     background-color: #FAFAFA;
     background-image: url(media/more_ux.png);
-    background-position: 40% 100%;
+    background-position: 50% 100%;
     background-repeat: no-repeat;
-    background-size: cover
+    background-size: cover;
 }
 
 .more_ux_text{
     margin-top: 9em;
     margin-left: 10%;
     grid-column: 1/-1;
-    grid-row: 12/15;
-    
+    grid-row: 15;
 }
 
 .more_ux_text h1{
     color: #242424;
-/*    font-size: 4em;*/
 }
 
 .more_ux_text button{
@@ -434,14 +405,53 @@ nav a{
     margin-top: 1em;
 }
 
+/*
 .more_ux_text button:hover{
     background-color: #242424;
     color: #FAFAFA;
     border: #242424 solid 2px;
 }
+*/
+
+/*---------------------REFERENCE-----------------------*/
+
+.reference{
+    text-align: center;
+    margin-bottom: 6em
+}
+
+.reference img{
+    border-radius: 50%;
+    width: 10em;
+    box-shadow: 0 .2em .6em rgba(0, 0, 0, 0.2);
+    
+}
+
+.reference h2{
+    padding: 0 1em;
+    margin: 0 auto;
+    font-size: 2.2em;
+    max-width: 20em;
+    line-height: 1.3em;
+    font-weight: 400;
+    margin-bottom: .8em
+}
+
+.reference p{
+    color: gray;
+    margin: .3em auto .8em auto;
+    font-size: 1.3em;
+}
+
+@media only screen and (max-width: 50em){
+    .reference h2{font-size: 1.8em}
+    .reference img{width: 8em;}
+    .reference p{font-size: 1.1em}
+}
 
     
 /*----------------FOOTER-----------------*/
+
 footer p{
     margin: 2em;
     font-size: 1em;
