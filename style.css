@@ -267,6 +267,8 @@ nav a{
     max-width: 68em;
     margin: 0 auto 6em auto;
     padding: 0 .5em;
+    filter: drop-shadow(0 1em 2em rgba(0, 0, 0, 0.2));
+    -webkit-filter: drop-shadow(0 1em 2em rgba(0, 0, 0, 0.2));
 }
 
 .uxb_section_heading{
@@ -304,8 +306,8 @@ nav a{
 .ux_banners img{
     object-fit: contain;
     max-height: 38em;
-    -webkit-filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.2));
-    filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.2));
+    -webkit-filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.1));
+    filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.1));
     transition: ease .3s;
 }
 
