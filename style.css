@@ -250,7 +250,7 @@ nav a{
 }
 
 @media only screen and (max-width: 50em) {
-    .intro{padding: 15vh 2.5em;}
+    .intro{padding: 14vh 2.5em;}
     .intro img{width: 10em;}
     .intro_container{margin-bottom: 1em}
 }
@@ -283,9 +283,11 @@ nav a{
     color: #242424;
 }
 
-@media only screen and (max-width: 50em) {
-    .uxb_section_heading{font-size: 1em;
-    padding-top: 4.5em;}
+@media only screen and (max-width: 60em) {
+    .uxb_section_heading{
+        font-size: 1em;
+        padding-top: 4.5em;
+    }
 }
 
 .ux_banners h3, .ux_banners h1{
@@ -345,6 +347,23 @@ nav a{
     z-index: 3;
     margin-left: 15%;
     align-self: center;
+}
+
+/*Keeping device from lining up awkwardly with color background*/
+@media only screen and (max-width: 60em) {
+    .mobell_app{transform: translateY(4em);}
+    .cp_events_app{transform: translateY(4em);}
+}
+
+@media only screen and (max-width: 41em) {
+    .mobell_app{transform: translateY(0);}
+    .cp_events_app{transform: translateY(0);}
+    .ux_banners img:hover{transform: translateY(0)}
+}
+
+@media only screen and (max-width: 35em) {
+    .ux_banners{grid-template-rows: repeat(13, 6em)}
+    .uxb_section_heading{padding-top: 3.5em;}
 }
 
 .mobell_color{
