@@ -69,7 +69,10 @@ button:hover{
 
 .nav_back_arrow{display: none;}
 
-main{padding-left: 12em;} 
+main{
+    padding-left: 12em;
+    margin-left: 2px;
+} 
 
 nav{
     height: 100%;
@@ -126,7 +129,7 @@ nav a{
     nav{padding-left: 2em}
     nav:hover{padding-left: 3em}
     .social{padding-left: .3em}
-    main{padding-left: 14em}
+    main{padding-left: 14em;}
 }
 
 @media only screen and (max-height: 30em) {
@@ -140,7 +143,7 @@ nav a{
 @media only screen and (max-width: 50em) {
     nav{
         transform: translateX(-100%);
-        box-shadow: none;
+        border: none;
     }
     
     nav:hover{
@@ -150,6 +153,7 @@ nav a{
     
     main{
         padding-left: 0;
+        margin-left: 0;
         padding-top: 5em;
     }
     
@@ -161,9 +165,9 @@ nav a{
     }
     
     .top_bar{
+        outline: solid #F1F1F1 2px;
         z-index: 99;
         background-color: #FFF;
-        box-shadow: 0 0 2em rgba(0, 0, 0, 0.1);
         height: 5em;
         display: flex;
         position: fixed;
@@ -222,110 +226,8 @@ nav a{
 }
 .nav_shadow_active{display: block;}
 
-/*---------------------HERO-----------------------*/
+/*---------------------INTRO-----------------------*/
 
-/*
-.hero{
-    padding: 5%;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 60vh 20vh;
-    column-gap: 2em;
-    max-width: 65em;
-    margin: 0 auto 3em;
-}
-
-.me{
-    background-image: url(media/hero.jpg);
-    background-position: 0% 40%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    grid-column: 1/4;
-    grid-row: 1/3;
-}
-
-.intro{
-    grid-column: 4/6;
-    grid-row: 2;
-    align-self: end;
-}
-
-.intro h3{
-    font-weight: 300;
-    line-height: 1.6em;
-    font-size: 1.3em;
-}
-
-.intro h1{font-size: 7.5em;}
-
-Converting hero to single column
-@media only screen and (max-width: 70em){
-    .hero{grid-template-rows: 50vh auto;}
-
-    .me{
-        grid-column: 1/6;
-        grid-row: 1;
-    }
-
-    .intro{
-        grid-column: 1/6;
-        align-self: start;
-        padding-top: 1.5em;
-        max-width: 60ch;
-    }
-
-    .intro h1{font-size: 4em;}
-}
-*/
-
-/*
-.intro{
-    margin-left: 10%;
-    height: 48em;
-}
-
-.intro_text{
-    max-width: 40em;
-    top: 11em;
-    left: 5em;
-    position: relative;
-}
-
-.intro_text h1{
-    font-size: 5em;
-}
-
-.intro_text h3{
-    line-height: 1.8em;
-    font-weight: 300;
-    font-size: 1.6em
-}
-
-.gray_circle{
-    background-color: #F8F8F8;
-    z-index: -1;
-    width: 65em;
-    height: 65em;
-    position: relative;
-    top: -33em;
-    left: -10em;
-    border-radius: 50%
-}
-
-.me{
-    width: 20em;
-    position: relative;
-    top: -55em;
-    left: 35em;
-    transition: .2s ease;
-}
-*/
-
-/*
-.intro h1{
-    font-size: 6em;
-}
-*/
 
 .intro h2{
     max-width: 27em;
@@ -350,6 +252,7 @@ Converting hero to single column
 @media only screen and (max-width: 50em) {
     .intro{padding: 15vh 2.5em;}
     .intro img{width: 10em;}
+    .intro_container{margin-bottom: 1em}
 }
 
 
@@ -363,18 +266,24 @@ Converting hero to single column
     column-gap: 1.5em;
     max-width: 68em;
     margin: 0 auto 6em auto;
+    padding: 0 .5em;
 }
 
 .uxb_section_heading{
     grid-row: 1;
     grid-column: 1/-1;
-    padding-left: 2em;
-    padding-top: 3.2em;
+    padding-left: 1.5em;
+    padding-top: 3.5em;
     font-family: proxima-nova, sans-serif;
     font-weight: 500;
     font-size: 1.2em;
     text-transform: uppercase;
     color: #242424;
+}
+
+@media only screen and (max-width: 50em) {
+    .uxb_section_heading{font-size: 1em;
+    padding-top: 4.5em;}
 }
 
 .ux_banners h3, .ux_banners h1{
@@ -437,7 +346,8 @@ Converting hero to single column
 }
 
 .mobell_color{
-    border-radius: 1em;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
     z-index: 1;
     grid-row: 2/6;
     grid-column: 1/6;
@@ -447,7 +357,6 @@ Converting hero to single column
 }
 
 .cp_events_color{
-    border-bottom-left-radius: 1em;
     z-index: 2;
     grid-row: 6/10;
     grid-column: 1/6;
@@ -457,6 +366,8 @@ Converting hero to single column
 }
 
 .more_ux{
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
     z-index: 3;
     grid-column: 1/-1;
     grid-row: 10/14;
@@ -505,7 +416,7 @@ Converting hero to single column
     font-size: 2.2em;
     max-width: 20em;
     line-height: 1.3em;
-    font-weight: 400;
+    font-weight: 600;
     margin-bottom: .8em
 }
 
