@@ -40,7 +40,7 @@ button{
     padding: .5em 1em;
     font-family: proxima-nova, sans-serif;
     font-weight: 500;
-    font-size: 1.1em;
+    font-size: 1em;
     border: #242424 solid 2px;
     border-radius: 4px;
     transition: ease .3s;
@@ -59,7 +59,7 @@ button:hover{
 
 @media only screen and (max-width: 50em) {
     h2{font-size: 1.2em}
-    h1{font-size: 3.5em}
+    h1{font-size: 3.3em}
 }
 
 
@@ -271,23 +271,27 @@ nav a{
     -webkit-filter: drop-shadow(0 1em 2em rgba(0, 0, 0, 0.2));
 }
 
+/*The new auto rows are to accomadate text that has reflowed to the point where it would have exited the container (due to long taglines)*/
+@media only screen and (max-width: 35em) {
+    .ux_banners{grid-template-rows: repeat(2, 6em) auto auto repeat(2, 6em) auto auto repeat(5, 6em)}
+    .uxb_section_heading{padding-top: 3.5em;}
+}
+
 .uxb_section_heading{
     grid-row: 1;
     grid-column: 1/-1;
     padding-left: 1.5em;
-    padding-top: 3.5em;
+    padding-bottom: 1.3em;
     font-family: proxima-nova, sans-serif;
     font-weight: 500;
     font-size: 1.2em;
     text-transform: uppercase;
     color: #242424;
+    align-self: end
 }
 
 @media only screen and (max-width: 60em) {
-    .uxb_section_heading{
-        font-size: 1em;
-        padding-top: 4.5em;
-    }
+    .uxb_section_heading{font-size: 1em;}
 }
 
 .ux_banners h3, .ux_banners h1{
@@ -349,7 +353,7 @@ nav a{
     align-self: center;
 }
 
-/*Keeping device from lining up awkwardly with color background*/
+/*Keeping device from lining up awkwardly with color background, etc.*/
 @media only screen and (max-width: 60em) {
     .mobell_app{transform: translateY(4em);}
     .cp_events_app{transform: translateY(4em);}
@@ -359,11 +363,6 @@ nav a{
     .mobell_app{transform: translateY(0);}
     .cp_events_app{transform: translateY(0);}
     .ux_banners img:hover{transform: translateY(0)}
-}
-
-@media only screen and (max-width: 35em) {
-    .ux_banners{grid-template-rows: repeat(13, 6em)}
-    .uxb_section_heading{padding-top: 3.5em;}
 }
 
 .mobell_color{
