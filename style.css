@@ -69,10 +69,7 @@ button:hover{
 
 .nav_back_arrow{display: none;}
 
-main{
-    padding-left: 12em;
-    margin-left: 2px;
-} 
+main{padding-left: 12em;} 
 
 nav{
     height: 100%;
@@ -116,25 +113,24 @@ nav a{
 .social{
     position: absolute;
     bottom: 1.5em;
-    padding-left: 1.5em;
+    padding-left: 1.2em;
 }
 
 .social img{
     width: 1.1em;
-    padding: 0 .8em;
+    padding: 0 .9em;
 }
 
 /*Optimizing for wide and short monitors*/
 @media only screen and (min-width: 90em) {
     nav{padding-left: 2em}
     nav:hover{padding-left: 3em}
-    .social{padding-left: .3em}
+    .social{padding-left: .2em}
     main{padding-left: 14em;}
 }
 
 @media only screen and (max-height: 30em) {
     .logo{width: 2.5em}
-    .social{bottom: .5em}
     nav ul{top: 35%;}
     nav a{line-height: 2em}
     }
