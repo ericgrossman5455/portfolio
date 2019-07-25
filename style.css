@@ -4,7 +4,7 @@ h1{
     font-family: proxima-nova, sans-serif;
     font-weight: 800;
     font-style: normal;
-    font-size: 6em;
+    font-size: 5.5em;
     color: #242424;
     padding-bottom: .1em;
 }
@@ -24,6 +24,16 @@ h3{
     font-size: 1.4em;
     line-height: 1.5em;
     color: #242424;
+}
+
+h4{
+    font-family: proxima-nova, sans-serif;
+    font-weight: 500;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    color: #242424;
+    padding-left: 1.5em;
+    padding-bottom: 1.3em;
 }
 
 p{
@@ -55,11 +65,12 @@ button:hover{
     h1{font-size: 4em}
     h2{font-size: 1.3em}
     h3{font-size: 1.2em}
+    h4{font-size: 1em}
 }
 
 @media only screen and (max-width: 50em) {
-    h2{font-size: 1.2em}
     h1{font-size: 3.3em}
+    h2{font-size: 1.2em}
 }
 
 
@@ -154,7 +165,7 @@ nav a{
     .top_bar{
         outline: solid #F1F1F1 2px;
         z-index: 99;
-        background-color: #FFF;
+        background-color: rgba(255, 255, 255, 1);
         height: 5em;
         display: flex;
         position: fixed;
@@ -249,18 +260,18 @@ nav a{
 .ux_banners{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(17, 7em);
+    grid-template-rows: repeat(16, 7em);
     column-gap: 1.5em;
     max-width: 68em;
     margin: 0 auto 6em auto;
-    padding: 0 .5em;
-    filter: drop-shadow(0 1em 2em rgba(0, 0, 0, 0.2));
-    -webkit-filter: drop-shadow(0 1em 2em rgba(0, 0, 0, 0.2));
+    padding: 0 2.5%;
+    filter: drop-shadow(0 1em 2em rgba(0, 0, 0, 0.15));
+    -webkit-filter: drop-shadow(0 1em 2em rgba(0, 0, 0, 0.15));
 }
 
 /*The new auto rows are to accomadate text that has reflowed to the point where it would have exited the container (due to long taglines)*/
 @media only screen and (max-width: 35em) {
-    .ux_banners{grid-template-rows: repeat(2, 6em) auto auto repeat(2, 6em) auto auto repeat(2, 6em) auto auto repeat(5, 6em)}
+    .ux_banners{grid-template-rows: repeat(2, 6em) auto auto repeat(2, 6em) auto auto repeat(2, 6em) auto auto repeat(4, 6em)}
     .uxb_section_heading{padding-top: 3.5em;}
     .ux_banners h1{font-size: 2.7em;}
 }
@@ -268,18 +279,7 @@ nav a{
 .uxb_section_heading{
     grid-row: 1;
     grid-column: 1/-1;
-    padding-left: 1.5em;
-    padding-bottom: 1.3em;
-    font-family: proxima-nova, sans-serif;
-    font-weight: 500;
-    font-size: 1.2em;
-    text-transform: uppercase;
-    color: #242424;
     align-self: end
-}
-
-@media only screen and (max-width: 60em) {
-    .uxb_section_heading{font-size: 1em;}
 }
 
 .ux_banners h3, .ux_banners h1{
@@ -308,6 +308,8 @@ nav a{
 .ux_banners img:hover{
     transform: translateY(-1.5em);
 }
+
+/*---------*/
 
 .mobell_text{
     z-index: 2;
@@ -357,7 +359,7 @@ nav a{
     align-self: center;
 }
 
-/*Keeping device from lining up awkwardly with color background, etc.*/
+/*Keeping device from lining up awkwardly with color background*/
 @media only screen and (max-width: 60em) {
     .mobell_app{transform: translateY(4em)}
     .cp_events_app{transform: translateY(4em)}
@@ -400,6 +402,8 @@ nav a{
     background-color: rgb(16, 79, 163);
 }
 
+/*---------*/
+
 .more_ux{
     border-bottom-left-radius: 1em;
     border-bottom-right-radius: 1em;
@@ -408,16 +412,14 @@ nav a{
     grid-row: 14/18;
     background-color: #F8F8F8;
     background-image: url(media/more_ux.png);
-    background-position: 50% 100%;
+    background-position: 40% 40%;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .more_ux_text{
-    margin-top: 9em;
+    margin-top: 6em;
     margin-left: 10%;
-    grid-column: 1/-1;
-    grid-row: 15;
 }
 
 .more_ux_text h1{
@@ -430,42 +432,90 @@ nav a{
     margin-top: 1em;
 }
 
+.more_ux_text button:hover{background: none}
+
 
 /*---------------------REFERENCE-----------------------*/
 
 .reference{
+    padding: 7em 2em;
     text-align: center;
-    margin-bottom: 6em
-}
-
-.reference img{
-    border-radius: 50%;
-    width: 10em;
-/*    box-shadow: 0 .2em .6em rgba(0, 0, 0, 0.2);*/
+    margin-bottom: 6em;
+    background-color: #F8F8F8;
     
 }
 
 .reference h3{
-    padding: 0 1em;
     margin: 0 auto;
-    font-size: 2.2em;
-    max-width: 20em;
+    font-size: 2em;
+    max-width: 22em;
     line-height: 1.3em;
-    font-weight: 600;
-    margin-bottom: .8em
+    font-weight: 400;
+    margin-bottom: 1em;
 }
 
 .reference p{
-    color: gray;
-    margin: .3em auto .8em auto;
-    font-size: 1.3em;
+    font-family: proxima-nova, sans-serif;
+    color: #BEBEBE;
+    margin-bottom: .5em;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    font-weight: 300
 }
 
-@media only screen and (max-width: 50em){
-    .reference h3{font-size: 1.8em}
-    .reference img{width: 8em;}
-    .reference p{font-size: 1.1em}
+@media only screen and (max-width: 60em){
+    .reference h3{font-size: 1.5em}
+    .reference p{font-size: .9em}
 }
+
+/*---------------------ART BANNER-----------------------*/
+
+.art_banner{
+    margin: 0 auto 6em auto;
+    padding: 0 2.5%;
+    max-width: 68em;
+}
+
+.art_banner_image{
+    border-radius: 1em;
+    height: 75vh;
+    filter: drop-shadow(0 1em 2em rgba(0, 0, 0, 0.3));
+    -webkit-filter: drop-shadow(0 1em 2em rgba(0, 0, 0, 0.3));
+    background-image: url(media/art_banner.jpg);
+    background-position: 20% 40%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 35em
+}
+
+.art_banner_text{
+    position: relative;
+    top: 45%;
+    left: 5%;
+}
+
+@media only screen and (max-width: 45em){
+.art_banner_text{top: 55%; left: 2em;}
+}
+
+.art_banner h1, .art_banner h3{
+    color: #FFF;
+    max-width: 12em
+}
+
+.art_banner button{
+    margin-top: 2.5em;
+    color: #FFF;
+    border: #FFF solid 2px;
+}
+
+.art_banner button:hover{
+    color: #242424;
+    background-color: #FFF;
+}
+
+
+
 
     
 /*----------------FOOTER-----------------*/
