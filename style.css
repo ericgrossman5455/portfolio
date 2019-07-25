@@ -76,9 +76,9 @@ button:hover{
 
 /*---------------------NAVIGATION-----------------------*/
 
-.top_bar{display: none;}
+.drawer_bubble{display: none;}
 
-.nav_back_arrow{display: none;}
+.nav_close_button{display: none;}
 
 main{padding-left: 12em;} 
 
@@ -102,6 +102,7 @@ nav:hover{
 .logo{
     width: 4em;
     margin: 2em;
+    float: left;
 }
 
 nav ul{
@@ -142,67 +143,58 @@ nav a{
 
 @media only screen and (max-height: 30em) {
     .logo{width: 2.5em}
-    nav ul{top: 35%;}
+    nav ul{top: 30%;}
     nav a{line-height: 2em}
     }
 
-/*Implementing sliding navigation drawer*/
+/*Implementing MOBILE sliding navigation drawer*/
 @media only screen and (max-width: 50em) {
-    nav{transform: translateX(-100%);}
+    nav{
+        transform: translateX(-100%);
+        width: 15em
+    }
     
     nav:hover{padding-left: 0;}
     
     main{
         padding-left: 0;
-        margin-left: 0;
-        padding-top: 5em;
+        margin-left: 0; 
     }
     
-    nav ul{top: 30%}
-    
-    nav a{line-height: 3em;}
-    
-    .top_bar{
-        outline: solid #F1F1F1 2px;
+    .drawer_bubble{
+        border: solid #F1F1F1 2px;
         z-index: 99;
         background-color: rgba(255, 255, 255, 1);
-        height: 5em;
-        display: flex;
+        height: 4em;
+        width: 4em;
+        border-radius: 50%;
+        display: block;
         position: fixed;
-        width: 100%;
+        margin: 1em 0 0 1em
     }
+    
+    nav a{line-height: 3em}
     
     .drawer{
         position: absolute;
-        margin-top: 1.5em;
-        margin-left: 2em;
-        width:33px;
+        margin-top: 1em;
+        margin-left: 1em;
+        width: 33px;
         cursor: pointer;
     }
 
-    .logo_bar{
-        width: 3em;
-        margin: 1em auto;
-    }
+    .social img{padding: 0 1.3em;}
     
-    /*Optimizing landscape mobile screens*/
-    @media only screen and (max-height: 30em) {
-        nav ul{top: 23%;}
-        nav a{line-height: 2.2em}
-    }
+    .social{bottom: .5em;}
     
-    /*"Moving" the logo by removing nav logo and now showing top bar logo*/
-    .logo{
-        display: none;
-    }
-    
-    .nav_back_arrow{
-        position: absolute;
-        margin-top: 1.5em;
-        margin-left: 1.5em;
-        width: 30px;
+    .nav_close_button{
+        position: fixed;
+        margin-top: 1em;
+        margin-left: 12.5em;
+        width: 25px;
         cursor: pointer;
         display: block;
+        opacity: .2
     }
     
     .nav_shadow{
@@ -227,9 +219,7 @@ nav a{
 /*---------------------INTRO-----------------------*/
 
 
-.intro h2{
-    max-width: 27em;
-}
+.intro h2{max-width: 27em;}
 
 .intro img{
     margin-top: 1em;
@@ -359,7 +349,7 @@ nav a{
     align-self: center;
 }
 
-/*Keeping device from lining up awkwardly with color background*/
+/*Avoiding awkward device position*/
 @media only screen and (max-width: 60em) {
     .mobell_app{transform: translateY(4em)}
     .cp_events_app{transform: translateY(4em)}
@@ -371,6 +361,15 @@ nav a{
     .cp_events_app{transform: translateY(0)}
     .slo_transit_app{transform: translateY(0)}
     .ux_banners img:hover{transform: translateY(0)}
+}
+
+@media only screen and (max-width: 35em) {
+    .mobell_app{grid-column: 1/-1; margin: 0; max-height: 15em; opacity: .2;}
+    .mobell_text{grid-column: 1/-1; padding: 0 7%; text-align: center; z-index: 9}
+    .cp_events_app{grid-column: 1/-1; margin: 0; max-height: 15em; opacity: .1;}
+    .cp_events_text{grid-column: 1/-1; padding: 0 7%; text-align: center; z-index: 9}
+    .slo_transit_app{grid-column: 1/-1; margin: 0; max-height: 15em; opacity: .1;}
+    .slo_transit_text{grid-column: 1/-1; padding: 0 7%; text-align: center; z-index: 9}
 }
 
 .mobell_color{
@@ -442,7 +441,6 @@ nav a{
     text-align: center;
     margin-bottom: 6em;
     background-color: #F8F8F8;
-    
 }
 
 .reference h3{
@@ -450,22 +448,23 @@ nav a{
     font-size: 2em;
     max-width: 22em;
     line-height: 1.3em;
-    font-weight: 400;
+    font-weight: 300;
     margin-bottom: 1em;
 }
 
-.reference p{
+.reference h4{
     font-family: proxima-nova, sans-serif;
-    color: #BEBEBE;
-    margin-bottom: .5em;
-    font-size: 1.1em;
+    color: #A7A7A7;
+    padding: 0;
+    margin-bottom: 1em;
+    font-size: 1em;
     text-transform: uppercase;
-    font-weight: 300
+    font-weight: 400;
 }
 
 @media only screen and (max-width: 60em){
     .reference h3{font-size: 1.5em}
-    .reference p{font-size: .9em}
+    .reference h4{font-size: .9em}
 }
 
 /*---------------------ART BANNER-----------------------*/
@@ -480,7 +479,7 @@ nav a{
     border-radius: 1em;
     height: 75vh;
     background-image: url(media/art_banner.jpg);
-    background-position: 20% 40%;
+    background-position: 25% 40%;
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 35em;
@@ -495,7 +494,7 @@ nav a{
 }
 
 @media only screen and (max-width: 45em){
-.art_banner_text{top: 55%; left: 2em;}
+.art_banner_text{top: 60%; left: 2em;}
 }
 
 .art_banner h1, .art_banner h3{
@@ -514,11 +513,12 @@ nav a{
     background-color: #FFF;
 }
 
-
-
-
-    
 /*----------------FOOTER-----------------*/
+
+footer{
+    background: #f8f8f8;
+    padding: 2em 0;
+}
 
 footer p{
     margin: 2em;
