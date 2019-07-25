@@ -489,7 +489,7 @@ nav a{
 }
 
 .art_banner_text{
-    position: relative;
+    position: fixed;
     top: 45%;
     left: 5%;
 }
