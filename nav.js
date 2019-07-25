@@ -4,7 +4,7 @@ const navSlide = () => {
     const drawer = document.querySelector('.drawer');
     const nav = document.querySelector('nav');
     const shadow = document.querySelector('.nav_shadow');
-    const back = document.querySelector('.nav_back_arrow');
+    const close = document.querySelector('.nav_close_button');
     
     drawer.addEventListener('click', () => {
         nav.classList.toggle('nav_active');
@@ -16,7 +16,7 @@ const navSlide = () => {
         shadow.classList.toggle('nav_shadow_active');
     });
     
-    back.addEventListener('click', () => {
+    close.addEventListener('click', () => {
         nav.classList.toggle('nav_active');
         shadow.classList.toggle('nav_shadow_active');
     });
