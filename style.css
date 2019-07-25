@@ -479,11 +479,10 @@ nav a{
 .art_banner_image{
     border-radius: 1em;
     height: 75vh;
-    background-image: url(media/signature.png);
+    background-image: url(media/art_banner.jpg);
     background-position: 20% 40%;
     background-repeat: no-repeat;
     background-size: cover;
-/*    background: linear-gradient(150deg, rgba(49,5,99,1) 0%, rgba(218,13,49,1) 100%);*/
     min-height: 35em;
     filter: drop-shadow(0 1em 2em rgba(0, 0, 0, 0.3));
     -webkit-filter: drop-shadow(0 1em 2em rgba(0, 0, 0, 0.3));
