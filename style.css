@@ -165,8 +165,8 @@ nav a{
         border: solid #F1F1F1 2px;
         z-index: 99;
         background-color: rgba(255, 255, 255, 1);
-        height: 4em;
-        width: 4em;
+        height: 3.3em;
+        width: 3.3em;
         border-radius: 50%;
         display: block;
         position: fixed;
@@ -177,8 +177,8 @@ nav a{
     
     .drawer{
         position: absolute;
-        margin-top: 1em;
-        margin-left: 1em;
+        margin-top: .6em;
+        margin-left: .6em;
         width: 33px;
         cursor: pointer;
     }
@@ -448,7 +448,7 @@ nav a{
     font-size: 2em;
     max-width: 22em;
     line-height: 1.3em;
-    font-weight: 300;
+    font-weight: 400;
     margin-bottom: 1em;
 }
 
