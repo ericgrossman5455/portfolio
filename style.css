@@ -368,6 +368,7 @@ nav a{
     .cp_events_text{grid-column: 1/-1; padding: 0 7%; text-align: center; z-index: 9}
     .slo_transit_app{grid-column: 1/-1; margin: 0; max-height: 15em; opacity: .1;}
     .slo_transit_text{grid-column: 1/-1; padding: 0 7%; text-align: center; z-index: 9}
+    .ux_banners img{-webkit-filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));}
 }
 
 .mobell_color{
