@@ -1,7 +1,7 @@
 //Thank you to Ed at YouTube Channel: Dev Ed
 
 const navSlide = () => {
-    const drawer = document.querySelector('.drawer');
+    const drawer = document.querySelector('.drawer_icon');
     const nav = document.querySelector('nav');
     const shadow = document.querySelector('.nav_shadow');
     const close = document.querySelector('.nav_close_button');
