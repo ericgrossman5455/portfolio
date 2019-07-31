@@ -63,7 +63,6 @@ button:hover{
     transform: translateY(-.2em)
 }
 
-
 @media only screen and (max-width: 70em) {
     h1{font-size: 4em}
     h2{font-size: 1.3em}
@@ -154,7 +153,8 @@ nav a{
 @media only screen and (max-width: 50em) {
     nav{
         transform: translateX(-100%);
-        width: 15em
+        width: 15em;
+        border: none;
     }
     
     nav:hover{padding-left: 0;}
@@ -165,37 +165,28 @@ nav a{
     }
     
     .drawer_bubble{
-        border: solid #F1F1F1 2px;
-        z-index: 99;
-        background-color: rgba(255, 255, 255, 1);
-        height: 4em;
-        width: 4em;
-        border-bottom-right-radius: 1em;
         display: block;
+        z-index: 99;
+        box-shadow: 0 0 0 2px #F1F1F1;
+        background-color: #FFF;
+        margin: 1.7em 0 0 1.7em;
+        height: 3.3em;
+        width: 3.3em;
+        border-radius: 50%;
         position: fixed;
     }
     
     nav a{line-height: 3em}
     
-    .drawer{
+    .drawer_icon{
         position: absolute;
-        transform: scale(.65);
+        transform: scale(.62);
         cursor: pointer;
     }
 
     .social img{padding: 0 1.3em;}
     
-    .social{bottom: .5em;}
-    
-    .nav_close_button{
-        position: fixed;
-        margin-top: 1em;
-        margin-left: 12.5em;
-        width: 25px;
-        cursor: pointer;
-        display: block;
-/*        opacity: .2*/
-    }
+    .social{bottom: 1em;}
     
     .nav_shadow{
         display: none;
@@ -214,7 +205,22 @@ nav a{
     transform: translateX(0%);
     box-shadow: 0 0 2em rgba(0, 0, 0, 0.1);
 }
+
 .nav_shadow_active{display: block;}
+
+/*
+.drawer_bubble_active{
+        display: block;
+        z-index: 99;
+        box-shadow: 0 0 0 2px #F1F1F1;
+        background-color: #FFF;
+        margin: 1.7em 0 0 1.7em;
+        height: 3.3em;
+        width: 3.3em;
+        border-radius: 50%;
+        position: fixed;
+}
+*/
 
 /*---------------------INTRO-----------------------*/
 
@@ -239,7 +245,7 @@ nav a{
 }
 
 @media only screen and (max-width: 50em) {
-    .intro{padding: 9em 2.5em 7em 2.5em;}
+    .intro{padding: 10em 2.5em 8em 2.5em;}
     .intro img{width: 10em;}
     .intro_container{margin-bottom: 1em; min-height: 20em}
 }
@@ -440,7 +446,7 @@ nav a{
 .reference{
     padding: 7em 2em;
     text-align: center;
-    margin-bottom: 6em;
+    margin-bottom: 5em;
     background-color: #F8F8F8;
 }
 
@@ -487,7 +493,7 @@ nav a{
     border-radius: 1em;
     height: 75vh;
     background-image: url(media/art_banner.jpg);
-    background-position: 25% 40%;
+    background-position: 20% 40%;
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 35em;
@@ -497,7 +503,7 @@ nav a{
 
 .art_banner_text{
     position: absolute;
-    bottom: 10%;
+    bottom: 11%;
     left: 8%;
 }
 
