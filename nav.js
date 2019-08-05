@@ -1,4 +1,4 @@
-//Thank you to Ed at YouTube Channel: Dev Ed
+//Thank you to Ed (YouTube Channel: Dev Ed)
 
 const navSlide = () => {
     const drawer = document.querySelector('.drawer_icon');
@@ -24,3 +24,15 @@ const navSlide = () => {
 }
 
 navSlide();
+
+$(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
+    
+    if (scroll >= 10) {
+        
+        $(".drawer_bubble").addClass("drawer_bubble_active");
+    } else {
+        
+        $(".drawer_bubble").removeClass("drawer_bubble_active");
+    }
+});
