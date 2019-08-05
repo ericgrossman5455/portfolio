@@ -165,10 +165,10 @@ nav a{
     }
     
     .drawer_bubble{
-        display: block;
-        z-index: 99;
         box-shadow: 0 0 0 2px #F1F1F1;
         background-color: #FFF;
+        display: block;
+        z-index: 99;
         margin: 1.7em 0 0 1.7em;
         height: 3.3em;
         width: 3.3em;
@@ -208,19 +208,10 @@ nav a{
 
 .nav_shadow_active{display: block;}
 
-/*
 .drawer_bubble_active{
-        display: block;
-        z-index: 99;
         box-shadow: 0 0 0 2px #F1F1F1;
         background-color: #FFF;
-        margin: 1.7em 0 0 1.7em;
-        height: 3.3em;
-        width: 3.3em;
-        border-radius: 50%;
-        position: fixed;
 }
-*/
 
 /*---------------------INTRO-----------------------*/
 
