@@ -7,10 +7,50 @@
     <meta name="theme-color" content="#F1F1F1">
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/rkj0niw.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-    <title>Eric Grossman | UX</title>
+    <title>Eric Grossman | art</title>
 </head>
+    
+    <style>
+        
+        .art_container{
+            display: grid;
+            max-width: 120em;
+            margin-bottom: 5em;
+            grid-gap: 5px;
+        }
+
+        .art_container img{
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .side_by_side{
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-column-gap: 5px;
+        }
+
+        .side_by_side1{
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            grid-column-gap: 5px;
+        }
+
+        .side_by_side2{
+            display: grid;
+            grid-template-columns: 1.15fr 1fr;
+            grid-column-gap: 5px;
+        }
+
+        .side_by_side3{
+            display: grid;
+            grid-template-columns: 3fr 0fr;
+            grid-column-gap: 5px;
+        }
+    
+    </style>
 
 <body>
             
@@ -23,8 +63,8 @@
         <a href="index.html"><img class="logo" src="media/logo.svg"></a>
         
         <ul>
-            <li><a href=#>ux</a></li>
-            <li><a href=#>art</a></li>
+            <li><a href=index.html>ux</a></li>
+            <li><a>art</a></li>
             <li><a href=#>about</a></li>
         </ul>
         
@@ -48,11 +88,87 @@
     <!-----------------------CONTENT------------------------->
     
     <main>
+        
+        <div class="intro_container">
+            <div class="intro">
+                <h1>hello again.</h1>
+                <h2>When I’m not designing an interface, I've got my hands on a camera and Photoshop. Scroll on through to learn about my design journey and process.</h2>
+            </div>
+        </div>
+        
+        <div class="art_container">
+            <div class="full_width"><img src="media/art/eric_grossman-1.jpg"></div>
+            
+            <div class=side_by_side1>
+                <div><img src="media/art/eric_grossman-2.jpg"></div>
+                <div><img src="media/art/eric_grossman-3.jpg"></div>
+            </div>
+            
+            <div class="highlight">
+                <h4>Where I Began</h4>
+                <h3>My love for technology and design began with photography and graphic design. This passion now drives me in the field of user experience design.</h3>
+            </div>
+            
+            <div class="full_width"><img src="media/art/eric_grossman-4.jpg"></div>
+            
+            <div class=side_by_side>
+                <div><img src="media/art/eric_grossman-5.jpg"></div>
+                <div><img src="media/art/eric_grossman-8.jpg"></div>
+            </div>
+            
+            <div class="highlight">
+                <h4>How I Create Imagery</h4>
+                <h3>Every piece of my digital art is original, meaning every element comes from my trusty camera.</h3>
+            </div>
+            
+            <div class=side_by_side>
+                <div><img src="media/art/eric_grossman-6.jpg"></div>
+                <div><img src="media/art/eric_grossman-7.jpg"></div>
+            </div>
+            
+            <div class="full_width"><img src="media/art/eric_grossman-15.jpg"></div>
+            
+            <div class="highlight">
+                <h4>How I Edit Shots</h4>
+                <h3>I create custom color profiles in Lightroom for each shoot, ensuring that the shots feel coherent.</h3>
+            </div>
+            
+            <div class="full_width"><img src="media/art/eric_grossman-18.jpg"></div>
+            
+            <div class="full_width"><img src="media/art/eric_grossman-19.jpg"></div>
+            
+            <div class=side_by_side>
+                <div><img src="media/art/eric_grossman-21.jpg"></div>
+                <div><img src="media/art/eric_grossman-22.jpg"></div>
+            </div>
+            
+            <div class="highlight">
+                <h4>How I Use These Skills</h4>
+                <h3>Creating digital art taught me the foundational skills needed for creating attractive user interfaces.</h3>
+            </div>
+            
+            <div class=side_by_side2>
+                <div><img src="media/art/eric_grossman-10.jpg"></div>
+                <div><img src="media/art/eric_grossman-11.jpg"></div>
+            </div>
+            
+            <div class="full_width"><img src="media/art/eric_grossman-12.jpg"></div>
+            
+            <div class=side_by_side>
+                <div><img src="media/art/eric_grossman-13.jpg"></div>
+                <div><img src="media/art/eric_grossman-14.jpg"></div>
+            </div>
+            
+            
+            
+        
+        </div>
+        
     
             <!----------------FOOTER----------------->
         
         <footer>
-            <p>This site is in development! (v 0.176)<br>© Designed &amp; Developed by Eric Grossman</p>
+            <p>This site is in development! (8/5/19)<br>© Designed &amp; Developed by Eric Grossman</p>
         </footer>
         
     </main>
