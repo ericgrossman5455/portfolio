@@ -46,6 +46,11 @@ p{
     color: #242424;
 }
 
+b{
+    font-weight: 600;
+    color: #000;
+}
+
 button{
     cursor: pointer;
     background: none;
@@ -121,7 +126,7 @@ nav a{
     font-family: proxima-nova, sans-serif;
     font-weight: 300;
     font-style: normal;
-    color: #242424;
+    color: #3d3d3d;
 }
 
 .social{
@@ -250,12 +255,15 @@ nav a{
 }
 
 .highlight h3{
-    margin: 0 auto;
+    margin: 0 auto .3em auto;
     font-size: 2em;
     max-width: 23em;
     line-height: 1.3em;
     font-weight: 400;
-    margin-bottom: 1em;
+}
+
+.highlight > button{
+    margin-top: 1em;
 }
 
 .highlight h4{
@@ -268,8 +276,8 @@ nav a{
     font-weight: 400;
 }
 
-@media only screen and (max-width: 60em){
-    .highlight h3{font-size: 1.5em}
+@media only screen and (max-width: 65em){
+    .highlight h3{font-size: 1.4em}
     .highlight h4{font-size: .9em}
 }
 
