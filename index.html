@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/rkj0niw.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <title>Eric Grossman | ux</title>
 </head>
@@ -205,14 +204,14 @@
         /*---------------------ART BANNER-----------------------*/
 
         .art_banner{
-            margin: 6em auto 6em auto;
+            margin: 5em auto 6em auto;
             padding: 0 2.5%;
             max-width: 68em;
         }
 
         .art_banner h1, .art_banner h3{
             color: #FFF;
-            max-width: 12em
+            max-width: 14em
         }
 
         .art_banner_image{
@@ -220,7 +219,7 @@
             border-radius: 1em;
             height: 75vh;
             background-image: url(media/index_ux/art_banner.jpg);
-            background-position: 20% 40%;
+            background-position: 30% 40%;
             background-repeat: no-repeat;
             background-size: cover;
             min-height: 35em;
@@ -230,8 +229,8 @@
 
         .art_banner_text{
             position: absolute;
-            bottom: 9%;
-            left: 8%;
+            bottom: 4em;
+            left: 4em;
         }
 
         .art_banner button{
@@ -243,6 +242,13 @@
         .art_banner button:hover{
             color: #242424;
             background-color: #FFF;
+        }
+        
+        @media only screen and (max-width: 80em){
+            .art_banner_text{
+                bottom: 2.5em;
+                left: 2.5em;
+            }
         }
 
     </style>
@@ -329,8 +335,8 @@
         
         
         <div class="highlight">
-            <h4>Dr. Ken Macro, GrC Dept. Chair at Cal Poly</h4>
-            <h3>&ldquo;If you want your project to achieve the utmost quality, you’ll need Eric on your team...&rdquo;</h3>
+            <h4>Charmaine Farber, Dir. of UX at Cal Poly</h4>
+            <h3>&ldquo;Eric empathizes with his end-user on behalf of the project he is working on, taking into mind the systems already in place. He’s an absolute delight!&rdquo;</h3>
             <button>Read more</button>
         </div>
         
@@ -348,7 +354,17 @@
         <!----------------FOOTER----------------->
         
         <footer>
-            <p>This site is in development! (v 0.181)<br>© Designed &amp; Developed by Eric Grossman</p>
+            <h4>Let’s connect &amp; create</h4>
+            
+            <div class="social">
+            <a href="mailto:contact@ericgrossman.me"><img src="media/nav/email_icon.svg" alt="Email button." title="Send Eric an email"></a>
+            
+            <a href="https://www.linkedin.com/in/eric-grossman-277a27bb/"><img src="media/nav/linkedin_icon.svg" alt="LinkedIn profile button." title="View Eric's LinkedIn profile"></a>
+
+            <a href="https://www.instagram.com/eric_grossman/"><img src="media/nav/instagram_icon.svg" alt="Instagram profile button." title="View Eric's Instagram profile"></a>    
+        </div>
+            
+            <p>© Designed &amp; Developed by Eric Grossman<br>This site is in development! (v 0.181)</p>
         </footer>
         
     </main>
