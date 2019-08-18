@@ -466,7 +466,7 @@ footer p{
 
     .slo_transit_color{
         z-index: 3;
-        grid-row: 10/16;
+        grid-row: 10/14;
         grid-column: 1/6;
         width: 100%;
         height: 100%;
