@@ -85,7 +85,7 @@ button:hover{
 
 .nav_close_button{display: none;}
 
-main{padding-left: 12em;} 
+main{padding-left: 12em; overflow-x: hidden} 
 
 nav{
     height: 100%;
@@ -168,8 +168,9 @@ nav a{
     }
     
     .drawer_bubble{
-        box-shadow: 0 0 0 2px #F1F1F1;
-        background-color: #FFF;
+/*        box-shadow: 0 0 0 2px #F1F1F1;*/
+/*        background-color: #FFF;*/
+        background-color: #F8F8F8;
         display: block;
         z-index: 99;
         margin: 1.7em 0 0 1.7em;
@@ -319,7 +320,7 @@ footer p{
         grid-template-rows: repeat(16, 7em);
         column-gap: 1.5em;
         max-width: 68em;
-        margin: 0 auto 6em auto;
+        margin: 0 auto 7em auto;
         padding: 0 1em;
         filter: drop-shadow(0 .4em .3em rgba(0, 0, 0, 0.1));
         -webkit-filter: drop-shadow(0 .4em .3em rgba(0, 0, 0, 0.1));
@@ -508,7 +509,7 @@ footer p{
     /*---------------------ART BANNER-----------------------*/
 
     .art_banner{
-        margin: 4em auto 6em auto;
+        margin: 5em auto 6em auto;
         padding: 0 1em;
         max-width: 68em;
     }
@@ -599,6 +600,67 @@ footer p{
         display: grid;
         grid-template-columns: 3fr 0fr;
         grid-column-gap: 5px;
+    }
+
+    /*--------------------ABOUT.HTML-----------------------*/
+
+    .about_intro_container{
+        background-color: #F8F8F8;
+        margin-bottom: 3em;
+        padding-left: 5em;
+    }
+
+    .about_intro_content{
+        max-width: 68em;
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        margin: 0 auto
+    }
+
+    .about_intro{
+        grid-row: 2;
+        grid-column: 1/-1;
+        z-index: 1
+    }
+
+    .headshot{
+        grid-row: 1/-1;
+        grid-column: 1/-1;
+        align-self: end;
+        transform: translateX(15vw);
+        
+    }
+
+    .headshot img{
+        margin-top: 7em;
+        object-fit: contain;
+        width: 50em;
+    }
+
+    /*This code is disgusting. Come back later and simplify*/
+    @media only screen and (max-width: 80em) {
+        .about_intro_container{padding: 0 6em}
+        .headshot img{width: 45em}
+    }
+
+    @media only screen and (max-width: 70em) {
+        .headshot img{width: 30em}
+    }
+
+    @media only screen and (max-width: 50em) {
+        .about_intro_container{padding: 0 7em}
+        .headshot img{width: 30em}
+    }
+
+    @media only screen and (max-width: 40em) {
+        .about_intro_container{padding: 0 2.5em}
+    }
+
+    @media only screen and (max-width: 30em) {
+        .about_intro_container{padding: 0 2.5em}
+        .headshot img{opacity: .4; margin-top: }
+        .headshot{transform: translateX(2vw);}
+        .about_intro h1{margin-top: 1.1em; padding-bottom: 0}
     }
 
     /*--------------------404.HTML-----------------------*/
