@@ -607,13 +607,13 @@ footer p{
     .about_intro_container{
         background-color: #F8F8F8;
         margin-bottom: 3em;
-        padding-left: 5em;
     }
 
     .about_intro_content{
         max-width: 68em;
         display: grid;
         grid-template-rows: repeat(3, 1fr);
+        padding: 0 5em;
         margin: 0 auto
     }
 
@@ -631,29 +631,26 @@ footer p{
         transform: translateX(15vw);
     }
 
-    .headshot img{
-        object-fit: contain;
-        width: 53em;
-    }
+    .headshot img{width: 53em;}
 
-    /*This code is disgusting. Please don't look at this section. Thanks.*/
+    /*This code is disgusting.*/
 
     @media only screen and (max-width: 70em) {
         .headshot img{width: 40em}
     }
 
     @media only screen and (max-width: 60em) {
-        .about_intro_container{padding-left: 3em}
+        .about_intro_content{padding: 0 3em}
         .headshot img{width: 35em}
     }
 
     @media only screen and (max-width: 50em) {
-        .about_intro_container{padding-left: 7em}
+        .about_intro_content{padding: 0 7em}
         .headshot img{width: 30em}
     }
 
     @media only screen and (max-width: 40em) {
-        .about_intro_container{padding-left: 2.5em}
+        .about_intro_content{padding: 0 2.5em}
     }
 
     @media only screen and (max-width: 30em) {
