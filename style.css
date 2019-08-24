@@ -31,7 +31,7 @@ h3{
 h4{
     font-family: proxima-nova, sans-serif;
     font-weight: 400;
-    font-size: 1.1em;
+    font-size: 1em;
     text-transform: uppercase;
     color: #242424;
 }
@@ -70,12 +70,13 @@ button:hover{
     h1{font-size: 4em}
     h2{font-size: 1.3em}
     h3{font-size: 1.2em}
-    h4{font-size: 1em}
+    h4{font-size: .9em}
 }
 
 @media only screen and (max-width: 50em) {
     h1{font-size: 3.3em}
     h2{font-size: 1.2em}
+    button{font-size: .9em}
 }
 
 
