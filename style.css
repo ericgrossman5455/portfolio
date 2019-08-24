@@ -339,7 +339,7 @@ footer p{
         align-self: end
     }
 
-    .ux_banners h3, .ux_banners h1{
+    .ux_banners h2, .ux_banners h1{
         color: #FFF;
     }
 
@@ -422,17 +422,9 @@ footer p{
     }
 
     /*Avoiding awkward device position*/
-    @media only screen and (max-width: 60em) {
-        .mobell_app{transform: translateY(4em)}
-        .cp_events_app{transform: translateY(4em)}
-        .slo_transit_app{transform: translateY(4em)}
-    }
-
-    @media only screen and (max-width: 41em) {
-        .mobell_app{transform: translateY(0)}
-        .cp_events_app{transform: translateY(0)}
-        .slo_transit_app{transform: translateY(0)}
-        .ux_banners img:hover{transform: translateY(0)}
+    @media only screen and (max-width: 62em) {
+        .ux_banners img{max-height: 25em;}
+        .ux_banners img:hover{transform: translateY(0);}
     }
 
     @media only screen and (max-width: 35em) {
@@ -442,7 +434,7 @@ footer p{
         .cp_events_text{grid-column: 1/-1; padding: 0 7%; text-align: center; z-index: 9}
         .slo_transit_app{grid-column: 1/-1; margin: 0; max-height: 15em; opacity: .1;}
         .slo_transit_text{grid-column: 1/-1; padding: 0 7%; text-align: center; z-index: 9}
-        .ux_banners img{-webkit-filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));}
+        .ux_banners img{-webkit-filter: none; filter: none;}
     }
 
     .mobell_color{
