@@ -15,7 +15,7 @@ h2{
     font-family: depot-new-web, sans-serif;
     font-weight: 300;
     font-size: 1.5em;
-    line-height: 1.8em;
+    line-height: 1.4em;
     color: #242424;
     
 }
@@ -221,7 +221,10 @@ nav a{
 /*---------------------INTROS-----------------------*/
 
 
-.intro h2{max-width: 27em;}
+.intro h2{
+    max-width: 27em;
+    line-height: 1.8;
+}
 
 .intro img{
     margin-top: 1em;
@@ -319,10 +322,13 @@ footer p{
     /*The new auto rows are to accomadate text that has reflowed to the point where it would have exited the container (due to long taglines)*/
     @media only screen and (max-width: 35em) {
         .ux_banners{grid-template-rows: repeat(2, 6em) auto auto repeat(2, 6em) auto auto repeat(2, 6em) auto auto repeat(4, 6em)}
-        .uxb_section_heading{padding-top: 3.5em;}
         .ux_banners h1{font-size: 2.7em;}
     }
 
+    @media only screen and (min-width: 70em) {
+        .ux_banners h1{font-size: 4.3em;}
+    }
+            
     .uxb_section_heading{
         grid-row: 1;
         grid-column: 1/-1;
@@ -367,15 +373,17 @@ footer p{
         z-index: 2;
         grid-column: 1/4;
         grid-row: 3;
-        padding-left: 8%;
+        padding-left: 15%;
+        max-width: 25em;
         text-align: end;
+        justify-self: end
     }
 
     .cp_events_text{
         z-index: 3;
         grid-column: 3/6;
         grid-row: 7;
-        padding-right: 8%; 
+        padding-right: 15%; 
         max-width: 60ch;
     }
 
@@ -383,8 +391,10 @@ footer p{
         z-index: 4;
         grid-column: 1/4;
         grid-row: 11;
-        padding-left: 8%; 
+        padding-left: 15%;
+        max-width: 55ch;
         text-align: end;
+        justify-self: end
     }
 
     .mobell_app{
@@ -419,11 +429,11 @@ footer p{
 
     @media only screen and (max-width: 35em) {
         .mobell_app{grid-column: 1/-1; margin: 0; max-height: 15em; opacity: .2;}
-        .mobell_text{grid-column: 1/-1; padding: 0 7%; text-align: center; z-index: 9}
+        .mobell_text{grid-column: 1/-1; padding: 0 10%; text-align: center; z-index: 9}
         .cp_events_app{grid-column: 1/-1; margin: 0; max-height: 15em; opacity: .1;}
-        .cp_events_text{grid-column: 1/-1; padding: 0 7%; text-align: center; z-index: 9}
+        .cp_events_text{grid-column: 1/-1; padding: 0 10%; text-align: center; z-index: 9}
         .slo_transit_app{grid-column: 1/-1; margin: 0; max-height: 15em; opacity: .1;}
-        .slo_transit_text{grid-column: 1/-1; padding: 0 7%; text-align: center; z-index: 9}
+        .slo_transit_text{grid-column: 1/-1; padding: 0 10%; text-align: center; z-index: 9}
         .ux_banners img{-webkit-filter: none; filter: none;}
     }
 
@@ -496,7 +506,7 @@ footer p{
         max-width: 68em;
     }
 
-    .art_banner h1, .art_banner h3{
+    .art_banner h1, .art_banner h2{
         color: #FFF;
     }
 
@@ -603,7 +613,7 @@ footer p{
         grid-row: 2;
         grid-column: 1/-1;
         z-index: 1;
-        margin-top: 3em;
+        margin-top: 4em;
     }
 
     .headshot{
@@ -635,7 +645,7 @@ footer p{
     }
 
     @media only screen and (max-width: 30em) {
-        .headshot{transform: translateX(1.6em); z-index: 1}
+        .headshot{transform: translateX(1.3em); z-index: 1}
     }
 
     /*--------------------404.HTML-----------------------*/
