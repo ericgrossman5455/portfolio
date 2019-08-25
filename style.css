@@ -273,25 +273,27 @@ nav a{
 
 /*---------------------SLIDERS-----------------------*/
 
-.slider{
+.slider_container{
     padding: 7em 2em 6.3em;
     text-align: center;
     background-color: #F8F8F8;
     margin-bottom: 3em;
 }
 
+.slider{
+    margin: 0 auto;
+    max-width: 40em;
+}
+
 .slider h3{
-    max-width: 650px;
     text-align: left;
     font-size: 1.3em;
-    margin: 0 auto .3em;
 }
 
 .slider h4{
-    max-width: 650px;
-    margin: 0 auto 1em;
     text-align: left;
     color: #A7A7A7;
+    margin-bottom: 1em;
 }
 
 .dots{
@@ -350,15 +352,9 @@ nav a{
 
 
 @media only screen and (max-width: 70em) {
-    .slider h3{
-        max-width: 500px;
-        font-size: 1.1em
-    }
-    
-    .slider h4{
-        max-width: 500px;
-        font-size: .9em
-    }
+    .slider{max-width: 30em;}
+    .slider h3{font-size: 1.1em}
+    .slider h4{font-size: .9em}
 }
 
 /*----------------FOOTERS-----------------*/
