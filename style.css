@@ -76,7 +76,7 @@ button:hover{
 @media only screen and (max-width: 50em) {
     h1{font-size: 3.3em}
     h2{font-size: 1.2em}
-    button{font-size: .9em}
+    button{font-size: .9em; font-weight: 600}
 }
 
 
@@ -269,6 +269,97 @@ nav a{
 
 .highlight button{
     margin-top: 1em;
+}
+
+/*---------------------SLIDERS-----------------------*/
+
+.slider{
+    padding: 7em 2em 6.3em 2em;
+    text-align: center;
+    background-color: #F8F8F8;
+    margin-bottom: 3em;
+    
+}
+
+.slider h3{
+    text-align:left;
+    font-size: 1.3em;
+    max-width: 650px;
+    margin: 0 auto .3em auto;
+}
+
+.slider h4{
+    max-width: 650px;
+    margin: 0 auto;
+    text-align:left;
+    color: #A7A7A7;
+    margin-bottom: 1em;
+}
+
+.dots{
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.dot_one{
+    border-radius: 50%;
+    width: 7px;
+    height: 7px;
+    background-color: #000;
+    margin: 0 .5em;
+}
+
+.dot_two{
+    border-radius: 50%;
+    width: 7px;
+    height: 7px;
+    background-color: #A7A7A7;
+    margin: 0 .5em;
+}
+
+.dot_three{
+    border-radius: 50%;
+    width: 7px;
+    height: 7px;
+    background-color: #A7A7A7;
+    margin: 0 .5em;
+}
+
+.dot_four{
+    border-radius: 50%;
+    width: 7px;
+    height: 7px;
+    background-color: #A7A7A7;
+    margin: 0 .5em;
+}
+
+.slider_content-one{
+    display: none;
+}
+
+.slider_content-two{
+    display: none;
+}
+
+.slider_content-three{
+    display: none;
+}
+
+.slider_content-four{
+    display: inline;
+}
+
+
+@media only screen and (max-width: 75em) {
+    .slider h3{
+        font-size: 1.1em
+    }
+    
+    .slider h4{
+        font-size: .8em
+    }
 }
 
 /*----------------FOOTERS-----------------*/
