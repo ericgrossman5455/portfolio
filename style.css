@@ -39,8 +39,8 @@ h4{
 p{
     font-family: depot-new-web, sans-serif;
     font-weight: 300;
-    font-size: 1em;
-    line-height: 1.5em;
+    font-size: 1.1em;
+    line-height: 1.8em;
     color: #242424;
 }
 
@@ -71,12 +71,27 @@ button:hover{
     h2{font-size: 1.3em}
     h3{font-size: 1.4em}
     h4{font-size: .9em}
+    p{font-size: 1em; line-height: 1.7em}
 }
 
 @media only screen and (max-width: 50em) {
     h1{font-size: 3.3em}
     h2{font-size: 1.2em}
     button{font-size: .9em; font-weight: 600}
+}
+
+/*---------------------ARTICLES-----------------------*/
+
+.body_text{
+    max-width: 40em;
+    margin: 0 auto;
+    padding: 0 3em;
+}
+
+.body_text h4{margin-bottom: .5em}
+
+@media only screen and (max-width: 50em) {
+    .body_text{padding: 0 1.5em;}
 }
 
 
@@ -205,7 +220,7 @@ nav a{
 }
 }
 
-/*For Javascript to toggle*/
+/*For Javascript to activate*/
 .nav_active{
     transform: translateX(0%);
     box-shadow: 0 0 2em rgba(0, 0, 0, 0.1);
@@ -274,35 +289,58 @@ nav a{
 /*---------------------SLIDERS-----------------------*/
 
 .slider_container{
-    padding: 7em 2em 6.3em;
+    padding: 7em 2em 6em;
     text-align: center;
     background-color: #F8F8F8;
-    margin-bottom: 3em;
+    margin: 3em 0;
 }
 
 .slider{
     margin: 0 auto;
-    max-width: 40em;
+    max-width: 45em;
 }
 
 .slider h3{
-    text-align: left;
-    font-size: 1.3em;
+    font-size: 1.4em;
 }
 
 .slider h4{
-    text-align: left;
     color: #A7A7A7;
     margin-bottom: 1em;
 }
 
-.dots{
-    margin-top: 2em;
-    display: flex;
-    justify-content: center;  
+@media only screen and (max-width: 70em) {
+    .slider{max-width: 35em;}
+    .slider h3{font-size: 1.2em}
+    .slider h4{font-size: .9em}
 }
 
-.dot_one{
+.slider_nav{
+    display: flex;
+    justify-content: center; 
+}
+
+.left_arrow{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    padding: 1.43em .8em;
+    
+}
+
+.right_arrow{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    padding: 1.43em .8em;
+}
+
+.dots{
+    margin-top: 2em;
+    display: flex; 
+}
+
+.dot_active{
     border-radius: 50%;
     width: 7px;
     height: 7px;
@@ -310,7 +348,7 @@ nav a{
     margin: 0 .5em;
 }
 
-.dot_two{
+.dot_inactive{
     border-radius: 50%;
     width: 7px;
     height: 7px;
@@ -318,44 +356,21 @@ nav a{
     margin: 0 .5em;
 }
 
-.dot_three{
-    border-radius: 50%;
-    width: 7px;
-    height: 7px;
-    background-color: #A7A7A7;
-    margin: 0 .5em;
-}
+.slider_content_one{display: inline;}
 
-.dot_four{
-    border-radius: 50%;
-    width: 7px;
-    height: 7px;
-    background-color: #A7A7A7;
-    margin: 0 .5em;
-}
+.slider_content_two{display: none;}
 
-.slider_content-one{
-    display: none;
-}
+.slider_content_three{display: none;}
 
-.slider_content-two{
-    display: none;
-}
+.slider_content_four{display: none;}
 
-.slider_content-three{
-    display: none;
-}
+/*For Javascript to activate*/
 
-.slider_content-four{
-    display: inline;
-}
+.slider_content_inactive{display: none;}
+
+.slider_content_active{display: inline;}
 
 
-@media only screen and (max-width: 70em) {
-    .slider{max-width: 30em;}
-    .slider h3{font-size: 1.1em}
-    .slider h4{font-size: .9em}
-}
 
 /*----------------FOOTERS-----------------*/
 
@@ -376,7 +391,7 @@ footer .social{
     width: 70%;
     position: static;
     border-top: 1px solid #B3B3B3;
-    padding: 2.2em 0 5em 0;
+    padding: 2.2em 0 5em;
 
 }
 
