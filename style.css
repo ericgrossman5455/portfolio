@@ -210,8 +210,7 @@ nav a{
         height: 100%;
         width: 100%;
         border-radius: 50%;
-        box-shadow: 0 0 0 2px #F1F1F1;
-        box-shadow: 0 0 1em .1em rgba(0, 0, 0, .1);
+        box-shadow: 0 .2em .2em .1em rgba(0, 0, 0, .05);
         background-color: #FFF;
 }
     
@@ -321,12 +320,12 @@ nav a{
     bottom: 0;
     vertical-align: bottom;
     object-fit: cover;
-    max-height: 110%;
+    max-height: 105%;
 }
 
 @media only screen and (max-width: 85em) {.headshot{transform: translateX(5em)}}
 
-@media only screen and (max-width: 60em) {
+@media only screen and (max-width: 65em) {
     .headshot{transform: translateX(2em);
         grid-column: 2/-1;
         width: 150%;
