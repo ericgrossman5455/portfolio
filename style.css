@@ -116,6 +116,7 @@ main{padding-left: 12em; overflow-x: hidden}
 
 nav{
     height: 100%;
+    min-height: 16em;
     width: 12em;
     position: fixed;
     z-index: 101;
@@ -246,10 +247,20 @@ nav a{
 
 /*---------------------INTROS-----------------------*/
 
+.intro_container{
+    background-color: #F8F8F8;
+    margin-bottom: 3em;
+}
+
+.intro{
+    max-width: 68em;
+    padding: 15vh 5em;
+    margin: 0 auto;
+    
+}
 
 .intro h2{
-/*    fix this*/
-    max-width: 21em;
+    max-width: 27em;
     line-height: 1.8;
 }
 
@@ -258,73 +269,67 @@ nav a{
     width: 13em;
 }
 
-.intro{
-    max-width: 68em;
-    padding: 15vh 5em;
-    margin: 0 auto; 
-}
-
-.intro_container{
-    background-color: #F8F8F8;
-    margin-bottom: 3em;
-}
-
 @media only screen and (max-width: 50em) {
     .intro{padding: 10em 2.5em 8em 2.5em;}
     .intro img{width: 10em;}
-    .intro_container{margin-bottom: 1em; min-height: 20em}
+    .intro_container{margin-bottom: 1em}
 }
+
+/*---------*/
 
 .image_intro_container{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: auto;
     background-color: #F8F8F8;
-    min-height: 35em; 
-/*    apply this to all intros^*/
+    min-height: 33em;
 }
 
-.intro_container{
+.image_intro_container h2{
+    max-width: 21em
+}
+
+.image_intro_container .intro_container {
+    background-color: none;
     grid-column: 1/-1;
     grid-row: 1;
     align-self: center
 }
 
-.me{
+.headshot{
     transform: translateX(0em);
     grid-column: 3/-1;
     grid-row: 1/-1;
     z-index: 1;
 }
 
-.me img{
+.headshot img{
     position: absolute;
     bottom: 0;
     vertical-align: bottom;
     object-fit: cover;
-    max-height: 110%
+    max-height: 110%;
 }
 
 @media only screen and (max-width: 85em) {
-    .me{transform: translateX(5em);object-fit: contain;}
+    .headshot{transform: translateX(5em);}
 }
-
-/*
-@media only screen and (max-width: 65em) {
-    .me{transform: translateX(3em);grid-column: 2/-1; opacity: .2}
-}
-*/
 
 @media only screen and (max-width: 60em) {
-    .me{transform: translateX(2em); grid-column: 1/-1; width: 150%; opacity: .2}
+    .headshot{transform: translateX(2em); grid-column: 2/-1; width: 150%; opacity: .2}
+    .headshot img{max-height: 100%}
+}
+
+@media only screen and (max-width: 40em) {
     .image_intro_container{min-height: initial}
+    .headshot{grid-column: 1/-1;}
 }
 
 
 /*---------------------HIGHLIGHTS-----------------------*/
 
 .highlight{
-    padding: 7em 2em 6.7em 2em;
+    padding: 7em 2em 6.7em;
     text-align: center;
     background-color: #F8F8F8;
 }
@@ -358,7 +363,7 @@ nav a{
 }
 
 .slider h3{
-    font-size: 1.4em;
+    font-size: 1.5em;
 }
 
 .slider h4{
@@ -368,8 +373,7 @@ nav a{
 
 @media only screen and (max-width: 70em) {
     .slider{max-width: 35em;}
-    .slider h3{font-size: 1.2em}
-    .slider h4{font-size: .9em}
+    .slider h3{font-size: 1.3em}
 }
 
 .slider_nav{
@@ -468,18 +472,18 @@ footer p{
     .ux_banners{
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(16, 7em);
+        grid-template-rows: repeat(15, 7em) 5em;
         column-gap: 1.5em;
         max-width: 68em;
         margin: 0 auto 7em auto;
-        padding: 0 1em;
+        padding: 0 5%;
         filter: drop-shadow(0 .4em .3em rgba(0, 0, 0, 0.1));
         -webkit-filter: drop-shadow(0 .4em .3em rgba(0, 0, 0, 0.1));
     }
 
     /*The new auto rows are to accomadate text that has reflowed to the point where it would have exited the container (due to long taglines)*/
     @media only screen and (max-width: 35em) {
-        .ux_banners{grid-template-rows: repeat(2, 6em) auto auto repeat(2, 6em) auto auto repeat(2, 6em) auto auto repeat(4, 6em)}
+        .ux_banners{grid-template-rows: repeat(2, 6em) auto auto repeat(2, 6em) auto auto repeat(2, 6em) auto auto repeat(4, 6em); padding: 0 1em;}
         .ux_banners h1{font-size: 2.7em;}
     }
 
@@ -634,7 +638,7 @@ footer p{
         grid-row: 14/18;
         background-color: #F8F8F8;
         background-image: url(media/index_ux/more_ux.png);
-        background-position: 40% 40%;
+        background-position: 30% 40%;
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -660,7 +664,7 @@ footer p{
 
     .art_banner{
         margin: 5em auto 6em auto;
-        padding: 0 1em;
+        padding: 0 5%;
         max-width: 68em;
     }
 
@@ -703,6 +707,8 @@ footer p{
         color: #242424;
         background-color: #FFF;
     }
+
+    @media only screen and (max-width: 35em){.art_banner{padding: 0 1em}}
 
     @media only screen and (max-width: 80em){
         .art_banner_text{
@@ -750,60 +756,6 @@ footer p{
         display: grid;
         grid-template-columns: 3fr 0fr;
         grid-column-gap: 5px;
-    }
-
-    /*--------------------ABOUT.HTML-----------------------*/
-
-    .about_intro_container{
-        background-color: #F8F8F8;
-        margin-bottom: 3em;
-    }
-
-    .about_intro_content{
-        max-width: 68em;
-        display: grid;
-        grid-template-rows: repeat(3, 1fr);
-        padding: 0 5em;
-        margin: 0 auto
-    }
-
-    .about_intro{
-        grid-row: 2;
-        grid-column: 1/-1;
-        z-index: 1;
-        margin-top: 4em;
-    }
-
-    .headshot{
-        grid-row: 1/-1;
-        grid-column: 1/-1;
-        align-self: end;
-        transform: translateX(15vw);
-    }
-
-    .headshot img{width: 53em;}
-
-    /*This code is disgusting.*/
-    @media only screen and (max-width: 70em) {
-        .headshot img{width: 40em}
-    }
-
-    @media only screen and (max-width: 60em) {
-        .about_intro_content{padding: 0 3em}
-        .headshot img{width: 35em}
-    }
-
-    @media only screen and (max-width: 50em) {
-        .about_intro_content{padding: 0 7em}
-        .headshot img{width: 30em}
-    }
-
-    @media only screen and (max-width: 40em) {
-        .about_intro_content{padding: 0 2.5em}
-    }
-
-    @media only screen and (max-width: 30em) {
-        .headshot{transform: translateX(1em); z-index: 1}
     }
 
     /*--------------------404.HTML-----------------------*/
