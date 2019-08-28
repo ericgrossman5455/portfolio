@@ -1,3 +1,25 @@
+//Shoutout to Dominic Gaiero for the help
+
+document.addEventListener("scroll", setDrawer);
+
+var breakpoint = 50;
+
+function setDrawer() {
+   var scrollDown = window.scrollY;
+   var navigation = document.getElementById("drawer_bubble");
+
+   if (scrollDown >= breakpoint) {
+      navigation.classList.add("drawer_bubble_fadein")
+      navigation.classList.remove("drawer_bubble_fadeout")
+   }
+
+   else {
+      navigation.classList.remove("drawer_bubble_fadein")
+      navigation.classList.add("drawer_bubble_fadeout")
+   }
+}
+
+
 //Thank you to Ed (YouTube Channel: Dev Ed)
 
 const navSlide = () => {
@@ -20,6 +42,11 @@ const navSlide = () => {
         nav.classList.toggle('nav_active');
         shadow.classList.toggle('nav_shadow_active');
     });
+    
+    close.addEventListener('click', () => {
+        nav.classList.toggle('nav_active');
+        shadow.classList.toggle('nav_shadow_active');
+     });
 
 }
 
