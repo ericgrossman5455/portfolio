@@ -108,7 +108,7 @@ button:hover{
 
 /*---------------------NAVIGATION-----------------------*/
 
-/*.drawer_bubble_wrapper{display: none;}*/
+.drawer_bubble_wrapper{display: none;}
 
 .nav_close_button{display: none;}
 
@@ -252,6 +252,7 @@ nav a{
    opacity: 1;
    transition: visibility 0s 0.5s, opacity 0.3s linear;
 }
+
 .drawer_bubble_fadeout {
    opacity: 0;
    transition: visibility 0s 0.5s, opacity 0.3s linear;
@@ -259,7 +260,7 @@ nav a{
 
 /*---------------------INTROS-----------------------*/
 
-.intro_container{
+.intro_wrapper{
     background-color: #F8F8F8;
     margin-bottom: 3em;
 }
@@ -284,12 +285,12 @@ nav a{
 @media only screen and (max-width: 50em) {
     .intro{padding: 10em 2.5em 8em 2.5em;}
     .intro img{width: 10em;}
-    .intro_container{margin-bottom: 1em}
+    .intro_wrapper{margin-bottom: 1em}
 }
 
 /*---------*/
 
-.image_intro_container{
+.image_intro_wrapper{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: auto;
@@ -297,11 +298,11 @@ nav a{
     min-height: 33em;
 }
 
-.image_intro_container h2{
+.image_intro_wrapper h2{
     max-width: 21em
 }
 
-.image_intro_container .intro_container {
+.image_intro_wrapper .intro_wrapper {
     background-color: transparent;
     grid-column: 1/-1;
     grid-row: 1;
@@ -336,7 +337,7 @@ nav a{
 }
 
 @media only screen and (max-width: 40em) {
-    .image_intro_container .intro_container {margin-top: 3em}
+    .image_intro_wrapper .intro_wrapper {margin-top: 3em}
     .headshot{grid-column: 1/-1;}
 }
 
@@ -365,7 +366,7 @@ nav a{
 
 /*---------------------SLIDERS-----------------------*/
 
-.slider_container{
+.slider_wrapper{
     padding: 7em 2em 6em;
     text-align: center;
     background-color: #F8F8F8;
@@ -496,7 +497,7 @@ footer p{
         -webkit-filter: drop-shadow(0 .4em .3em rgba(0, 0, 0, 0.1));
     }
 
-    /*The new auto rows are to accomadate text that has reflowed to the point where it would have exited the container (due to long taglines)*/
+    /*The new auto rows are to accomadate text that has reflowed to the point where it would have exited the wrapper (due to long taglines)*/
     @media only screen and (max-width: 35em) {
         .ux_banners{grid-template-rows: repeat(2, 6em) auto auto repeat(2, 6em) auto auto repeat(2, 6em) auto auto repeat(4, 6em); padding: 0 1em;}
         .ux_banners h1{font-size: 2.7em;}
@@ -736,13 +737,13 @@ footer p{
 
     /*--------------------ART.HTML-----------------------*/
 
-    .art_container{
+    .art_wrapper{
         display: grid;
         margin: 5em 0 5px 0;
         grid-gap: 5px;
     }
 
-    .art_container img{
+    .art_wrapper img{
         display: block;
         width: 100%;
         height: 100%;
