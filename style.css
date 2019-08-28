@@ -295,11 +295,10 @@ nav a{
     grid-row: 1;
     align-self: center;
     z-index: 1;
-    
 }
 
 .headshot{
-    transform: translateX(0);
+    transform: translateX(0em);
     grid-column: 3/-1;
     grid-row: 1/-1;
 }
@@ -312,29 +311,18 @@ nav a{
     max-height: 110%;
 }
 
-/*Avoids text and headshot overlap*/
 @media only screen and (max-width: 85em) {
     .headshot{transform: translateX(5em);}
 }
 
-/*Accomodates tablets and strange screens sizes using opacity*/
 @media only screen and (max-width: 60em) {
     .headshot{transform: translateX(2em); grid-column: 2/-1; width: 150%; opacity: .2}
     .headshot img{max-height: 100%}
 }
 
-/*Moves headshot below intro for phones*/
-@media only screen and (max-width: 30em) and (min-height: 40em) {
-    .image_intro_container .intro_container {transform: translateY(-5em)}
-    .image_intro_container{height: 90vh}
-    .headshot img{transform: scale(.75) translateX(-5em); transform-origin: bottom;}
-    .headshot{grid-column: 2/-1; opacity: 1}
-}
-
-/*Improves headshot size for tall phones*/
-@media only screen and (max-width: 30em) and (min-height: 50em) {
-    .headshot img{transform: scale(.8) translateX(-5em);}
-
+@media only screen and (max-width: 40em) {
+    .image_intro_container .intro_container {margin-top: 3em}
+    .headshot{grid-column: 1/-1;}
 }
 
 
