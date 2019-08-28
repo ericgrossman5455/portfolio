@@ -210,7 +210,7 @@ nav a{
         height: 100%;
         width: 100%;
         border-radius: 50%;
-        box-shadow: 0 .2em .2em .1em rgba(0, 0, 0, .05);
+        box-shadow: 0 .15em .25em .1em rgba(0, 0, 0, .05);
         background-color: #FFF;
 }
     
