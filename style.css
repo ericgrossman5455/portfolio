@@ -599,7 +599,7 @@ footer p{
     }
 
     /*Avoiding awkward device position*/
-    @media only screen and (max-width: 62em) {
+    @media only screen and (max-width: 67em) {
         .ux_banners img{max-height: 25em;}
         .ux_banners img:hover{transform: translateY(0);}
     }
