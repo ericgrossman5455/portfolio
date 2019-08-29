@@ -1,21 +1,21 @@
 //Shoutout to Dominic Gaiero for the help
 
-document.addEventListener("scroll", setDrawer);
+document.addEventListener('scroll', setDrawer);
 
 var breakpoint = 50;
 
 function setDrawer() {
    var scrollDown = window.scrollY;
-   var navigation = document.getElementById("drawer_bubble");
+   var navigation = document.getElementById('drawer_bubble');
 
    if (scrollDown >= breakpoint) {
-      navigation.classList.add("drawer_bubble_fadein")
-      navigation.classList.remove("drawer_bubble_fadeout")
+      navigation.classList.add('drawer_bubble_fadein')
+      navigation.classList.remove('drawer_bubble_fadeout')
    }
 
    else {
-      navigation.classList.remove("drawer_bubble_fadein")
-      navigation.classList.add("drawer_bubble_fadeout")
+      navigation.classList.remove('drawer_bubble_fadein')
+      navigation.classList.add('drawer_bubble_fadeout')
    }
 }
 
