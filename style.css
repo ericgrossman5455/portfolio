@@ -87,7 +87,7 @@ button:hover{
     max-width: 45em;
     margin: 5em auto;
     padding: 0 3em;
-    
+    overflow-wrap: break-word;
 }
 
 .body_text{
@@ -256,6 +256,54 @@ nav a{
    opacity: 0;
    transition: visibility 0s 0.5s, opacity 0.3s linear;
 }
+
+/*---------------------SNACKBAR-----------------------*/
+
+.snackbar_wrapper{
+    background: #242424;
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    z-index: 10;
+    border-radius: 4px;
+    box-shadow: 0 .2em .4em rgba(0, 0, 0, 0.3);
+    margin-left: 2em;
+    transition: ease .3s;
+}
+
+.snackbar_content{
+    margin: 1.2em 1.5em;
+    align-items: center;
+    display: flex;
+}
+
+.snackbar_wrapper p {
+    color: white;
+    line-height: 1.5em;
+    padding-right: 3em
+}
+
+.snackbar_wrapper h4{
+    min-width: 6ch;
+    color: deepskyblue;
+    font-weight: 600;
+    letter-spacing: .5px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 40em) {
+    .snackbar_wrapper{
+        bottom: .5em;
+        right: .5em;
+        margin-left: .5em
+    }
+}
+
+.snackbar_inactive{
+    transform: translateY(200%);
+}
+
+
 
 /*---------------------INTROS-----------------------*/
 
@@ -441,7 +489,6 @@ nav a{
 .slider_content_four{display: none;}
 
 /*For Javascript to activate*/
-
 .slider_content_inactive{display: none;}
 
 .slider_content_active{display: inline;}
