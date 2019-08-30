@@ -40,8 +40,8 @@ h4{
 p{
     font-family: depot-new-web, sans-serif;
     font-weight: 300;
-    font-size: 1.1em;
-    line-height: 1.8em;
+    font-size: 1.2em;
+    line-height: 2em;
     color: #242424;
 }
 
@@ -72,7 +72,7 @@ button:hover{
     h2{font-size: 1.3em}
     h3{font-size: 1.4em}
     h4{font-size: .9em}
-    p{font-size: 1em; line-height: 1.7em}
+/*    p{font-size: 1em; line-height: 1.7em}*/
 }
 
 @media only screen and (max-width: 50em) {
@@ -81,12 +81,15 @@ button:hover{
     button{font-size: .9em; font-weight: 600}
 }
 
+@media only screen and (max-width: 40em) {
+    p{font-size: 1.1em; line-height: 2}}
+
 /*---------------------ARTICLES-----------------------*/
 
 .text{
     max-width: 45em;
     margin: 5em auto;
-    padding: 0 3em;
+    padding: 0 5em;
     overflow-wrap: break-word;
 }
 
@@ -95,16 +98,20 @@ button:hover{
     column-gap: 2em;
 }
 
-.text h4{margin-bottom: .5em;
-    font-weight: 500
+.text h2{margin-bottom: .4em; text-transform: uppercase
 }
 
-@media only screen and (max-width: 50em) {
-    .text{padding: 0 1.5em;}
-    .body_text{
-        column-count: 1;}
+@media only screen and (max-width: 60em) {
+    .text{padding: 0 3em; margin: 3em auto;}
 }
 
+@media only screen and (max-width: 40em) {
+    .text{padding: 0 2em; margin: 2em auto;}
+    .text h2{margin-bottom: .3em;}
+}
+
+/*possibly remove*/
+.nobr { white-space:nowrap; }
 
 /*---------------------NAVIGATION-----------------------*/
 
@@ -284,7 +291,6 @@ nav a{
 }
 
 .snackbar_wrapper h4{
-    min-width: 6ch;
     color: deepskyblue;
     font-weight: 600;
     letter-spacing: .5px;
@@ -302,8 +308,6 @@ nav a{
 .snackbar_inactive{
     transform: translateY(200%);
 }
-
-
 
 /*---------------------INTROS-----------------------*/
 
