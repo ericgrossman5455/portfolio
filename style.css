@@ -91,13 +91,9 @@ button:hover{
     h2{font-size: 1.2em}
     h3{font-size: 1.4em}
     h4{font-size: .9em}
-    h5{font-size: 2em}
+    h5{font-size: 2.2em}
     p{font-size: 1.1em; line-height: 1.8}
     button{font-size: .9em; font-weight: 600}
-}
-
-@media only screen and (max-width: 40em) {
-    
 }
 
 /*---------------------ARTICLES-----------------------*/
@@ -220,12 +216,12 @@ main{
 }
 
 @media only screen and (max-width: 50em) {
-    .intro_text{padding: 11em 2.5em 8em}
+    .intro_text{padding: 11em 2em 8em}
     .intro_text img{width: 10em;}
 }
 
 @media only screen and (max-width: 33em) {
-    .headshot{width: 80em; transform: translateX(-20em)}
+    .headshot{width: 80em; transform: translateX(-17em)}
 }
 
 /*For Android multitasking and small square-ish screens*/
@@ -397,7 +393,7 @@ main{
 }
 
 @media only screen and (max-width: 50em) {
-    .mobell_uxb_haze{grid-column: 1/-1}
+    .mobell_uxb_haze{display: none;}
 }
 
 /*--------------*/
@@ -493,10 +489,7 @@ main{
 
 @media only screen and (max-width: 50em) {
 
-    .boltabout_uxb_haze{
-        grid-column: 1/-1;
-        width: auto;
-    }
+    .boltabout_uxb_haze{display: none}
     
     .boltabout_uxb_image{transform: translateX(-8em)}
     
@@ -546,6 +539,14 @@ main{
     transition: ease 1s;
 }
 
+/*
+.cp_uxb_text h5{
+    background: -webkit-linear-gradient(160deg, rgba(212,255,217,1) 0%, rgba(43,136,101,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+*/
+
 .cp_uxb_wrapper:hover .cp_uxb_haze {
     transform: scale(2.7) translateX(4em);
 }
@@ -594,12 +595,27 @@ main{
 }
 
 @media only screen and (max-width: 50em) {
-    .cp_uxb_haze{grid-column: 1/-1; opacity: .5}
-    .cp_uxb_image{transform: scale(1.1) translateX(-3em)
+    .cp_uxb_wrapper{
+        margin: 0 auto 18vh;
+        grid-template-rows: 1fr 1fr;
+    }
+    
+    .cp_uxb_haze{grid-column: 1/-1; opacity: 1}
+    
+    .cp_uxb_image{
+        transform: scale(1.5) translateY(5em);
+        opacity: 1;
+        grid-row: 1;
+        height: 60vh;
     }
     .cp_uxb_wrapper:hover .cp_uxb_image {
-        transform: scale(1.1) translateX(-3em);
+        transform: scale(1.5) translateY(5em);
     }
+    .cp_uxb_text{
+        padding-top: 3em;
+        grid-row: 2;
+        background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 80%, rgba(0,0,0,0.5) 95%, rgba(0,0,0,0) 100%);}
+    
 }
 
 /*--------------*/
@@ -613,9 +629,9 @@ main{
     padding: 0 5em;
 }
 
-/*perhaps change max height for long phones*/
 @media only screen and (max-width: 50em) {
-    .art_intro{padding: 0 2.5em;}
+    .art_intro{padding: 0 2em;}
+    .sunrise{max-height: 20em}
 }
 
 .sunrise{
