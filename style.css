@@ -145,9 +145,8 @@ main{
     background-color: #242424;
     margin: 0 auto 4em;
     min-height: 33em;
-/*    max-width: 100em;*/
-    border-bottom-left-radius: .6em;
-    border-bottom-right-radius: .6em;
+    /* border-bottom-left-radius: 1.5em;
+    border-bottom-right-radius: 1.5em; */
     box-shadow: 0 .5em 2em rgba(0, 0, 0, 0.6);
 }
 
@@ -196,7 +195,6 @@ main{
 }
 
 @media only screen and (max-width: 100em){
-/*    .intro_bg{border-radius: 0}*/
     .intro_wrapper{margin: 0}
 }
 
@@ -230,7 +228,6 @@ main{
     .intro_text{padding: 7em 2.5em 4em}
     .headshot{width: 80em; transform: translateX(-17em)}
 }
-
 
 /*---------------------SECTION HEADERS-----------------------*/
 
@@ -319,17 +316,14 @@ main{
     column-gap: 5%
 }
 
-
-
 .mobell_uxb_haze{
     align-self: center;
     grid-column: 1/3;
     grid-row: 1;
     width: 30em;
     height: 30em;
-    background: rgb(248,181,0);
     background: radial-gradient(ellipse closest-side, rgba(248,181,0,1) 0%, rgba(248,181,0,0.10) 70%, rgba(248,181,0,0) 100%);
-    transform: scale(2);
+    transform: scale(2) translateX(2em);
     opacity: .5;
     transition: ease 1s;
 }
@@ -353,7 +347,7 @@ main{
 }
 
 .mobell_uxb_wrapper:hover .mobell_uxb_haze {
-    transform: scale(3);
+    transform: scale(2.7) translateX(2em);
 }
 
 .mobell_uxb_wrapper:hover .mobell_uxb_image {
@@ -414,9 +408,8 @@ main{
     grid-row: 1;
     width: 30em;
     height: 30em;
-    background: rgb(248,181,0);
     background: radial-gradient(ellipse closest-side, rgba(17,172,243,1) 0%, rgba(17,172,243,0.10) 70%, rgba(17,172,243,0) 100%);
-    transform: scale(1.8) translateX(-3em);
+    transform: scale(1.8) translateX(-3em) translateY(-1em);
     opacity: .8;
     transition: ease 1s;
 }
@@ -440,7 +433,7 @@ main{
 }
 
 .boltabout_uxb_wrapper:hover .boltabout_uxb_haze {
-    transform: scale(2.5) translateX(-3em);
+    transform: scale(2.5) translateX(-3em) translateY(-1em);
 }
 
 .boltabout_uxb_wrapper:hover .boltabout_uxb_image {
@@ -514,9 +507,8 @@ main{
     grid-row: 1;
     width: 30em;
     height: 30em;
-    background: rgb(248,181,0);
     background: radial-gradient(ellipse closest-side, rgba(21,71,52,1) 0%, rgba(21,71,52,0.10) 90%, rgba(21,71,52,0) 100%);
-    transform: scale(2) translateX(4em);
+    transform: scale(1.8) translateX(3em) translateY(-2em);
     opacity: 1;
     transition: ease 1s;
 }
@@ -539,16 +531,8 @@ main{
     transition: ease 1s;
 }
 
-/*
-.cp_uxb_text h5{
-    background: -webkit-linear-gradient(160deg, rgba(212,255,217,1) 0%, rgba(43,136,101,1) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-*/
-
 .cp_uxb_wrapper:hover .cp_uxb_haze {
-    transform: scale(2.7) translateX(4em);
+    transform: scale(2.5) translateX(3em) translateY(-2em);
 }
 
 .cp_uxb_wrapper:hover .cp_uxb_image {
@@ -566,10 +550,15 @@ main{
 /*    Clean this*/
     .cp_uxb_image, .cp_uxb_haze{
         opacity: .2;
-        max-height: 70vh;
+        max-height: 80vh;
         width: auto;
+        min-height: 25em
     }
     
+    .cp_uxb_image{
+        transform: scale(1.1) translateX(3em)
+    }
+
     .cp_uxb_haze{
         opacity: .4;
         transform: scale(1.5) translateX(0em);
@@ -594,7 +583,7 @@ main{
     }
 }
 
-@media only screen and (max-width: 50em) {
+@media only screen and (max-width: 40em) {
     .cp_uxb_wrapper{
         margin: 0 auto 18vh;
         grid-template-rows: 1fr 1fr;
@@ -603,7 +592,7 @@ main{
     .cp_uxb_haze{grid-column: 1/-1; opacity: 1}
     
     .cp_uxb_image{
-        transform: scale(1.5) translateY(5em);
+        transform: scale(1.5) translateY(6em) translateX(1em);
         opacity: 1;
         grid-row: 1;
         height: 60vh;
@@ -637,7 +626,7 @@ main{
 .sunrise{
     margin-bottom: 5em;
     height: 70vh;
-    background: transparent linear-gradient(180deg, #000 0%, #182643 12%, #42588F 24%, #657FD9 35%, #8DA4EB 51%, #DBC6DB 65%, #E2D7E6 73%, #F2EDF7 88%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(180deg, #000 0%, #121b30 10%, #42588F 24%, #657FD9 35%, #8DA4EB 51%, #DBC6DB 65%, #E2D7E6 73%, #F2EDF7 88%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
 }
 
 .art_wrapper{
@@ -707,13 +696,13 @@ main{
 }
 
 .snackbar_wrapper h4{
-    color: deepskyblue;
+    color: rgb(0, 191, 255);
     font-weight: 600;
     letter-spacing: .5px;
     cursor: pointer;
 }
 
-@media only screen and (max-width: 30em) {
+@media only screen and (max-width: 33em) {
     .snackbar_wrapper{
         border-radius: 0;
         bottom: 0em;
@@ -860,6 +849,7 @@ main{
 /*----------------FOOTER-----------------*/
 
 footer{
+    margin-top: -5px;
     text-align: center;
     background: #f8f8f8;
 }
