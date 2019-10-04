@@ -598,7 +598,7 @@ main{
         height: 60vh;
     }
     .cp_uxb_wrapper:hover .cp_uxb_image {
-        transform: scale(1.5) translateY(5em);
+        transform: scale(1.5) translateY(6em) translateX(1em);
     }
     .cp_uxb_text{
         padding-top: 3em;
