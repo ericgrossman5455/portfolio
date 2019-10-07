@@ -758,10 +758,14 @@ main{
 }
 
 @media only screen and (max-width: 70em){
-    .highlight_wrapper{margin: 3em .7em;}
-    /* .highlight{border-radius: 0} */
+    .highlight_wrapper{margin: 3em 2em;}
     .art_wrapper .highlight{margin: 0em;}
     .art_wrapper .highlight_wrapper{margin: -.7em .7em}
+}
+
+@media only screen and (max-width: 50em){
+    .highlight_wrapper{margin: 3em .7em;}
+    .highlight{padding: 5em 2em 4.7em;}
 }
 
 /*---------------------QUOTE SLIDER-----------------------*/
