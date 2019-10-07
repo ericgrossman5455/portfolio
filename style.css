@@ -31,7 +31,7 @@ h3{
 
 h4{
     font-family: proxima-nova, sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 1em;
     text-transform: uppercase;
     color: #A7A7A7;
@@ -121,7 +121,7 @@ button:hover{
 /*---------------------TBD-----------------------*/
 
 main{
-    background-color: #121212;
+    background-color: rgb(33, 32, 36);
     overflow-x: hidden;
 } 
 
@@ -134,7 +134,6 @@ main{
 /*---------------------INTRO-----------------------*/
 
 .intro_wrapper{
-/*    margin: 0 5em;*/
     transition: ease .5s;
 }
 
@@ -142,12 +141,10 @@ main{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
-    background-color: #242424;
+    background-color: rgb(45, 45, 50);
     margin: 0 auto 4em;
     min-height: 33em;
-    /* border-bottom-left-radius: 1.5em;
-    border-bottom-right-radius: 1.5em; */
-    box-shadow: 0 .5em 2em rgba(0, 0, 0, 0.6);
+    box-shadow: 0 .5em 2em rgba(0, 0, 0, 0.3);
 }
 
 .headshot{
@@ -603,7 +600,7 @@ main{
     .cp_uxb_text{
         padding-top: 3em;
         grid-row: 2;
-        background: linear-gradient(0deg, rgba(18,18,18,1) 0%, rgba(18,18,18,1) 80%, rgba(18,18,18,0.5) 95%, rgba(18,18,18,0) 100%);}
+        background: linear-gradient(0deg, rgba(33,32,36,1) 0%, rgba(33,32,36,1) 80%, rgba(33,32,36,0.5) 95%, rgba(33,32,36,0) 100%);}
     
 }
 
@@ -626,7 +623,7 @@ main{
 .sunrise{
     margin-bottom: 5em;
     height: 70vh;
-    background: transparent linear-gradient(180deg, #121212 0%, #151f38 10%, #42588F 24%, #657FD9 35%, #8DA4EB 51%, #DBC6DB 65%, #E2D7E6 73%, #F2EDF7 88%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(180deg, #212024 0%, #222e4e 10%, #42588F 24%, #657FD9 35%, #8DA4EB 51%, #DBC6DB 65%, #E2D7E6 73%, #F2EDF7 88%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
 }
 
 .art_wrapper{
@@ -671,13 +668,13 @@ main{
 /*---------------------SNACKBAR-----------------------*/
 
 .snackbar_wrapper{
-    background: #333333;
+    background: rgb(50, 50, 55) ;
     position: fixed;
     bottom: 2em;
     right: 2em;
     z-index: 10;
     border-radius: 4px;
-    box-shadow: 0 .2em .4em rgba(0, 0, 0, 0.3);
+    box-shadow: 0 .2em .4em rgba(0, 0, 0, 0.2);
     margin-left: 2em;
     transition: ease .3s;
 }
@@ -696,7 +693,7 @@ main{
 }
 
 .snackbar_wrapper h4{
-    color: rgb(0, 191, 255);
+    color: rgb(138, 180, 248);
     font-weight: 600;
     letter-spacing: .5px;
     cursor: pointer;
@@ -727,11 +724,11 @@ main{
     z-index: 9;
     padding: 7em 2em 6.7em;
     text-align: center;
-    background-color: #242424;
+    background-color: rgb(45, 45, 50);;
     border-radius: .6em;
     margin: 0 auto;
     max-width: 85em;
-    box-shadow: 0 .5em 2em rgba(0, 0, 0, 0.6);
+    box-shadow: 0 .5em 2em rgba(0, 0, 0, 0.3);
 }
 
 .highlight h3{
@@ -746,11 +743,12 @@ main{
     transform: scale(1.0);
     margin: -5em auto;
     background-color: #FFF;
-    box-shadow: 0 .5em 2em rgba(0, 0, 0, 0.03);
+    box-shadow: 0 .5em 1em rgba(0, 0, 0, 0.1);
 }
 
 .art_wrapper .highlight h3{
     color: #242424;
+    margin-bottom: .5em
 }
 
 .highlight button{
@@ -760,7 +758,7 @@ main{
 @media only screen and (max-width: 70em){
     .highlight_wrapper{margin: 3em 2em;}
     .art_wrapper .highlight{margin: 0em;}
-    .art_wrapper .highlight_wrapper{margin: -.7em .7em}
+    .art_wrapper .highlight_wrapper{margin: -1em .7em}
 }
 
 @media only screen and (max-width: 50em){
