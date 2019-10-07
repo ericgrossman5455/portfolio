@@ -121,7 +121,7 @@ button:hover{
 /*---------------------TBD-----------------------*/
 
 main{
-    background-color: #000;
+    background-color: #121212;
     overflow-x: hidden;
 } 
 
@@ -214,7 +214,7 @@ main{
 }
 
 @media only screen and (max-width: 50em) {
-    .intro_text{padding: 11em 2em 8em}
+    .intro_text{padding: 10em 2em 7em}
     .intro_text img{width: 10em;}
 }
 
@@ -603,7 +603,7 @@ main{
     .cp_uxb_text{
         padding-top: 3em;
         grid-row: 2;
-        background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 80%, rgba(0,0,0,0.5) 95%, rgba(0,0,0,0) 100%);}
+        background: linear-gradient(0deg, rgba(18,18,18,1) 0%, rgba(18,18,18,1) 80%, rgba(18,18,18,0.5) 95%, rgba(18,18,18,0) 100%);}
     
 }
 
@@ -626,7 +626,7 @@ main{
 .sunrise{
     margin-bottom: 5em;
     height: 70vh;
-    background: transparent linear-gradient(180deg, #000 0%, #121b30 10%, #42588F 24%, #657FD9 35%, #8DA4EB 51%, #DBC6DB 65%, #E2D7E6 73%, #F2EDF7 88%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(180deg, #121212 0%, #151f38 10%, #42588F 24%, #657FD9 35%, #8DA4EB 51%, #DBC6DB 65%, #E2D7E6 73%, #F2EDF7 88%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
 }
 
 .art_wrapper{
@@ -758,10 +758,10 @@ main{
 }
 
 @media only screen and (max-width: 70em){
-    .highlight_wrapper{margin: 3em 0;}
-    .highlight{border-radius: 0}
-    .art_wrapper .highlight{margin: 0em; background-color: #F8F8F8}
-    .art_wrapper .highlight_wrapper{margin: 0em}
+    .highlight_wrapper{margin: 3em .7em;}
+    /* .highlight{border-radius: 0} */
+    .art_wrapper .highlight{margin: 0em;}
+    .art_wrapper .highlight_wrapper{margin: -.7em .7em}
 }
 
 /*---------------------QUOTE SLIDER-----------------------*/
@@ -888,11 +888,11 @@ footer p{
 
 .doh h2{
     max-width: 27em;
-    margin-bottom: 1.5em;
+    margin-bottom: 1em;
 }
 
 .homer{
-    margin: 0 10% 0 auto;
+    margin: 0 10% 5px auto;
     max-width: 25em;
 }
 
