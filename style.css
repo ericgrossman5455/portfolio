@@ -352,7 +352,7 @@ main{
     
     .mobell_uxb_wrapper{
         margin: 40vh auto;
-        column-gap: 5%;
+        column-gap: 3%;
     }
     
      .mobell_uxb_haze{
@@ -370,7 +370,7 @@ main{
     
     .mobell_uxb_text{
         grid-column: 2/5;
-        margin: 0 2em 0 0;
+        margin: 0 5% 0 0;
     }
 
     
@@ -745,13 +745,13 @@ main{
     cursor: pointer;
 }
 
-@media only screen and (max-width: 33em) {
+@media only screen and (max-width: 37em) {
     .snackbar_wrapper{
-        border-radius: 0;
-        bottom: 0em;
+        /* border-radius: 0; */
+        bottom: 0;
         right: 0;
         left: 0;
-        margin: 0
+        margin: .5em;
     }
 }
 
