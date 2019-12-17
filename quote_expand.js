@@ -8,9 +8,6 @@ const expand = () => {
     const charLong = document.querySelector('.char_long');
     const charMin = document.querySelector('.char_min');
     const charExpand = document.querySelector('.char_expand');
-
-    const inactive = document.querySelector('.quote_inactive');
-    const active = document.querySelector('.quote_active');
     
     kenExpand.addEventListener('click', () => {
         kenShort.classList.add('quote_inactive');
