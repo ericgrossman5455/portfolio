@@ -23,7 +23,7 @@ h2{
 
 h3{
     font-family: depot-new-web, sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 2em;
     line-height: 1.3em;
     color: #FFF;
@@ -241,17 +241,15 @@ main{
 /*---------------------HIGHLIGHTS-----------------------*/
 
 .highlight_wrapper{
-    margin: 3em 3em;
+    margin: 2em 0;
+    background-color: rgb(40, 40, 45);
 }
 
 .highlight{
-    padding: 7em 2em 6.7em;
+    padding: 10em 2em 9.7em;
     text-align: center;
-    background-color: rgb(45, 45, 50);;
-    border-radius: .6em;
     margin: 0 auto;
     max-width: 85em;
-    box-shadow: 0 .5em 2em rgba(0, 0, 0, 0.2);
 }
 
 .highlight h3{
@@ -261,33 +259,17 @@ main{
 
 .highlight h4{margin-bottom: 1em}
 
-.art_wrapper .highlight{
-    z-index: 9;
-    transform: scale(1.0);
-    margin: -5em auto;
-    background-color: #FFF;
-    box-shadow: 0 .5em 1em rgba(0, 0, 0, 0.1);
+.art_wrapper .highlight_wrapper{
+    margin: 0;
+    background-color: #F8F8F8;
 }
 
 .art_wrapper .highlight h3{
-    color: #242424;
-    margin-bottom: .5em
+    color: #333333;
 }
 
 .highlight button{
     margin-top: 1em;
-}
-
-@media only screen and (max-width: 70em){
-    .highlight_wrapper{margin: 3em 2em;}
-    .art_wrapper .highlight{margin: 0em;}
-    .art_wrapper .highlight_wrapper{margin: -1em .7em}
-}
-
-@media only screen and (max-width: 50em){
-    /* sync art highlight margining */
-    .highlight_wrapper{margin: 3em .7em;}
-    .highlight{padding: 5em 2em 4.7em;}
 }
 
 /*---------------------UX BANNERS-----------------------*/
@@ -351,7 +333,7 @@ main{
 @media only screen and (max-width: 70em) {
     
     .mobell_uxb_wrapper{
-        margin: 40vh auto;
+        margin: 30vh auto;
         column-gap: 3%;
     }
     
