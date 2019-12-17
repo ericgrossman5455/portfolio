@@ -246,7 +246,7 @@ main{
 }
 
 .highlight{
-    padding: 10em 2em 9.7em;
+    padding: 20vh 2em 18vh;
     text-align: center;
     margin: 0 auto;
     max-width: 85em;
@@ -255,6 +255,18 @@ main{
 .highlight h3{
     margin: 0 auto .3em;
     max-width: 23em;
+}
+
+.highlight h2{
+    margin: 0 auto .3em;
+    max-width: 30em;
+}
+
+.highlight h2 img{
+    width: .9em;
+    display: inline-block;
+    margin: 0 5px 4px 0px;
+    vertical-align: middle;
 }
 
 .highlight h4{margin-bottom: 1em}
@@ -268,9 +280,25 @@ main{
     color: #333333;
 }
 
-.highlight button{
-    margin-top: 1em;
+/* --------------- */
+
+.ken_long h2, .char_long h2{
+    font-weight: 500;
 }
+
+.ken_min h2, .ken_expand h2, .char_min h2, .char_expand h2{
+    font-weight: 300;
+    cursor: pointer;
+    width: 8em;
+}
+
+.ken_long, .char_long{
+    display: none;
+}
+
+/*For Javascript to activate*/
+.quote_inactive{display: none;}
+.quote_active{display: block;}
 
 /*---------------------UX BANNERS-----------------------*/
 
