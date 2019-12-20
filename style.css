@@ -284,6 +284,8 @@ main{
     color: #333333;
 }
 
+@media only screen and (max-width: 70em) {.highlight{padding: 15vh 2em 14.5vh;}}
+
 /*----------HIGHLIGHT QUOTES---------*/
 
 /*This is targeting the quote "buttons"*/
@@ -322,7 +324,7 @@ main{
     grid-row: 1;
     width: 30em;
     height: 30em;
-    background: radial-gradient(ellipse closest-side, rgba(248,181,0,1) 0%, rgba(248,181,0,0.10) 70%, rgba(248,181,0,0) 100%);
+    background: radial-gradient(ellipse closest-side, rgb(248, 161, 0) 0%, rgba(248,181,0,0.10) 70%, rgba(248,181,0,0) 100%);
     transform: scale(2) translateX(2em);
     opacity: .5;
     transition: ease 1s;
@@ -339,7 +341,7 @@ main{
 .mobell_uxb_text{
     grid-column: 3/5;
     grid-row: 1;
-    margin: 0 4em 0 1em;
+    margin-right: 4em;
     align-self: center;
     z-index: 1;
     max-width: 45em;
@@ -362,7 +364,7 @@ main{
     
     .mobell_uxb_wrapper{
         margin: 30vh auto;
-        column-gap: 3%;
+        column-gap: 5%;
     }
     
      .mobell_uxb_haze{
@@ -375,12 +377,13 @@ main{
     
     .mobell_uxb_image{
         grid-column: 1/2;
-        transform: scale(3);
+        transform: scale(2.7);
     }
     
     .mobell_uxb_text{
         grid-column: 2/5;
-        margin: 0 5% 0 0;
+        margin: 0 7% 0 0;
+        max-width: 40em;
     }
 
     .mobell_uxb_wrapper:hover .mobell_uxb_haze {
@@ -388,7 +391,7 @@ main{
 }
 
     .mobell_uxb_wrapper:hover .mobell_uxb_image {
-        transform: scale(3);
+        transform: scale(2.7);
 }
 
     .mobell_uxb_wrapper:hover .mobell_uxb_text {
@@ -396,7 +399,7 @@ main{
 }
 }
 
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 45em) {
     .mobell_uxb_wrapper{
         margin: 0 auto 10vh;
         grid-template-rows: 1fr 1fr;
@@ -409,14 +412,14 @@ main{
         height: 25em;
         margin-bottom: -10em
     }
-/*    SET MIN HEIGHT FOR SMALL PHONES*/
+
     .mobell_uxb_image{
         transform: scale(1.5) translateX(-1em);
         transform-origin: top;
         grid-column: 1/-1;
         width: auto;
         height: 60vh;
-        min-height: 20em;
+        min-height: 25em;
         margin: 5em auto -5em;
     }
 
@@ -425,7 +428,7 @@ main{
         grid-column: 1/-1;
         grid-row: 2;
         margin: 0;
-        background: linear-gradient(0deg, rgba(33,32,36,1) 0%, rgba(33,32,36,1) 80%, rgba(33,32,36,0.5) 95%, rgba(33,32,36,0) 100%);
+        background: linear-gradient(0deg, rgba(33,32,36,1) 0%, rgba(33,32,36,1) 70%, rgba(33,32,36,0.9) 80%, rgba(33,32,36,0.7) 90%, rgba(33,32,36,0.5) 95%, rgba(33,32,36,0) 100%);
     }
 
     .mobell_uxb_wrapper:hover .mobell_uxb_haze {
@@ -497,34 +500,38 @@ main{
 }
 
 @media only screen and (max-width: 70em) {
+    
     .boltabout_uxb_wrapper{
-        margin: 12vh auto;
+        margin: 30vh auto;
+        column-gap: 5%;
+    }
+
+    .boltabout_uxb_haze{
+        grid-column: 4/5;
+        width: 10em;
+        height: 10em;
+        transform: scale(5) translateX(1em);
+        opacity: .6;
     }
     
     .boltabout_uxb_image{
-        opacity: .2;
-        max-height: 70vh;
-        width: auto;
-    }
-    
-    .boltabout_uxb_haze{
-        opacity: .2;
-        max-height: 70vh;
-        transform: scale(1.8);
+        grid-column: 4/5;
+        transform: scale(4.5) translateX(-2em);
+        margin: auto 0;
     }
     
     .boltabout_uxb_text{
-        grid-column: 1/-1;
-        margin: 0 auto;
-        padding: 0 2em;
+        grid-column: 1/4;
+        margin: 0 22% 0 7%;
+        max-width: 40em;
     }
     
     .boltabout_uxb_wrapper:hover .boltabout_uxb_haze {
-        transform: scale(1.8);
+        transform: scale(5) translateX(1em);
     }
 
     .boltabout_uxb_wrapper:hover .boltabout_uxb_image {
-        transform: scale(1.3) translateX(0);
+        transform: scale(4.5) translateX(-2em);
     }
 
     .boltabout_uxb_wrapper:hover .boltabout_uxb_text {
@@ -532,13 +539,50 @@ main{
     }
 }
 
-@media only screen and (max-width: 50em) {
+@media only screen and (max-width: 45em) {
 
-    .boltabout_uxb_haze{display: none}
+
+    .boltabout_uxb_wrapper{
+        margin: -7vh auto 14vh;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .boltabout_uxb_haze{
+        grid-column: 1/-1;
+        transform: scale(1.5) translateX(2em);
+        width: auto;
+        height: 25em;
+        margin-bottom: -10em
+    }
+
+    .boltabout_uxb_image{
+        transform: scale(1.5) translateX(4em) translateY(1em);
+        transform-origin: top;
+        grid-column: 1/-1;
+        width: auto;
+        height: 50vh;
+        min-height: 17em;
+        margin: 5em auto 5em;
+    }
+
+    .boltabout_uxb_text{
+        padding: 2em 2em 0;
+        grid-column: 1/-1;
+        grid-row: 2;
+        margin: 0;
+        background: linear-gradient(0deg, rgba(33,32,36,1) 0%, rgba(33,32,36,1) 70%, rgba(33,32,36,0.9) 80%, rgba(33,32,36,0.9) 90%, rgba(33,32,36,0.6) 95%, rgba(33,32,36,0) 100%);
+    }
+
+    .boltabout_uxb_wrapper:hover .boltabout_uxb_haze {
+        transform: scale(1.5) translateX(2em);
+    }
     
-    .boltabout_uxb_image{transform: translateX(-8em)}
-    
-    .boltabout_uxb_wrapper:hover .boltabout_uxb_image {transform: translateX(-8em);
+    .boltabout_uxb_wrapper:hover .boltabout_uxb_image {
+        transform: scale(1.5) translateX(4em) translateY(1em);
+    }
+
+    .boltabout_uxb_wrapper:hover .boltabout_uxb_text {
+        transform: translateX(0);
     }
 }
 
@@ -551,6 +595,7 @@ main{
     margin: 21vh auto;
     max-width: 100em;
     max-height: 100em;
+    column-gap: 5%;
 }
 
 .cp_uxb_haze{
@@ -560,7 +605,7 @@ main{
     width: 30em;
     height: 30em;
     background: radial-gradient(ellipse closest-side, rgb(21, 71, 52) 0%, rgba(21,71,52,0.10) 90%, rgba(21,71,52,0) 100%);
-    transform: scale(1.8) translateX(3em) translateY(-2em);
+    transform: scale(1.8) translateX(2.5em) translateY(-2em);
     opacity: 1;
     transition: ease 1s;
 }
@@ -584,7 +629,7 @@ main{
 }
 
 .cp_uxb_wrapper:hover .cp_uxb_haze {
-    transform: scale(2.5) translateX(3em) translateY(-2em);
+    transform: scale(2.3) translateX(3em) translateY(-2em);
 }
 
 .cp_uxb_wrapper:hover .cp_uxb_image {
@@ -596,70 +641,87 @@ main{
 }
 
 @media only screen and (max-width: 70em) {
+
     .cp_uxb_wrapper{
-        margin: 13vh auto 18vh;
+        margin: 40vh auto 30vh;
+        column-gap: 5%;
     }
-/*    Clean this*/
-    .cp_uxb_image, .cp_uxb_haze{
-        opacity: .2;
-        max-height: 80vh;
-        width: auto;
-        min-height: 25em
+    
+    .cp_uxb_haze{
+        grid-column: 1/2;
+        width: 10em;
+        height: 10em;
+        transform: scale(4.5) translateX(-1em) translateY(-3em);
+        opacity: .8;
     }
     
     .cp_uxb_image{
-        transform: scale(1.1) translateX(3em)
-    }
-
-    .cp_uxb_haze{
-        opacity: .4;
-        transform: scale(1.5) translateX(0em);
+        grid-column: 1/2;
+        transform: scale(2.2) translateY(-3em);
     }
     
     .cp_uxb_text{
-        grid-column: 1/-1;
-        margin: 0 auto;
-        padding: 0 2em;
-    }
-    
-    .cp_uxb_wrapper:hover .cp_uxb_haze {
-        transform: scale(1.5) translateX(0em);
+        grid-column: 2/5;
+        margin: 0 7% 0 0;
+        max-width: 40em;
     }
 
+    .cp_uxb_wrapper:hover .cp_uxb_haze {
+        transform: scale(4.5) translateX(-1em) translateY(-3em);
+}
+
     .cp_uxb_wrapper:hover .cp_uxb_image {
-        transform: scale(1.1);
+        transform: scale(2.2) translateY(-3em);
+}
+
+    .cp_uxb_wrapper:hover .cp_uxb_text {
+        transform: translateX(0);
+}
+}
+
+@media only screen and (max-width: 45em) {
+    .cp_uxb_wrapper{
+        margin: -4vh auto 10vh;
+        grid-template-rows: 1fr 1fr;
+    }
+    
+    .cp_uxb_haze{
+        grid-column: 1/-1;
+        transform: scale(1.5) translateX(-1em);
+        width: auto;
+        height: 25em;
+        margin-bottom: -10em
+    }
+
+    .cp_uxb_image{
+        transform: scale(1.4) translateX(-1em) translateY(1em);
+        transform-origin: top;
+        grid-column: 1/-1;
+        width: auto;
+        height: 60vh;
+        min-height: 25em;
+        margin: 5em auto -5em;
+    }
+
+    .cp_uxb_text{
+        padding: 2em 2em 0;
+        grid-column: 1/-1;
+        grid-row: 2;
+        margin: 0;
+        background: linear-gradient(0deg, rgba(33,32,36,1) 0%, rgba(33,32,36,1) 70%, rgba(33,32,36,1) 80%, rgba(33,32,36,0.7) 90%, rgba(33,32,36,0.5) 95%, rgba(33,32,36,0) 100%);
+    }
+
+    .cp_uxb_wrapper:hover .cp_uxb_haze {
+        transform: scale(1.5) translateX(-1em);
+    }
+    
+    .cp_uxb_wrapper:hover .cp_uxb_image {
+        transform: scale(1.4) translateX(-1em) translateY(1em);
     }
 
     .cp_uxb_wrapper:hover .cp_uxb_text {
         transform: translateX(0);
     }
-}
-
-@media only screen and (max-width: 40em) {
-    .cp_uxb_wrapper{
-        margin: 0 auto 18vh;
-        grid-template-rows: 1fr 1fr;
-    }
-    
-    .cp_uxb_haze{grid-column: 1/-1; opacity: 1; transform: scale(1.2)}
-    
-    .cp_uxb_image{
-        transform: scale(1.3) translateY(0em) translateX(-1em);
-        opacity: 1;
-        grid-row: 1;
-        grid-column: 1/-1;
-        height: 60vh;
-/*        FIX THIS theres a max of 10??*/
-        margin: 5em auto -10em;
-    }
-    .cp_uxb_wrapper:hover .cp_uxb_image {
-        transform: scale(1.3) translateY(0em) translateX(-1em);
-    }
-    .cp_uxb_text{
-        margin-top: -10em;
-        padding-top: 3em;
-        grid-row: 2;
-        background: linear-gradient(0deg, rgba(33,32,36,1) 0%, rgba(33,32,36,1) 80%, rgba(33,32,36,0.5) 95%, rgba(33,32,36,0) 100%);}
 }
 
 /*--------------------ART-----------------------*/
