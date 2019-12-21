@@ -130,11 +130,38 @@ main{
     padding: 0 .9em;
 }
 
+.about_wrapper{
+    z-index: 99;
+    position: fixed;
+    top: 30px;
+    right: 30px;
+}
+
+.about_wrapper img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    box-shadow: 0 .3em 1em rgba(0, 0, 0, 0.2);
+    /* border: #FFF solid 2px; */
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 35em) {
+    .about_wrapper img{
+        height: 40px;
+        width: 40px;
+    }
+
+    .about_wrapper{
+        top: 20px;
+        right: 20px;
+    }
+}
 
 /*---------------------INTRO-----------------------*/
 
 .intro{
-    height: 89vh;
+    height: 89.5vh;
     min-height: 30em;
     max-width: 80em;
     margin: 0 auto;
