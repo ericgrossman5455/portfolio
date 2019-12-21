@@ -308,6 +308,10 @@ main{
     color: #FFF
 }
 
+.mobell_uxb_wrapper button, .boltabout_uxb_wrapper button, .cp_uxb_wrapper button{
+    cursor: default;
+}
+
 .mobell_uxb_wrapper{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -424,11 +428,11 @@ main{
     }
 
     .mobell_uxb_text{
-        padding: 2em 2em 0;
+        padding: 3em 2em 0;
         grid-column: 1/-1;
         grid-row: 2;
         margin: 0;
-        background: linear-gradient(0deg, rgba(33,32,36,1) 0%, rgba(33,32,36,1) 70%, rgba(33,32,36,0.9) 80%, rgba(33,32,36,0.7) 90%, rgba(33,32,36,0.5) 95%, rgba(33,32,36,0) 100%);
+        background: linear-gradient(0deg, rgba(33,32,36,1) 0%, rgba(33,32,36,1) 80%, rgba(33,32,36,.9) 90%, rgba(33,32,36,.6) 95%, rgba(33,32,36,0.3) 98%, rgba(33,32,36,0) 100%);
     }
 
     .mobell_uxb_wrapper:hover .mobell_uxb_haze {
@@ -541,9 +545,8 @@ main{
 
 @media only screen and (max-width: 45em) {
 
-
     .boltabout_uxb_wrapper{
-        margin: -7vh auto 14vh;
+        margin: -7vh auto 10vh;
         grid-template-rows: 1fr 1fr;
     }
 
@@ -566,11 +569,11 @@ main{
     }
 
     .boltabout_uxb_text{
-        padding: 2em 2em 0;
+        padding: 3em 2em 0;
         grid-column: 1/-1;
         grid-row: 2;
         margin: 0;
-        background: linear-gradient(0deg, rgba(33,32,36,1) 0%, rgba(33,32,36,1) 70%, rgba(33,32,36,0.9) 80%, rgba(33,32,36,0.9) 90%, rgba(33,32,36,0.6) 95%, rgba(33,32,36,0) 100%);
+        background: linear-gradient(0deg, rgba(33,32,36,1) 0%, rgba(33,32,36,1) 80%, rgba(33,32,36,.9) 90%, rgba(33,32,36,.6) 95%, rgba(33,32,36,0.3) 98%, rgba(33,32,36,0) 100%);
     }
 
     .boltabout_uxb_wrapper:hover .boltabout_uxb_haze {
@@ -621,7 +624,7 @@ main{
 .cp_uxb_text{
     grid-column: 3/5;
     grid-row: 1;
-    margin: 0 4em 0 1em;
+    margin-right: 4em;
     align-self: center;
     z-index: 1;
     max-width: 45em;
@@ -657,7 +660,7 @@ main{
     
     .cp_uxb_image{
         grid-column: 1/2;
-        transform: scale(2.2) translateY(-3em);
+        transform: scale(2.2) translateY(-3em) translateX(-1em);
     }
     
     .cp_uxb_text{
@@ -668,26 +671,27 @@ main{
 
     .cp_uxb_wrapper:hover .cp_uxb_haze {
         transform: scale(4.5) translateX(-1em) translateY(-3em);
-}
+    }
 
     .cp_uxb_wrapper:hover .cp_uxb_image {
-        transform: scale(2.2) translateY(-3em);
-}
+        transform: scale(2.2) translateY(-3em) translateX(-1em);
+    }
 
     .cp_uxb_wrapper:hover .cp_uxb_text {
         transform: translateX(0);
-}
+    }
 }
 
 @media only screen and (max-width: 45em) {
+
     .cp_uxb_wrapper{
-        margin: -4vh auto 10vh;
+        margin: -6vh auto 10vh;
         grid-template-rows: 1fr 1fr;
     }
     
     .cp_uxb_haze{
         grid-column: 1/-1;
-        transform: scale(1.5) translateX(-1em);
+        transform: scale(1.3) translateX(-1em);
         width: auto;
         height: 25em;
         margin-bottom: -10em
@@ -704,15 +708,15 @@ main{
     }
 
     .cp_uxb_text{
-        padding: 2em 2em 0;
+        padding: 3em 2em 0;
         grid-column: 1/-1;
         grid-row: 2;
         margin: 0;
-        background: linear-gradient(0deg, rgba(33,32,36,1) 0%, rgba(33,32,36,1) 70%, rgba(33,32,36,1) 80%, rgba(33,32,36,0.7) 90%, rgba(33,32,36,0.5) 95%, rgba(33,32,36,0) 100%);
+        background: linear-gradient(0deg, rgba(33,32,36,1) 0%, rgba(33,32,36,1) 80%, rgba(33,32,36,.9) 90%, rgba(33,32,36,.6) 95%, rgba(33,32,36,0.3) 98%, rgba(33,32,36,0) 100%);
     }
 
     .cp_uxb_wrapper:hover .cp_uxb_haze {
-        transform: scale(1.5) translateX(-1em);
+        transform: scale(1.3) translateX(-1em);
     }
     
     .cp_uxb_wrapper:hover .cp_uxb_image {
