@@ -41,7 +41,7 @@ h5{
     font-family: depot-new-web, sans-serif;
     font-weight: 600;
     font-size: 2.7em;
-    line-height: 1.2em;
+    line-height: 1.1em;
     margin-bottom: .4em;
     color: #FFF;  
 }
@@ -407,6 +407,7 @@ main{
     .mobell_uxb_wrapper{
         margin: 0 auto 10vh;
         grid-template-rows: 1fr 1fr;
+        background-color: salmon;
     }
     
     .mobell_uxb_haze{
@@ -548,6 +549,7 @@ main{
     .boltabout_uxb_wrapper{
         margin: -7vh auto 10vh;
         grid-template-rows: 1fr 1fr;
+        background-color: salmon;
     }
 
     .boltabout_uxb_haze{
@@ -565,7 +567,7 @@ main{
         width: auto;
         height: 50vh;
         min-height: 17em;
-        margin: 5em auto 5em;
+        margin: 5em auto 2em;
     }
 
     .boltabout_uxb_text{
