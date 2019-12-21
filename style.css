@@ -407,7 +407,6 @@ main{
     .mobell_uxb_wrapper{
         margin: 0 auto 10vh;
         grid-template-rows: 1fr 1fr;
-        background-color: salmon;
     }
     
     .mobell_uxb_haze{
@@ -549,7 +548,6 @@ main{
     .boltabout_uxb_wrapper{
         margin: -7vh auto 10vh;
         grid-template-rows: 1fr 1fr;
-        background-color: salmon;
     }
 
     .boltabout_uxb_haze{
