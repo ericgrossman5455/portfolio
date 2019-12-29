@@ -146,6 +146,110 @@ main{
     cursor: pointer;
 }
 
+.chat_bubble {
+	position: absolute;
+	background: #758ca1;
+    border-radius: 1.3em;
+    top: -95px;
+    right: 70px;
+    white-space: nowrap;
+    padding: 5px 20px;
+    /* -moz-animation: drop 3s infinite 0s;
+	-webkit-animation: drop 3s infinite 0s; */
+	animation: drop 10s 1 0s;
+}
+/* @-moz-keyframes drop {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  60% {
+    -moz-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+}
+@-webkit-keyframes drop {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  60% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+} */
+@keyframes drop {
+  0% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(-5000px);
+  }
+  20% {
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    transform: translateY(100px);
+  }
+
+  90% {
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    transform: translateY(100px);
+  }
+
+  100% {
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    transform: translateY(-270px);
+  }
+}
+
+.chat_bubble:after {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 10px solid transparent;
+	border-left-color: #758ca1;
+	border-right: 0;
+	margin-top: -10px;
+	margin-right: -6.5px;
+}
+
+/* .about_popup{
+    z-index: 101;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 70vw;
+    transform: translate(-50%, -50%);
+    background-color: rgb(50, 50, 55);
+    border-radius: .3em;
+    padding: 3em;
+    max-width: 30em;
+}
+
+.about_popup_bg{
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    color: plum;
+} */
+
 @media only screen and (max-width: 35em) {
     .about_wrapper img{
         height: 40px;
@@ -155,6 +259,89 @@ main{
     .about_wrapper{
         top: 20px;
         right: 20px;
+    }
+
+    .chat_bubble {
+        position: absolute;
+        background: #758ca1;
+        border-radius: 1.3em;
+        top: -95px;
+        right: 0px;
+        white-space: nowrap;
+        padding: 5px 20px;
+        /* -moz-animation: drop 3s infinite 0s;
+        -webkit-animation: drop 3s infinite 0s; */
+        animation: drop 10s 1 0s;
+        }
+        /* @-moz-keyframes drop {
+        0%, 20%, 50%, 80%, 100% {
+            -moz-transform: translateY(0);
+            transform: translateY(0);
+        }
+        40% {
+            -moz-transform: translateY(-10px);
+            transform: translateY(-10px);
+        }
+        60% {
+            -moz-transform: translateY(-2px);
+            transform: translateY(-2px);
+        }
+        }
+        @-webkit-keyframes drop {
+        0%, 20%, 50%, 80%, 100% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+        }
+        40% {
+            -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+        }
+        60% {
+            -webkit-transform: translateY(-2px);
+            transform: translateY(-2px);
+        }
+        } */
+        @keyframes drop {
+        0% {
+            -moz-transform: translateY(0);
+            -ms-transform: translateY(0);
+            -webkit-transform: translateY(0);
+            transform: translateY(-5000px);
+        }
+        20% {
+            -moz-transform: translateY(-10px);
+            -ms-transform: translateY(-10px);
+            -webkit-transform: translateY(-10px);
+            transform: translateY(150px);
+        }
+
+        90% {
+            -moz-transform: translateY(-10px);
+            -ms-transform: translateY(-10px);
+            -webkit-transform: translateY(-10px);
+            transform: translateY(150px);
+        }
+
+        100% {
+            -moz-transform: translateY(0px);
+            -ms-transform: translateY(0px);
+            -webkit-transform: translateY(0px);
+            transform: translateY(-270px);
+        }
+}
+    
+    .chat_bubble:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 95%;
+        width: 0;
+        height: 0;
+        border: 10px solid transparent;
+        border-bottom-color: #758ca1;
+        border-top: 0;
+        margin-left: -13px;
+        margin-top: -6.6px;
     }
 }
 
@@ -816,7 +1003,7 @@ main{
 /*---------------------SNACKBAR-----------------------*/
 
 .snackbar_wrapper{
-    background: rgb(50, 50, 55) ;
+    background: rgb(50, 50, 55);
     position: fixed;
     bottom: 2em;
     right: 2em;
