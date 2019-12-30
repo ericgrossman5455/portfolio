@@ -1051,10 +1051,7 @@ main{
 @media only screen and (max-width: 35em) {
     .snackbar_wrapper{
         box-shadow: 0 -.2em .4em rgba(0, 0, 0, 0.1);
-        border-top-left-radius: .7em;
-        border-top-right-radius: .7em;
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
+        border-radius: 0;
         bottom: 0;
         right: 0;
         left: 0;
