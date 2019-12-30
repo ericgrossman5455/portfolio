@@ -176,9 +176,9 @@ main{
     right: -500px;
     white-space: nowrap;
     padding: 4px 17px;
-    -moz-animation: slide 10s ease-in-out 10s 1;
-	-webkit-animation: slide 10s ease-in-out 10s 1;
-	animation: slide 10s ease-in-out 10s 1;
+    -moz-animation: slide 15s ease-in-out 10s 1;
+	-webkit-animation: slide 15s ease-in-out 10s 1;
+	animation: slide 15s ease-in-out 10s 1;
 }
 
 .chat_bubble:after {
@@ -278,9 +278,9 @@ main{
     .chat_bubble {
         top: -95px;
         right: 0px;
-        -moz-animation: drop 10s ease 10s 1;
-        -webkit-animation: drop 10s ease 10s 1;
-        animation: drop 10s ease 10s 1;
+        -moz-animation: drop 15s ease 10s 1;
+        -webkit-animation: drop 15s ease 10s 1;
+        animation: drop 15s ease 10s 1;
     }
 
     .chat_bubble:after {
@@ -631,7 +631,7 @@ main{
 }
 }
 
-@media only screen and (max-width: 45em) {
+@media only screen and (max-width: 43em) {
     .mobell_uxb_wrapper{
         margin: 0 auto 10vh;
         grid-template-rows: 1fr 1fr;
@@ -771,7 +771,7 @@ main{
     }
 }
 
-@media only screen and (max-width: 45em) {
+@media only screen and (max-width: 43em) {
 
     .boltabout_uxb_wrapper{
         margin: -7vh auto 10vh;
@@ -792,7 +792,7 @@ main{
         grid-column: 1/-1;
         width: auto;
         height: 50vh;
-        min-height: 17em;
+        min-height: 25em;
         margin: 5em auto 2em;
     }
 
@@ -910,7 +910,7 @@ main{
     }
 }
 
-@media only screen and (max-width: 45em) {
+@media only screen and (max-width: 43em) {
 
     .cp_uxb_wrapper{
         margin: -6vh auto 10vh;
@@ -1048,13 +1048,17 @@ main{
     cursor: pointer;
 }
 
-@media only screen and (max-width: 37em) {
+@media only screen and (max-width: 35em) {
     .snackbar_wrapper{
-        /* border-radius: 0; */
+        box-shadow: 0 -.2em .4em rgba(0, 0, 0, 0.1);
+        border-top-left-radius: .7em;
+        border-top-right-radius: .7em;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
         bottom: 0;
         right: 0;
         left: 0;
-        margin: .5em;
+        margin: 0;
     }
 }
 
