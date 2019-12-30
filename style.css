@@ -224,12 +224,10 @@ main{
         -webkit-transform: translateX(-570px);
         transform: translateX(-570px);
     }
-
     80% {
         -webkit-transform: translateX(-570px);
         transform: translateX(-570px);
     }
-
     100% {
         -webkit-transform: translateX(2000px);
         transform: translateX(2000px);
@@ -248,14 +246,12 @@ main{
         -webkit-transform: translateX(-570px);
         transform: translateX(-570px);
     }
-
     80% {
         -moz-transform: translateX(-570px);
         -ms-transform: translateX(-570px);
         -webkit-transform: translateX(-570px);
         transform: translateX(-570px);
     }
-
     100% {
         -moz-transform: translateX(2000px);
         -ms-transform: translateX(2000px);
@@ -1026,6 +1022,22 @@ main{
     box-shadow: 0 .2em .4em rgba(0, 0, 0, 0.2);
     margin-left: 2em;
     transition: ease .3s;
+    animation: snack 1.5s ease-out 0s 1;
+}
+
+@keyframes snack {
+    0% {
+        -moz-transform: translateX(2000px);
+        -ms-transform: translateX(2000px);
+        -webkit-transform: translateX(2000px);
+        transform: translateY(2000px);
+    }
+    100% {
+        -moz-transform: translateX(2000px);
+        -ms-transform: translateX(2000px);
+        -webkit-transform: translateX(2000px);
+        transform: translateY(0);
+    }
 }
 
 .snackbar_content{
