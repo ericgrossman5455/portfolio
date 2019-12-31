@@ -396,6 +396,8 @@ main{
 
 .section_header{
     text-align: center;
+    width: max-content;
+    margin: 0 auto;
 }
 
 .section_header h4, .section_header a{
