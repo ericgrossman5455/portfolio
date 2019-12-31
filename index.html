@@ -17,6 +17,7 @@
     <meta name="msapplication-TileColor" content="#212024">
     <meta name="msapplication-config" content="/favicons/browserconfig.xml">
     <meta name="theme-color" content="#212024">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title>Eric Grossman | Portfolio</title>
 </head>
 
@@ -61,15 +62,17 @@
         
         
         <div class="section_header">
-            <h4>Featured UX Work</h4>
-            <div class="bounce"><img src="media/arrow_down.svg"></div>
+            <a href="#mobell">
+                <h4> Featured UX Work</h4>
+                <div class="bounce"><img src="media/arrow_down.svg"></div>
+            </a>
         </div>
             
         
         
         
         <!--UXB means User Experience Banner, a preview of the UX study-->
-        <div class="mobell_uxb_wrapper">
+        <div class="mobell_uxb_wrapper" id="mobell">
                 
                 <div class="mobell_uxb_haze"></div>
                 <img class="mobell_uxb_image" src="media/mobell/mobell_product_shot.png">
@@ -151,15 +154,17 @@
         </div>
         
         <div class="section_header">
-            <h4>Photography &amp; Graphic Design</h4>
-            <div class="bounce"><img src="media/arrow_down.svg"></div>
+            <a href="#art">
+                <h4>Photography &amp; Graphic Design</h4>
+                <div class="bounce"><img src="media/arrow_down.svg"></div>
+            </a>
         </div>
         
         <div class="sunrise"></div>
         
         
         
-        <div class="art_wrapper">
+        <div class="art_wrapper" id="art">
             
             <div class="full_width"><img data-src="media/art/eric_grossman-1.jpg"></div>
             
@@ -257,6 +262,7 @@
     <script src="snackbar.js"></script>
     <script src="lazy_load.js"></script>
     <script src="quote_expand.js"></script>
+    <script src="smooth_scroll.js"></script>
         
 </body>
 </html>
