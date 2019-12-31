@@ -1,4 +1,4 @@
-// A big thank you to Tania Rascia!
+//Thank you to Tania Rascia!
 
 $("a[href^='#']").click(function(e) {
 	e.preventDefault();
