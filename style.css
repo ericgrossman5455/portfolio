@@ -477,7 +477,6 @@ main{
     padding: 19vh 2em 18.5vh;
     text-align: center;
     margin: 0 auto;
-    /* max-width: 85em; */
 }
 
 /*This helps visually match long quotes (h2) to short quote's font (h3)*/
@@ -537,7 +536,7 @@ main{
 }
 
 .mobell_uxb_wrapper button, .boltabout_uxb_wrapper button, .cp_uxb_wrapper button{
-    cursor: default;
+    cursor: not-allowed;
 }
 
 .mobell_uxb_wrapper{
@@ -601,8 +600,8 @@ main{
     
      .mobell_uxb_haze{
         grid-column: 1/2;
-        width: 10em;
-        height: 10em;
+        width: 9em;
+        height: 9em;
         transform: scale(4) translateX(-.5em);
         opacity: .3;
     }
@@ -634,7 +633,7 @@ main{
 @media only screen and (max-width: 43em) {
     .mobell_uxb_wrapper{
         margin: 0 auto 10vh;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 31em auto;
     }
     
     .mobell_uxb_haze{
@@ -704,7 +703,7 @@ main{
 .boltabout_uxb_image{
     grid-row: 1;
     grid-column: 3/5;
-    transform: scale(1.3);
+    transform: scale(1.5);
     transform-origin: left;
     transition: ease 1s;
 }
@@ -724,7 +723,7 @@ main{
 }
 
 .boltabout_uxb_wrapper:hover .boltabout_uxb_image {
-    transform: scale(1.3) translateX(-.3em);
+    transform: scale(1.5) translateX(-.3em);
 }
 
 .boltabout_uxb_wrapper:hover .boltabout_uxb_text {
@@ -734,7 +733,7 @@ main{
 @media only screen and (max-width: 70em) {
     
     .boltabout_uxb_wrapper{
-        margin: 25vh auto;
+        margin: 25vh auto 20vh;
         column-gap: 5%;
     }
 
@@ -742,8 +741,8 @@ main{
         grid-column: 4/5;
         width: 10em;
         height: 10em;
-        transform: scale(5) translateX(1em);
-        opacity: .6;
+        transform: scale(4) translateX(1em);
+        opacity: .7;
     }
     
     .boltabout_uxb_image{
@@ -759,7 +758,7 @@ main{
     }
     
     .boltabout_uxb_wrapper:hover .boltabout_uxb_haze {
-        transform: scale(5) translateX(1em);
+        transform: scale(4) translateX(1em);
     }
 
     .boltabout_uxb_wrapper:hover .boltabout_uxb_image {
@@ -775,7 +774,7 @@ main{
 
     .boltabout_uxb_wrapper{
         margin: -7vh auto 10vh;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 33em auto;
     }
 
     .boltabout_uxb_haze{
@@ -874,14 +873,14 @@ main{
 @media only screen and (max-width: 70em) {
 
     .cp_uxb_wrapper{
-        margin: 43vh auto 30vh;
+        margin: 45vh auto 30vh;
         column-gap: 5%;
     }
     
     .cp_uxb_haze{
         grid-column: 1/2;
-        width: 10em;
-        height: 10em;
+        width: 8.5em;
+        height: 8.5em;
         transform: scale(4.5) translateX(-1em) translateY(-3em);
         opacity: .8;
     }
@@ -913,8 +912,8 @@ main{
 @media only screen and (max-width: 43em) {
 
     .cp_uxb_wrapper{
-        margin: -6vh auto 10vh;
-        grid-template-rows: 1fr 1fr;
+        margin: -7vh auto 10vh;
+        grid-template-rows: 32em auto;
     }
     
     .cp_uxb_haze{
