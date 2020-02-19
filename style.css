@@ -546,6 +546,7 @@ main{
     margin: 23vh auto;
     max-width: 100em;
     max-height: 100em;
+    min-height: 40em;
     column-gap: 5%;
 }
 
@@ -575,7 +576,7 @@ main{
     margin-right: 4em;
     align-self: center;
     z-index: 1;
-    max-width: 45em;
+    max-width: 40em;
     transition: ease 1s;
 }
 
@@ -594,44 +595,35 @@ main{
 @media only screen and (max-width: 70em) {
     
     .mobell_uxb_wrapper{
-        margin: 30vh auto 20vh;
-        column-gap: 5%;
-        min-height: 30em;
+        column-gap: 0;
     }
-    
-     .mobell_uxb_haze{
-        grid-column: 1/2;
-        width: 9em;
-        height: 9em;
-        transform: scale(4) translateX(-.5em);
-        opacity: .3;
+
+    .mobell_uxb_haze{
+        transform: scale(1.7) translateX(-2em);
     }
-    
+
     .mobell_uxb_image{
-        grid-column: 1/2;
-        transform: scale(2.3);
+        transform: scale(1.3) translateX(-2em);
     }
-    
+
     .mobell_uxb_text{
-        grid-column: 2/5;
-        margin: 0 7% 0 0;
-        max-width: 40em;
+        margin-right: 3em;
     }
 
     .mobell_uxb_wrapper:hover .mobell_uxb_haze {
-    transform: scale(4) translateX(-.5em);
-}
-
+        transform: scale(1.7) translateX(-2em);
+    }
+    
     .mobell_uxb_wrapper:hover .mobell_uxb_image {
-        transform: scale(2.3);
-}
+        transform: scale(1.3) translateX(-2em);
+    }
 
     .mobell_uxb_wrapper:hover .mobell_uxb_text {
         transform: translateX(0);
-}
+    }
 }
 
-@media only screen and (max-width: 43em) {
+@media only screen and (max-width: 50em) {
     .mobell_uxb_wrapper{
         margin: 0 auto 10vh;
         grid-template-rows: 31em auto;
@@ -661,6 +653,7 @@ main{
         grid-column: 1/-1;
         grid-row: 2;
         margin: 0;
+        max-width: none;
         background: linear-gradient(0deg, rgba(33,32,36,1) 0%, rgba(33,32,36,1) 80%, rgba(33,32,36,.9) 90%, rgba(33,32,36,.6) 95%, rgba(33,32,36,0.3) 98%, rgba(33,32,36,0) 100%);
     }
 
@@ -687,6 +680,7 @@ main{
     margin: 25vh auto;
     max-width: 100em;
     max-height: 100em;
+    min-height: 40em;
     column-gap: 3%
 }
 
@@ -716,7 +710,7 @@ main{
     margin-left: 3em;
     align-self: center;
     z-index: 1;
-    max-width: 45em;
+    max-width: 40em;
     transition: ease 1s;
 }
 
@@ -735,45 +729,42 @@ main{
 @media only screen and (max-width: 70em) {
     
     .boltabout_uxb_wrapper{
-        margin: 25vh auto 20vh;
-        column-gap: 6%;
-        min-height: 30em;
+        column-gap: 0;
+        margin: 15vh auto;
     }
-
+    
     .boltabout_uxb_haze{
+        width: 25em;
+        height: 25em;
         grid-column: 4/5;
-        width: 10em;
-        height: 10em;
-        transform: scale(4) translateX(1em);
-        opacity: .7;
+        transform: scale(2.2) translateX(5em) translateY(1em);
     }
     
     .boltabout_uxb_image{
         grid-column: 4/5;
-        transform: scale(4.3) translateX(-2em);
-        margin: auto 0;
+        transform: scale(3) translateX(1em);
+        align-self: center;
     }
     
     .boltabout_uxb_text{
         grid-column: 1/4;
-        margin: 0 22% 0 7%;
-        max-width: 40em;
+        max-width: 35em;
     }
     
     .boltabout_uxb_wrapper:hover .boltabout_uxb_haze {
-        transform: scale(4) translateX(1em);
+        transform: scale(2.2) translateX(5em) translateY(1em);
     }
-
+    
     .boltabout_uxb_wrapper:hover .boltabout_uxb_image {
-        transform: scale(4.3) translateX(-2em);
+        transform: scale(3) translateX(1em);
     }
-
+    
     .boltabout_uxb_wrapper:hover .boltabout_uxb_text {
         transform: translateX(0);
     }
 }
 
-@media only screen and (max-width: 43em) {
+@media only screen and (max-width: 50em) {
 
     .boltabout_uxb_wrapper{
         margin: -7vh auto 10vh;
@@ -804,6 +795,7 @@ main{
         grid-column: 1/-1;
         grid-row: 2;
         margin: 0;
+        max-width: none;
         background: linear-gradient(0deg, rgba(33,32,36,1) 0%, rgba(33,32,36,1) 80%, rgba(33,32,36,.9) 90%, rgba(33,32,36,.6) 95%, rgba(33,32,36,0.3) 98%, rgba(33,32,36,0) 100%);
     }
 
@@ -829,6 +821,7 @@ main{
     margin: 21vh auto;
     max-width: 100em;
     max-height: 100em;
+    min-height: 40em;
     column-gap: 5%;
 }
 
@@ -858,7 +851,7 @@ main{
     margin-right: 4em;
     align-self: center;
     z-index: 1;
-    max-width: 45em;
+    max-width: 40em;
     transition: ease 1s;
 }
 
@@ -877,36 +870,27 @@ main{
 @media only screen and (max-width: 70em) {
 
     .cp_uxb_wrapper{
-        margin: 45vh auto 30vh;
-        column-gap: 5%;
+        column-gap: 0;
     }
     
     .cp_uxb_haze{
-        grid-column: 1/2;
-        width: 8.5em;
-        height: 8.5em;
-        transform: scale(4.5) translateX(-1em) translateY(-3em);
-        opacity: .8;
+        transform: scale(1.5) translateX(-4em) translateY(-2em);
     }
     
     .cp_uxb_image{
-        margin-top: 5em;
-        grid-column: 1/2;
-        transform: scale(2) translateY(-3em) translateX(-1em);
+        transform: scale(1.1) translateX(-2em);
     }
     
     .cp_uxb_text{
-        grid-column: 2/5;
-        margin: 0 7% 0 0;
-        max-width: 40em;
+        margin-right: 3em;
     }
 
     .cp_uxb_wrapper:hover .cp_uxb_haze {
-        transform: scale(4.5) translateX(-1em) translateY(-3em);
+        transform: scale(1.5) translateX(-4em) translateY(-2em);
     }
 
     .cp_uxb_wrapper:hover .cp_uxb_image {
-        transform: scale(2) translateY(-3em) translateX(-1em);
+        transform: scale(1.1) translateX(-2em);
     }
 
     .cp_uxb_wrapper:hover .cp_uxb_text {
@@ -914,7 +898,7 @@ main{
     }
 }
 
-@media only screen and (max-width: 43em) {
+@media only screen and (max-width: 50em) {
 
     .cp_uxb_wrapper{
         margin: -7vh auto 10vh;
@@ -945,6 +929,7 @@ main{
         grid-column: 1/-1;
         grid-row: 2;
         margin: 0;
+        max-width: none;
         background: linear-gradient(0deg, rgba(33,32,36,1) 0%, rgba(33,32,36,1) 80%, rgba(33,32,36,.9) 90%, rgba(33,32,36,.6) 95%, rgba(33,32,36,0.3) 98%, rgba(33,32,36,0) 100%);
     }
 
