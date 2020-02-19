@@ -596,6 +596,7 @@ main{
     .mobell_uxb_wrapper{
         margin: 30vh auto 20vh;
         column-gap: 5%;
+        min-height: 30em;
     }
     
      .mobell_uxb_haze{
@@ -608,7 +609,7 @@ main{
     
     .mobell_uxb_image{
         grid-column: 1/2;
-        transform: scale(2.7);
+        transform: scale(2.3);
     }
     
     .mobell_uxb_text{
@@ -622,7 +623,7 @@ main{
 }
 
     .mobell_uxb_wrapper:hover .mobell_uxb_image {
-        transform: scale(2.7);
+        transform: scale(2.3);
 }
 
     .mobell_uxb_wrapper:hover .mobell_uxb_text {
@@ -651,6 +652,7 @@ main{
         width: auto;
         height: 60vh;
         min-height: 25em;
+        max-height: 30em;
         margin: 5em auto -5em;
     }
 
@@ -734,7 +736,8 @@ main{
     
     .boltabout_uxb_wrapper{
         margin: 25vh auto 20vh;
-        column-gap: 5%;
+        column-gap: 6%;
+        min-height: 30em;
     }
 
     .boltabout_uxb_haze{
@@ -747,7 +750,7 @@ main{
     
     .boltabout_uxb_image{
         grid-column: 4/5;
-        transform: scale(4.5) translateX(-2em);
+        transform: scale(4.3) translateX(-2em);
         margin: auto 0;
     }
     
@@ -762,7 +765,7 @@ main{
     }
 
     .boltabout_uxb_wrapper:hover .boltabout_uxb_image {
-        transform: scale(4.5) translateX(-2em);
+        transform: scale(4.3) translateX(-2em);
     }
 
     .boltabout_uxb_wrapper:hover .boltabout_uxb_text {
@@ -792,6 +795,7 @@ main{
         width: auto;
         height: 50vh;
         min-height: 25em;
+        max-height: 30em;
         margin: 5em auto 2em;
     }
 
@@ -886,8 +890,9 @@ main{
     }
     
     .cp_uxb_image{
+        margin-top: 5em;
         grid-column: 1/2;
-        transform: scale(2.2) translateY(-3em) translateX(-1em);
+        transform: scale(2) translateY(-3em) translateX(-1em);
     }
     
     .cp_uxb_text{
@@ -901,7 +906,7 @@ main{
     }
 
     .cp_uxb_wrapper:hover .cp_uxb_image {
-        transform: scale(2.2) translateY(-3em) translateX(-1em);
+        transform: scale(2) translateY(-3em) translateX(-1em);
     }
 
     .cp_uxb_wrapper:hover .cp_uxb_text {
@@ -931,6 +936,7 @@ main{
         width: auto;
         height: 60vh;
         min-height: 25em;
+        max-height: 30em;
         margin: 5em auto -5em;
     }
 
