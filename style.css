@@ -1197,7 +1197,7 @@ footer p{
 }
 
 .homer{
-    margin: 0 10% 5px auto;
+    margin: 0 10% 1px auto;
     max-width: 25em;
 }
 
@@ -1207,5 +1207,5 @@ footer p{
 }
 
 .doh button{
-    margin-right: 1em;
+    margin: 0 .5em 2em 0
 }
