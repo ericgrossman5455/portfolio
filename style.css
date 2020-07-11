@@ -80,6 +80,8 @@ button:hover{
     transform: translateY(-.2em)
 }
 
+button:focus{outline: none;}
+
 @media only screen and (max-width: 70em) {
     h1{font-size: 4em}
     h2{font-size: 1.3em}
