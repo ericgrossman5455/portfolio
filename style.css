@@ -1180,6 +1180,7 @@ footer p{
 .homer{
     margin: 0 10% 1px auto;
     max-width: 25em;
+    line-height: 0;
 }
 
 @media only screen and (max-width: 80em) {
