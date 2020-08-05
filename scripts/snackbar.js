@@ -1,9 +1,9 @@
 const snackbarRemove = () => {
-    const dismiss = document.querySelector('.snackbar_button');
-    const snackbar = document.querySelector('.snackbar_wrapper')
+    const dismiss = document.querySelector('.snackbar-button');
+    const snackbar = document.querySelector('.snackbar-wrapper')
     
     dismiss.addEventListener('click', () => {
-        snackbar.classList.add('snackbar_inactive');
+        snackbar.classList.add('snackbar-inactive');
 
     });
     
