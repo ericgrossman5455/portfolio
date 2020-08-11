@@ -6,7 +6,7 @@ h1 {
     font-family: proxima-nova, sans-serif;
     font-weight: 800;
     font-style: normal;
-    font-size: 5.5em;
+    font-size: 5.5rem;
     line-height: .9;
     color: #FFF;
     padding-bottom: .2em;
@@ -15,9 +15,9 @@ h1 {
 h2 {
     font-family: depot-new-web, sans-serif;
     font-weight: 300;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     max-width: 25em;
-    line-height: 1.8em;
+    line-height: 1.8;
     color: #FFF;  
 }
 
@@ -139,8 +139,8 @@ main {
 .about-wrapper {
     z-index: 99;
     position: fixed;
-    top: 30px;
-    right: 30px;
+    top: 1.875rem;
+    right: 1.875rem;
 }
 
 /*---------------------ABOUT BUBBLE-----------------------*/
@@ -178,7 +178,7 @@ main {
     border-left-color: #758ca1;
     border-right: 0;
     margin-top: -.6em;
-    margin-right: -.4em;
+    margin-right: -.35em;
 }
 
 @-moz-keyframes slide-left {
@@ -259,7 +259,7 @@ main {
 
     .chat-bubble {
         top: -6rem;
-        right: 0px;
+        right: 0;
         -moz-animation: slide-down 15s ease 12s 1;
         -webkit-animation: slide-down 15s ease 12s 1;
         animation: slide-down 15s ease-in-out 0s 1;
@@ -271,11 +271,11 @@ main {
         left: 95%;
         width: 0;
         height: 0;
-        border: 10px solid transparent;
+        border: .6rem solid transparent;
         border-bottom-color: #758ca1;
         border-top: 0;
-        margin-left: -13px;
-        margin-top: -6.6px;
+        margin-left: -.8rem;
+        margin-top: -.4rem;
     }
 
     @-moz-keyframes slide-down {
@@ -472,6 +472,7 @@ main {
     font-weight: 500;
 }
 
+/* SMACSS this with .intro h2 img class*/
 .highlight h2 img {
     width: .9em;
     display: inline-block;
@@ -968,6 +969,8 @@ main {
     object-fit: cover;
 }
 
+/* Try using nth child here */
+
 .side-by-side {
     display: grid;
     grid-template-columns: auto auto;
@@ -1001,7 +1004,7 @@ main {
     bottom: 2em;
     right: 2em;
     z-index: 10;
-    border-radius: 4px;
+    border-radius: .25rem;
     box-shadow: 0 .2em .4em rgba(0, 0, 0, 0.2);
     margin-left: 2em;
     transition: ease .3s;
@@ -1010,15 +1013,15 @@ main {
 
 @keyframes snack {
     0% {
-        -moz-transform: translateX(2000px);
-        -ms-transform: translateX(2000px);
-        -webkit-transform: translateX(2000px);
-        transform: translateY(2000px);
+        -moz-transform: translateY(75rem);
+        -ms-transform: translateY(75rem);
+        -webkit-transform: translateY(75rem);
+        transform: translateY(75rem);
     }
     100% {
-        -moz-transform: translateX(2000px);
-        -ms-transform: translateX(2000px);
-        -webkit-transform: translateX(2000px);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -webkit-transform: translateY(0);
         transform: translateY(0);
     }
 }
