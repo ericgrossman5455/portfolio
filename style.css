@@ -49,8 +49,8 @@ h5 {
 p {
     font-family: depot-new-web, sans-serif;
     font-weight: 300;
-    font-size: 1.2em;
-    line-height: 1.7em;
+    font-size: 1.2rem;
+    line-height: 1.7;
     color: #FFF;
 }
 
@@ -67,12 +67,11 @@ button {
     color: #FFF;
     cursor: pointer;
     background: none;
-    padding: .5em 1em;
+    padding: .5rem 1rem;
     font-family: proxima-nova, sans-serif;
-    font-weight: 500;
-    font-size: 1em;
-    border: #FFF solid 2px;
-    border-radius: 2.5em;
+    font-size: 1rem;
+    border: #FFF solid .125rem;
+    border-radius: 2.5rem;
     transition: ease .3s;
     margin-top: 1.3em
 }
@@ -86,13 +85,13 @@ button:hover {
 
 button:focus {outline: none;}
 
-@media only screen and (max-width: 70em) {
+@media only screen and (max-width: 70rem) {
     h1 {font-size: 4em}
     h2 {font-size: 1.3em}
     h3 {font-size: 1.7em}
 }
 
-@media only screen and (max-width: 50em) {
+@media only screen and (max-width: 50rem) {
     h1 {font-size: 3.3em}
     h2 {font-size: 1.2em}
     h3 {font-size: 1.4em}
@@ -129,7 +128,39 @@ button:focus {outline: none;}
 main {
     background-color: #212024;
     overflow-x: hidden;
-} 
+}
+
+.plus-icon{
+    position: relative;
+    padding-left: 1.6rem;
+    color: #FFF;
+    white-space: nowrap;
+}
+
+.plus-icon::before{
+    position: absolute;
+    content: url(./assets/global/plus-circle.svg);
+    width: 1.3rem;
+    height: 1.3rem;
+    top: -3.5px;
+    left: 0;
+}
+
+@media only screen and (max-width: 70rem) {
+    .plus-icon{
+        padding-left: 1.5rem;
+    }
+    
+    .plus-icon::before{
+        width: 1.2rem;
+        height: 1.2rem;
+        top: -3.5px;
+    }
+}
+
+@media only screen and (max-width: 50rem) {
+
+}
 
 .social img {
     width: 1.1em;
@@ -358,7 +389,7 @@ main {
 .intro h2 img {
     width: .9em;
     display: inline-block;
-    margin: 0 5px 4px 0px;
+    margin: 0 5px 5px 0px;
     vertical-align: middle;
 }
 
@@ -476,7 +507,7 @@ main {
 .highlight h2 img {
     width: .9em;
     display: inline-block;
-    margin: 0 5px 4px 0px;
+    margin: 0 5px 5px 0px;
     vertical-align: middle;
 }
 
