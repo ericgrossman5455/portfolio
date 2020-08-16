@@ -132,7 +132,7 @@ main {
 
 .plus-icon{
     position: relative;
-    padding-left: 1.6rem;
+    padding-left: 1.15em;
     color: #FFF;
     white-space: nowrap;
 }
@@ -140,23 +140,12 @@ main {
 .plus-icon::before{
     position: absolute;
     content: url(./assets/global/plus-circle.svg);
-    width: 1.3rem;
-    height: 1.3rem;
-    top: -3.5px;
+    width: .9em;
+    height: .9em;
+    top: -.15em;
     left: 0;
 }
 
-@media only screen and (max-width: 70rem) {
-    .plus-icon{
-        padding-left: 1.5rem;
-    }
-    
-    .plus-icon::before{
-        width: 1.2rem;
-        height: 1.2rem;
-        top: -3.5px;
-    }
-}
 
 @media only screen and (max-width: 50rem) {
 
