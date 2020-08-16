@@ -60,9 +60,7 @@ p {
     color: #FFF;
 }
 
-a {
-    text-decoration: none;
-}
+a {text-decoration: none;}
 
 b {
     font-weight: 600;
@@ -92,19 +90,19 @@ button:hover {
 button:focus {outline: none;}
 
 @media only screen and (max-width: 70rem) {
-    h1 {font-size: 4em}
-    h2 {font-size: 1.3em}
-    h3 {font-size: 1.7em}
+    h1 {font-size: 4rem}
+    h2 {font-size: 1.3rem}
+    h3 {font-size: 1.7rem}
 }
 
 @media only screen and (max-width: 50rem) {
-    h1 {font-size: 3.3em}
-    h2 {font-size: 1.2em}
-    h3 {font-size: 1.4em}
-    h4 {font-size: .9em}
-    h5 {font-size: 2.2em}
+    h1 {font-size: 3.3rem}
+    h2 {font-size: 1.2rem}
+    h3 {font-size: 1.4rem}
+    h4 {font-size: .9rem}
+    h5 {font-size: 2.2rem}
     p {font-size: 1.1em; line-height: 1.8}
-    button {font-size: .9em; font-weight: 600}
+    button {font-size: .9rem;}
 }
 
 /*---------------------ARTICLES-----------------------*/
