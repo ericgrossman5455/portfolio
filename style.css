@@ -136,16 +136,32 @@ main {
     overflow-x: hidden;
 }
 
-.plus-icon{
+.icon-plus{
     position: relative;
     padding-left: 1.15em;
     color: #FFF;
     white-space: nowrap;
 }
 
-.plus-icon::before{
+.icon-plus::before{
     position: absolute;
     content: url(./assets/global/plus-circle.svg);
+    width: .9em;
+    height: .9em;
+    top: -.15em;
+    left: 0;
+}
+
+.icon-minus{
+    position: relative;
+    padding-left: 1.15em;
+    color: #FFF;
+    white-space: nowrap;
+}
+
+.icon-minus::before{
+    position: absolute;
+    content: url(./assets/global/minus-circle.svg);
     width: .9em;
     height: .9em;
     top: -.15em;
