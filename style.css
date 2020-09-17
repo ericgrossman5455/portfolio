@@ -166,11 +166,6 @@ main {
     left: 0;
 }
 
-
-@media only screen and (max-width: 50rem) {
-
-}
-
 .social img {
     width: 1.1em;
     padding: 0 .9em;
