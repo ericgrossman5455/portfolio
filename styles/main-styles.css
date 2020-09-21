@@ -3,9 +3,12 @@
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display:block;}body {line-height:1;}ol, ul {list-style:none;}blockquote, q {quotes:none;}blockquote:before, blockquote:after,q:before, q:after {content:'';content:none;}table {border-collapse:collapse;border-spacing:0;}img {width:100%;}
 
 :root {
-    --layer0-bg: #212024;
-    --layer1-bg: #28282d;
     --layer-top-bg: #323237;
+    --layer1-bg: #28282d;
+    --layer0-bg: #212024;
+
+    --blue-bg: #758ca1;
+    --blue-text: #9bc5ec;
   }
 
 h1 {
@@ -143,7 +146,7 @@ main {
 
 .icon-plus::before{
     position: absolute;
-    content: url(./assets/global/plus-circle.svg);
+    content: url(/assets/global/plus-circle.svg);
     width: .9em;
     height: .9em;
     top: -.15em;
@@ -159,7 +162,7 @@ main {
 
 .icon-minus::before{
     position: absolute;
-    content: url(./assets/global/minus-circle.svg);
+    content: url(/assets/global/minus-circle.svg);
     width: .9em;
     height: .9em;
     top: -.15em;
@@ -190,7 +193,7 @@ main {
 
 .chat-bubble {
     position: absolute;
-    background: #758ca1;
+    background: var(--blue-bg);
     border-radius: 1.3em;
     top: .3rem;
     right: -31.25rem;
@@ -209,75 +212,10 @@ main {
     width: 0;
     height: 0;
     border: .6em solid transparent;
-    border-left-color: #758ca1;
+    border-left-color: var(--blue-bg);
     border-right: 0;
     margin-top: -.6em;
     margin-right: -.35em;
-}
-
-@-moz-keyframes slide-left {
-    0% {
-        -moz-transform: translateX(60em);
-        transform: translateX(60em);
-    }
-    15% {
-        -moz-transform: translateX(-35.5rem);
-        transform: translateX(-35.5rem);
-    }
-
-    85% {
-        -moz-transform: translateX(-35.5rem);
-        transform: translateX(-35.5rem);
-    }
-
-    100% {
-        -moz-transform: translateX(60em);
-        transform: translateX(60em);
-    }
-}
-@-webkit-keyframes slide-left {
-    0% {
-        -webkit-transform: translateX(60em);
-        transform: translateX(60em);
-    }
-    15% {
-        -webkit-transform: translateX(-35.5rem);
-        transform: translateX(-35.5rem);
-    }
-    85% {
-        -webkit-transform: translateX(-35.5rem);
-        transform: translateX(-35.5rem);
-    }
-    100% {
-        -webkit-transform: translateX(60em);
-        transform: translateX(60em);
-    }
-}
-@keyframes slide-left {
-    0% {
-        -moz-transform: translateX(60em);
-        -ms-transform: translateX(60em);
-        -webkit-transform: translateX(60em);
-        transform: translateX(60em);
-    }
-    15% {
-        -moz-transform: translateX(-35.5rem);
-        -ms-transform: translateX(-35.5rem);
-        -webkit-transform: translateX(-35.5rem);
-        transform: translateX(-35.5rem);
-    }
-    85% {
-        -moz-transform: translateX(-35.5rem);
-        -ms-transform: translateX(-35.5rem);
-        -webkit-transform: translateX(-35.5rem);
-        transform: translateX(-35.5rem);
-    }
-    100% {
-        -moz-transform: translateX(60em);
-        -ms-transform: translateX(60em);
-        -webkit-transform: translateX(60em);
-        transform: translateX(60em);
-    }
 }
 
 @media only screen and (max-width: 35em) {
@@ -305,73 +243,10 @@ main {
         width: 0;
         height: 0;
         border: .6rem solid transparent;
-        border-bottom-color: #758ca1;
+        border-bottom-color: var(--blue-bg);
         border-top: 0;
         margin-left: -.8rem;
         margin-top: -.4rem;
-    }
-
-    @-moz-keyframes slide-down {
-        0% {
-            -moz-transform: translateY(-60em);
-            transform: translateY(-60em);
-        }
-        15% {
-            -moz-transform: translateY(9.5rem);
-            transform: translateY(9.5rem);
-        }
-        85% {
-            -moz-transform: translateY(9.5rem);
-            transform: translateY(9.5rem);
-        }
-        100% {
-            -moz-transform: translateY(-60em);
-            transform: translateY(-60em);
-        }
-    }
-    @-webkit-keyframes slide-down {
-        0% {
-            -webkit-transform: translateY(-60em);
-            transform: translateY(-60em);
-        }
-        15% {
-            -webkit-transform: translateY(9.5rem);
-            transform: translateY(9.5rem);
-        }
-        85% {
-            -webkit-transform: translateY(9.5rem);
-            transform: translateY(9.5rem);
-        }
-        100% {
-            -webkit-transform: translateY(-60em);
-            transform: translateY(-60em);
-        }
-    }
-    @keyframes slide-down {
-        0% {
-            -moz-transform: translateY(-60em);
-            -ms-transform: translateY(-60em);
-            -webkit-transform: translateY(-60em);
-            transform: translateY(-60em);
-        }
-        15% {
-            -moz-transform: translateY(9.5rem);
-            -ms-transform: translateY(9.5rem);
-            -webkit-transform: translateY(9.5rem);
-            transform: translateY(9.5rem);
-        }
-        85% {
-            -moz-transform: translateY(9.5rem);
-            -ms-transform: translateY(9.5rem);
-            -webkit-transform: translateY(9.5rem);
-            transform: translateY(9.5rem);
-        }
-        100% {
-            -moz-transform: translateY(-60em);
-            -ms-transform: translateY(-60em);
-            -webkit-transform: translateY(-60em);
-            transform: translateY(-60em);
-        }
     }
 }
 
@@ -430,59 +305,10 @@ main {
     width: 1.5em
 }
 
-
 .bounce {
     -moz-animation: bounce 3s infinite 0s;
     -webkit-animation: bounce 3s infinite 0s;
     animation: bounce 3s infinite 0s;
-}
-@-moz-keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    -moz-transform: translateY(0);
-    transform: translateY(0);
-  }
-  40% {
-    -moz-transform: translateY(-.6rem);
-    transform: translateY(-.6rem);
-  }
-  60% {
-    -moz-transform: translateY(-.15rem);
-    transform: translateY(-.15rem);
-  }
-}
-@-webkit-keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  40% {
-    -webkit-transform: translateY(-.6rem);
-    transform: translateY(-.6rem);
-  }
-  60% {
-    -webkit-transform: translateY(-.15rem);
-    transform: translateY(-.15rem);
-  }
-}
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  40% {
-    -moz-transform: translateY(-.6rem);
-    -ms-transform: translateY(-.6rem);
-    -webkit-transform: translateY(-.6rem);
-    transform: translateY(-.6rem);
-  }
-  60% {
-    -moz-transform: translateY(-.15rem);
-    -ms-transform: translateY(-.15rem);
-    -webkit-transform: translateY(-.15rem);
-    transform: translateY(-.15rem);
-  }
 }
 
 /*---------------------HIGHLIGHTS-----------------------*/
@@ -1041,22 +867,7 @@ main {
     box-shadow: 0 .2em .4em rgba(0, 0, 0, 0.2);
     margin-left: 2em;
     transition: ease .3s;
-    animation: snack 1.5s ease-out 0s 1;
-}
-
-@keyframes snack {
-    0% {
-        -moz-transform: translateY(75rem);
-        -ms-transform: translateY(75rem);
-        -webkit-transform: translateY(75rem);
-        transform: translateY(75rem);
-    }
-    100% {
-        -moz-transform: translateY(0);
-        -ms-transform: translateY(0);
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-    }
+    animation: pop-up 1.5s ease-out 0s 1;
 }
 
 .snackbar-content {
@@ -1073,7 +884,7 @@ main {
 }
 
 .snackbar-wrapper h4 {
-    color: rgb(138, 180, 248);
+    color: var(--blue-text);
     font-weight: 600;
     letter-spacing: .5px;
     cursor: pointer;
