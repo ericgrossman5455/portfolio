@@ -867,6 +867,8 @@ main {
     box-shadow: 0 .2em .4em rgba(0, 0, 0, 0.2);
     margin-left: 2em;
     transition: ease .3s;
+    -moz-animation: pop-up 1.5s ease-out 0s 1;
+    -webkit-animation: pop-up 1.5s ease-out 0s 1;
     animation: pop-up 1.5s ease-out 0s 1;
 }
 
