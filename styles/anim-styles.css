@@ -138,12 +138,12 @@
       transform: translateY(0);
     }
     40% {
-      -moz-transform: translateY(-.6rem);
-      transform: translateY(-.6rem);
+      -moz-transform: translateY(-9px);
+      transform: translateY(-9px);
     }
     60% {
-      -moz-transform: translateY(-.15rem);
-      transform: translateY(-.15rem);
+      -moz-transform: translateY(-2px);
+      transform: translateY(-2px);
     }
 }
 @-webkit-keyframes bounce {
@@ -152,12 +152,12 @@
       transform: translateY(0);
     }
     40% {
-      -webkit-transform: translateY(-.6rem);
-      transform: translateY(-.6rem);
+      -webkit-transform: translateY(-9px);
+      transform: translateY(-9px);
     }
     60% {
-      -webkit-transform: translateY(-.15rem);
-      transform: translateY(-.15rem);
+      -webkit-transform: translateY(-2px);
+      transform: translateY(-2px);
     }
 }
 @keyframes bounce {
@@ -168,16 +168,16 @@
       transform: translateY(0);
     }
     40% {
-      -moz-transform: translateY(-.6rem);
-      -ms-transform: translateY(-.6rem);
-      -webkit-transform: translateY(-.6rem);
-      transform: translateY(-.6rem);
+      -moz-transform: translateY(-9px);
+      -ms-transform: translateY(-9px);
+      -webkit-transform: translateY(-9px);
+      transform: translateY(-9px);
     }
     60% {
-      -moz-transform: translateY(-.15rem);
-      -ms-transform: translateY(-.15rem);
-      -webkit-transform: translateY(-.15rem);
-      transform: translateY(-.15rem);
+      -moz-transform: translateY(-2px);
+      -ms-transform: translateY(-2px);
+      -webkit-transform: translateY(-2px);
+      transform: translateY(-2px);
     }
 }
 
@@ -185,8 +185,8 @@
 
 @-moz-keyframes pop-up {
     0% {
-        -moz-transform: translateY(75rem);
-        transform: translateY(75rem);
+        -moz-transform: translateY(1000px);
+        transform: translateY(1000px);
     }
     100% {
         -moz-transform: translateY(0);
@@ -195,8 +195,8 @@
 }
 @-webkit-keyframes pop-up {
     0% {
-        -webkit-transform: translateY(75rem);
-        transform: translateY(75rem);
+        -webkit-transform: translateY(1000px);
+        transform: translateY(1000px);
     }
     100% {
         -webkit-transform: translateY(0);
@@ -205,10 +205,10 @@
 }
 @keyframes pop-up {
     0% {
-        -moz-transform: translateY(75rem);
-        -ms-transform: translateY(75rem);
-        -webkit-transform: translateY(75rem);
-        transform: translateY(75rem);
+        -moz-transform: translateY(1000px);
+        -ms-transform: translateY(1000px);
+        -webkit-transform: translateY(1000px);
+        transform: translateY(1000px);
     }
     100% {
         -moz-transform: translateY(0);
