@@ -264,6 +264,7 @@ main {
     display: flex;
     flex-flow: column;
     justify-content: center;
+    animation: fade-in ease 1s;
 }
 
 .intro h2 img {
@@ -289,6 +290,7 @@ main {
     text-align: center;
     width: max-content;
     margin: 0 auto;
+    animation: fade-in ease 5s;
 }
 
 .section-header h4, .section-header a {
