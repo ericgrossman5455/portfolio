@@ -522,7 +522,7 @@ main {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
-    margin: 25vh auto;
+    margin: 40vh auto 25vh;
     max-width: 100em;
     max-height: 100em;
     min-height: 40em;
