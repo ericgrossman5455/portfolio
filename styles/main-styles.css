@@ -3,12 +3,15 @@
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display:block;}body {line-height:1;}ol, ul {list-style:none;}blockquote, q {quotes:none;}blockquote:before, blockquote:after,q:before, q:after {content:'';content:none;}table {border-collapse:collapse;border-spacing:0;}img {width:100%;}
 
 :root {
-    --layer-top-bg: #323237;
-    --layer1-bg: #28282d;
-    --layer0-bg: #212024;
+    --bg-layer-top: #323237;
+    --bg-layer1: #28282d;
+    --bg-layer-base: #212024;
 
-    --blue-bg: #758ca1;
-    --blue-text: #9bc5ec;
+    --bg-blue: #758ca1;
+    --glyph-blue: #9bc5ec;
+
+    --glyph-white: #f8f8f8;
+    --glyph-gray: #cacaca;
   }
 
 h1 {
@@ -17,7 +20,7 @@ h1 {
     font-style: normal;
     font-size: 5.5rem;
     line-height: .9;
-    color: #FFF;
+    color: var(--glyph-white);
     padding-bottom: .2em;
 }
 
@@ -27,7 +30,7 @@ h2 {
     font-size: 1.5rem;
     max-width: 25em;
     line-height: 1.8;
-    color: #FFF;  
+    color: var(--glyph-white);  
 }
 
 h3 {
@@ -43,7 +46,7 @@ h4 {
     font-weight: 400;
     font-size: 1rem;
     text-transform: uppercase;
-    color: #A7A7A7;
+    color: var(--glyph-white);
 }
 
 h5 {
@@ -52,7 +55,7 @@ h5 {
     font-size: 2.7rem;
     line-height: 1.1;
     margin-bottom: .4em;
-    color: #FFF;  
+    color: var(--glyph-white);  
 }
 
 p {
@@ -60,7 +63,7 @@ p {
     font-weight: 300;
     font-size: 1.2rem;
     line-height: 1.7;
-    color: #FFF;
+    color:var(--glyph-white);
 }
 
 a {text-decoration: none;}
@@ -71,13 +74,13 @@ b {
 }
 
 button {
-    color: #FFF;
+    color: var(--glyph-white);
     cursor: pointer;
     background: none;
     padding: .5rem 1rem;
     font-family: proxima-nova, sans-serif;
     font-size: 1rem;
-    border: #FFF solid .125rem;
+    border: var(--glyph-white) solid .125rem;
     border-radius: 2.5rem;
     transition: ease .3s;
     margin-top: 1.3em
@@ -85,7 +88,7 @@ button {
 
 button:hover {
     color: #121212;
-    background: #FFF;
+    background: var(--glyph-white);
     box-shadow: 0 .5em 1em rgba(0, 0, 0, 0.7);
     transform: translateY(-.2em)
 }
@@ -133,14 +136,14 @@ button:focus {outline: none;}
 /*---------------------TBD-----------------------*/
 
 main {
-    background-color: var(--layer0-bg);
+    background-color: var(--bg-layer-base);
     overflow-x: hidden;
 }
 
 .icon-plus{
     position: relative;
     padding-left: 1.15em;
-    color: #FFF;
+    color: var(--glyph-white);
     white-space: nowrap;
 }
 
@@ -156,7 +159,7 @@ main {
 .icon-minus{
     position: relative;
     padding-left: 1.15em;
-    color: #FFF;
+    color: var(--glyph-white);
     white-space: nowrap;
 }
 
@@ -193,7 +196,7 @@ main {
 
 .chat-bubble {
     position: absolute;
-    background: var(--blue-bg);
+    background: var(--bg-blue);
     border-radius: 1.3em;
     top: .3rem;
     right: -31.25rem;
@@ -212,7 +215,7 @@ main {
     width: 0;
     height: 0;
     border: .6em solid transparent;
-    border-left-color: var(--blue-bg);
+    border-left-color: var(--bg-blue);
     border-right: 0;
     margin-top: -.6em;
     margin-right: -.35em;
@@ -243,7 +246,7 @@ main {
         width: 0;
         height: 0;
         border: .6rem solid transparent;
-        border-bottom-color: var(--blue-bg);
+        border-bottom-color: var(--bg-blue);
         border-top: 0;
         margin-left: -.8rem;
         margin-top: -.4rem;
@@ -268,13 +271,6 @@ main {
     display: inline-block;
     margin: 0 5px 5px 0px;
     vertical-align: middle;
-}
-
-.intro a {
-    font-family: depot-new-web, sans-serif;
-    color: #FFF;
-    text-decoration: none;
-    white-space: nowrap;
 }
 
 .intro img {
@@ -315,7 +311,7 @@ main {
 
 .highlight-wrapper {
     margin: 2em 0;
-    background-color: var(--layer1-bg);
+    background-color: var(--bg-layer1);
 }
 
 .highlight {
@@ -503,7 +499,7 @@ main {
         grid-row: 2;
         margin: 0;
         max-width: none;
-        background: linear-gradient(0deg, var(--layer0-bg) 0%, var(--layer0-bg) 80%, rgba(33,32,36,.9) 90%, rgba(33,32,36,.6) 95%, rgba(33,32,36,0.3) 98%, rgba(33,32,36,0) 100%);
+        background: linear-gradient(0deg, var(--bg-layer-base) 0%, var(--bg-layer-base) 80%, rgba(33,32,36,.9) 90%, rgba(33,32,36,.6) 95%, rgba(33,32,36,0.3) 98%, rgba(33,32,36,0) 100%);
     }
 
     .mobell-uxb-wrapper:hover .mobell-uxb-haze {
@@ -645,7 +641,7 @@ main {
         grid-row: 2;
         margin: 0;
         max-width: none;
-        background: linear-gradient(0deg, var(--layer0-bg) 0%, var(--layer0-bg) 80%, rgba(33,32,36,.9) 90%, rgba(33,32,36,.6) 95%, rgba(33,32,36,0.3) 98%, rgba(33,32,36,0) 100%);
+        background: linear-gradient(0deg, var(--bg-layer-base) 0%, var(--bg-layer-base) 80%, rgba(33,32,36,.9) 90%, rgba(33,32,36,.6) 95%, rgba(33,32,36,0.3) 98%, rgba(33,32,36,0) 100%);
     }
 
     .boltabout-uxb-wrapper:hover .boltabout-uxb-haze {
@@ -779,7 +775,7 @@ main {
         grid-row: 2;
         margin: 0;
         max-width: none;
-        background: linear-gradient(0deg, var(--layer0-bg) 0%, var(--layer0-bg) 80%, rgba(33,32,36,.9) 90%, rgba(33,32,36,.6) 95%, rgba(33,32,36,0.3) 98%, rgba(33,32,36,0) 100%);
+        background: linear-gradient(0deg, var(--bg-layer-base) 0%, var(--bg-layer-base) 80%, rgba(33,32,36,.9) 90%, rgba(33,32,36,.6) 95%, rgba(33,32,36,0.3) 98%, rgba(33,32,36,0) 100%);
     }
 
     .cp-uxb-wrapper:hover .cp-uxb-haze {
@@ -812,7 +808,7 @@ main {
     margin-bottom: -1px;
     margin-top: 2em;
     height: 70vh;
-    background: transparent linear-gradient(180deg, var(--layer0-bg) 0%, #42588f 24%, #657FD9 35%, #8DA4EB 51%, #DBC6DB 65%, #E2D7E6 73%, #F2EDF7 88%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(180deg, var(--bg-layer-base) 0%, #42588f 24%, #657FD9 35%, #8DA4EB 51%, #DBC6DB 65%, #E2D7E6 73%, #F2EDF7 88%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
 }
 
 .art-wrapper {
@@ -858,7 +854,7 @@ main {
 /*---------------------SNACKBAR-----------------------*/
 
 .snackbar-wrapper {
-    background: var(--layer-top-bg);
+    background: var(--bg-layer-top);
     position: fixed;
     bottom: 2em;
     right: 2em;
@@ -886,7 +882,7 @@ main {
 }
 
 .snackbar-wrapper h4 {
-    color: var(--blue-text);
+    color: var(--glyph-blue);
     font-weight: 600;
     letter-spacing: .5px;
     cursor: pointer;
@@ -998,7 +994,7 @@ footer {
 }
 
 footer h4 {
-    color: #A3A3A3;
+    color: #888888;
     padding: 6em 0 2em 0;
     
 }
