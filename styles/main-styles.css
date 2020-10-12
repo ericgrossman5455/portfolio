@@ -290,7 +290,7 @@ main {
     text-align: center;
     width: max-content;
     margin: 0 auto;
-    animation: fade-in ease 5s;
+    animation: fade-in ease 4s;
 }
 
 .section-header h4, .section-header a {
@@ -299,14 +299,12 @@ main {
     text-decoration: none;
 }
 
-.section-header img {
-    width: 1.5em
-}
+.section-header img {width: 1.5em;}
 
 .bounce {
-    -moz-animation: bounce 3s infinite 0s;
-    -webkit-animation: bounce 3s infinite 0s;
-    animation: bounce 3s infinite 0s;
+    -moz-animation: bounce 4s infinite 6s;
+    -webkit-animation: bounce 4s infinite 6s;
+    animation: bounce 4s infinite 6s;
 }
 
 /*---------------------HIGHLIGHTS-----------------------*/
