@@ -264,7 +264,7 @@ main {
     display: flex;
     flex-flow: column;
     justify-content: center;
-    animation: fade-in ease 1s;
+    animation: fade-in ease 1.5s;
 }
 
 .intro h2 img {
