@@ -99,15 +99,16 @@ button:focus {outline: none;}
     h1 {font-size: 4rem}
     h2 {font-size: 1.3rem}
     h3 {font-size: 1.7rem}
+    h4 {font-size: .9rem}
 }
 
 @media only screen and (max-width: 50rem) {
     h1 {font-size: 3.3rem}
     h2 {font-size: 1.2rem}
     h3 {font-size: 1.4rem}
-    h4 {font-size: .9rem}
+    h4 {font-size: .85rem}
     h5 {font-size: 2.2rem}
-    p {font-size: 1.1em; line-height: 1.8}
+    p {font-size: 1.1rem; line-height: 1.8}
     button {font-size: .9rem;}
 }
 
@@ -276,7 +277,7 @@ main {
 }
 
 .art-narration {
-    margin: 20vh auto;
+    margin: 20vh auto 15vh;
 }
 
 @media only screen and (max-width: 55em) {
@@ -291,12 +292,8 @@ main {
     width: max-content;
     margin: 0 auto;
     animation: fade-in ease 4s;
-    /* height: 0; as to not interrupt gradients */
+    text-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
 }
-
-/* .section-title h4{
-    color: var(--bg-layer-top);
-} */
 
 .section-title img {
     margin-top: .7em;
@@ -304,6 +301,19 @@ main {
     -moz-animation: bounce 4s infinite 6s;
     -webkit-animation: bounce 4s infinite 6s;
     animation: bounce 4s infinite 6s;
+}
+
+@media only screen and (max-width: 70rem) {
+    .section-title img {
+        width: 1.3rem;
+    }
+}
+
+@media only screen and (max-width: 50rem) {
+    .section-title img {
+        margin-top: .5em;
+        width: 1.2rem;
+    }
 }
 
 /*---------------------HIGHLIGHTS-----------------------*/
@@ -344,7 +354,7 @@ main {
     margin: 0 auto 1em auto;
 }
 
-.art-wrapper .highlight h4 {color: #999999;}
+.art-wrapper .highlight h4 {color: #777777;}
 
 .art-wrapper .highlight-wrapper {
     margin: 0;
@@ -488,7 +498,7 @@ main {
         width: auto;
         height: 60vh;
         min-height: 25em;
-        max-height: 30em;
+        max-height: 28em;
         margin: 5em auto -5em;
     }
 
@@ -774,7 +784,7 @@ main {
         grid-row: 2;
         margin: 0;
         max-width: none;
-        background: linear-gradient(0deg, var(--bg-layer-base) 0%, var(--bg-layer-base) 80%, rgba(33,32,36,.9) 90%, rgba(33,32,36,.6) 95%, rgba(33,32,36,0.3) 98%, rgba(33,32,36,0) 100%);
+        background: linear-gradient(0deg, rgba(33,32,36,0) 0%, rgba(33,32,36,1) 20%, var(--bg-layer-base) 80%, rgba(33,32,36,.9) 90%, rgba(33,32,36,.6) 95%, rgba(33,32,36,0.3) 98%, rgba(33,32,36,0) 100%);
     }
 
     .cp-uxb-wrapper:hover .cp-uxb-haze {
