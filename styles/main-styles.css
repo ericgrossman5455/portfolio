@@ -277,7 +277,7 @@ main {
 }
 
 .art-narration {
-    margin: 20vh auto 15vh;
+    margin: 12vh auto 10vh;
 }
 
 @media only screen and (max-width: 55em) {
@@ -802,22 +802,11 @@ main {
 
 /*--------------------ART-----------------------*/
 
-/* @media only screen and (max-width: 50em) {
-    .sunrise {max-height: 20em}
-} */
-
 .sunrise {
     margin-bottom: -1px;
-    margin-top: -75vh;
+    margin-top: -65vh;
     height: 100vh;
-    background: linear-gradient(180deg, var(--bg-layer-base) 0%, #2f4375 33%, #425991 45%, #8197da 65%, #DBC6DB 80%, #E2D7E6 85%, #faf5ff 95%, #FFFFFF 100%);
-}
-
-@media only screen and (max-width: 50em) {
-    .sunrise {
-        margin-top: -65vh;
-        height: 90vh;
-    }
+    background: linear-gradient(180deg, var(--bg-layer-base) 0%, #2f4375 33%, #425991 45%, #8197da 65%, #DBC6DB 80%, #E2D7E6 85%, #FFFFFF 100%);
 }
 
 .art-wrapper {
