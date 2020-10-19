@@ -265,24 +265,31 @@ main {
     justify-content: center;
 }
 
-.intro-narration {
+.narration-hero {
     height: 89.5vh;
     min-height: 30em;
     animation: fade-in ease 1.5s;
 }
 
-.intro-narration img {
+.narration-hero img {
     margin-top: .3em;
     width: 13em;
 }
 
-.art-narration {
-    margin: 12vh auto 10vh;
+.wrapper-sunrise {
+    padding-top: 18vh;
+    height: 90vh;
+    min-height: 35em;
+    background: linear-gradient(180deg, var(--bg-layer-base) 0%, #2f4375 33%, #425991 45%, #8197da 65%, #DBC6DB 80%, #E2D7E6 85%, #FFFFFF 100%);
+}
+
+.narration-art {
+    margin-bottom: 12vh;
 }
 
 @media only screen and (max-width: 55em) {
     .narration {padding: 0 2em;}
-    .intro-narration img {width: 10em;}
+    .narration-hero img {width: 10em;}
 }
 
 /*---------------------SECTION TITLES-----------------------*/
@@ -336,7 +343,7 @@ main {
     font-weight: 500;
 }
 
-/* SMACSS this with .intro h2 img class*/
+/* SMACSS this with .hero h2 img class*/
 .highlight h2 img {
     width: .9em;
     display: inline-block;
@@ -672,7 +679,7 @@ main {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
-    margin: 21vh auto;
+    margin: 21vh auto 0;
     max-width: 100em;
     max-height: 100em;
     min-height: 40em;
@@ -801,13 +808,6 @@ main {
 }
 
 /*--------------------ART-----------------------*/
-
-.sunrise {
-    margin-bottom: -1px;
-    margin-top: -65vh;
-    height: 100vh;
-    background: linear-gradient(180deg, var(--bg-layer-base) 0%, #2f4375 33%, #425991 45%, #8197da 65%, #DBC6DB 80%, #E2D7E6 85%, #FFFFFF 100%);
-}
 
 .art-wrapper {
     display: grid;
