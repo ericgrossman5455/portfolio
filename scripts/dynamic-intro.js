@@ -14,11 +14,6 @@ if (hour < 3){ //earlier than 3AM
 }
 else if (hour < 7){ //earlier than 7AM
     h1.innerHTML = 'hey early&nbsp;bird.';
-    headshot.style.height = '335px';
-    headshot.style.margin = '20px 30px 0 0';
-    headshot.style.backgroundPosition = '-40px';
-    signature.style.right = '-120px';
-    signature.style.bottom = '-45px';
 }
 else if (hour < 10){ //earlier than 10AM
     h1.innerHTML = 'good mornin\’.';
