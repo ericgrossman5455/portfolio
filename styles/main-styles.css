@@ -266,7 +266,10 @@ main{
 }
 
 .narration-wrapper-hero{
-
+    /* height: 100vh;
+    min-height: 30em;
+    background-image: url(/assets/index/hero-banner.jpg);
+    background-size: cover; */
 }
 
 .narration-hero{
