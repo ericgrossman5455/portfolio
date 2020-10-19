@@ -17,6 +17,7 @@ else if (hour < 7){ //earlier than 7AM
 }
 else if (hour < 10){ //earlier than 10AM
     h1.innerHTML = 'good mornin\’.';
+    headshot.style.margin = '20px 30px 0 0';
 }
 else if (hour < 13){ //earlier than 1PM
     h1.innerHTML = 'hey there.';
