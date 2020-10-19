@@ -265,6 +265,30 @@ main{
     justify-content: center;
 }
 
+.narration-hero{
+    height: 89.5vh;
+    min-height: 30em;
+    padding: 0 6em;
+    margin: 0vh auto 0vh auto;
+    animation: fade-in ease 1.5s;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.signature{
+    width: 13em;
+    position: absolute;
+    bottom: -40px;
+    right: -150px;
+}
+
+.signature-alt{
+    display: none;
+    padding-top: .3em;
+    width: 12em;
+}
+
 .narration-wrapper-hero{
     /* height: 100vh;
     min-height: 30em;
@@ -272,16 +296,29 @@ main{
     background-size: cover; */
 }
 
-.narration-hero{
-    height: 89.5vh;
-    min-height: 30em;
-    animation: fade-in ease 1.5s;
+.hero-headshot{
+    background-image: url(/assets/global/headshot.jpg);
+    background-size: cover;
+    background-position: -30px;
+    width: 250px;
+    height: 350px;
+    margin: 5px 30px 0 0;
+    /* align-self: center; */
+    border-radius: .3em;
+    box-shadow: 0 1em 2.5em rgba(0, 0, 0, .4);
+    position: relative;
 }
 
-.narration-hero img{
-    margin-top: .3em;
-    width: 13em;
+.hero-copy{
+    align-self: center;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: row;
 }
+
+/* .hero-copy h2{
+    max-width: 23em;
+} */
 
 .narration-wrapper-art{
     padding-top: 18vh;

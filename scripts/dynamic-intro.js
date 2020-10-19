@@ -1,6 +1,6 @@
 var date = new Date();
 var hour = date.getHours();
-var intro = document.querySelector(".intro-narration h1");
+var intro = document.querySelector(".hero-copy h1");
 
 if (hour < 3){ //earlier than 3AM
     intro.innerHTML = 'hey night&nbsp;owl.';
