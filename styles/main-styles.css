@@ -273,10 +273,10 @@ main{
 }
 
     .narration-hero{
+        animation: fade-in ease 1.5s;
         height: 89.5vh;
         min-height: 30em;
         margin: 0vh auto 0vh auto;
-        animation: fade-in ease 1.5s;
         display: flex;
         flex-direction: row;
         justify-content: start;
@@ -292,8 +292,8 @@ main{
     .hero-headshot{
         background-image: url(/assets/global/headshot.jpg);
         background-size: cover;
-        background-position: -15px;
-        width: 220px;
+        background-position: -5px;
+        width: 230px;
         height: 290px;
         margin: 5px 30px 0 0;
         border-radius: .4em;
@@ -304,8 +304,8 @@ main{
     .signature{
         width: 13em;
         position: absolute;
-        bottom: -30px;
-        right: -135px;
+        right: -130px;
+        bottom: -35px;
     }
 
     .signature-alt{
