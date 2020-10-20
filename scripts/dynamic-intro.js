@@ -1,25 +1,42 @@
 var date = new Date();
 var hour = date.getHours();
-var intro = document.querySelector(".hero-copy h1");
+var h1 = document.querySelector(".hero-content h1");
+var headshot = document.querySelector(".hero-headshot");
+var signature = document.querySelector(".signature");
 
 if (hour < 3){ //earlier than 3AM
-    intro.innerHTML = 'hey night&nbsp;owl.';
+    h1.innerHTML = 'hey night&nbsp;owl.';
+    headshot.style.height = '350px';
+    headshot.style.backgroundPosition = '-55px';
+    signature.style.bottom = '-40px';
 }
 else if (hour < 7){ //earlier than 7AM
-    intro.innerHTML = 'hey early&nbsp;bird.';
+    h1.innerHTML = 'hey early&nbsp;bird.';
+    headshot.style.height = '350px';
+    headshot.style.backgroundPosition = '-55px';
+    signature.style.bottom = '-40px';
 }
 else if (hour < 10){ //earlier than 10AM
-    intro.innerHTML = 'good mornin\’.';
+    h1.innerHTML = 'good mornin\’.';
 }
 else if (hour < 13){ //earlier than 1PM
-    intro.innerHTML = 'hey there.';
+    h1.innerHTML = 'hey there.';
 }
 else if (hour < 18){ //earlier than 6PM
-    intro.innerHTML = 'good<br>afternoon.';
+    h1.innerHTML = 'good<br>afternoon.';
+    headshot.style.height = '350px';
+    headshot.style.backgroundPosition = '-55px';
+    signature.style.bottom = '-40px';
 }
 else if (hour < 22){ //earlier than 10PM
-    intro.innerHTML = 'good<br>evening.';
+    h1.innerHTML = 'good<br>evening.';
+    headshot.style.height = '350px';
+    headshot.style.backgroundPosition = '-55px';
+    signature.style.bottom = '-40px';
 }
 else if (hour <= 24){ //earlier or equal to 12AM
-    intro.innerHTML = 'hey night&nbsp;owl.';
+    h1.innerHTML = 'hey night&nbsp;owl.';
+    headshot.style.height = '350px';
+    headshot.style.backgroundPosition = '-55px';
+    signature.style.bottom = '-40px';
 }

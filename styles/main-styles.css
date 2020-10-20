@@ -259,34 +259,10 @@ main{
 .narration{
     max-width: 80em;
     margin: 0 auto;
-    padding: 0 8em;
+    padding: 0 7em;
     display: flex;
     flex-flow: column;
     justify-content: center;
-}
-
-.narration-hero{
-    height: 89.5vh;
-    min-height: 30em;
-    padding: 0 6em;
-    margin: 0vh auto 0vh auto;
-    animation: fade-in ease 1.5s;
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-}
-
-.signature{
-    width: 13em;
-    position: absolute;
-    bottom: -40px;
-    right: -150px;
-}
-
-.signature-alt{
-    display: none;
-    padding-top: .3em;
-    width: 12em;
 }
 
 .narration-wrapper-hero{
@@ -296,29 +272,47 @@ main{
     background-size: cover; */
 }
 
-.hero-headshot{
-    background-image: url(/assets/global/headshot.jpg);
-    background-size: cover;
-    background-position: -30px;
-    width: 250px;
-    height: 350px;
-    margin: 5px 30px 0 0;
-    /* align-self: center; */
-    border-radius: .3em;
-    box-shadow: 0 1em 2.5em rgba(0, 0, 0, .4);
-    position: relative;
-}
+    .narration-hero{
+        height: 89.5vh;
+        min-height: 30em;
+        margin: 0vh auto 0vh auto;
+        animation: fade-in ease 1.5s;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+    }
 
-.hero-copy{
-    align-self: center;
-    margin-top: 0px;
-    display: flex;
-    flex-direction: row;
-}
+    .hero-content{
+        align-self: center;
+        margin-top: 0px;
+        display: flex;
+        flex-direction: row;
+    }
 
-/* .hero-copy h2{
-    max-width: 23em;
-} */
+    .hero-headshot{
+        background-image: url(/assets/global/headshot.jpg);
+        background-size: cover;
+        background-position: -15px;
+        width: 220px;
+        height: 290px;
+        margin: 5px 30px 0 0;
+        border-radius: .4em;
+        box-shadow: 0 1em 2.5em rgba(0, 0, 0, .4);
+        position: relative;
+    }
+
+    .signature{
+        width: 13em;
+        position: absolute;
+        bottom: -30px;
+        right: -135px;
+    }
+
+    .signature-alt{
+        display: none;
+        padding-top: .3em;
+        width: 12em;
+    }
 
 .narration-wrapper-art{
     padding-top: 18vh;
@@ -327,9 +321,9 @@ main{
     background: linear-gradient(180deg, var(--bg-layer-base) 0%, #2f4375 33%, #425991 45%, #8197da 65%, #DBC6DB 80%, #E2D7E6 85%, #FFFFFF 100%);
 }
 
-.narration-art{
-    margin-bottom: 12vh;
-}
+    .narration-art{
+        margin-bottom: 12vh;
+    }
 
 @media only screen and (max-width: 55em){
     .narration{padding: 0 2em;}
