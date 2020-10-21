@@ -5,8 +5,6 @@ var headshot = document.querySelector(".hero-headshot");
 var signature = document.querySelector(".signature");
 var oneLine = false;
 
-hour = 19
-
 if (hour > 22){ //after 10PM
     h1.innerHTML = 'hey<br>night&nbsp;owl.';
     headshot.style.height = '335px';
@@ -72,15 +70,15 @@ function oneLineIntro(e) {
 
     if ((e.matches == true) && (oneLine == true)) {
         // console.log("smaller than 70em and one line");
-        headshot.style.backgroundPosition = '0px';
-        headshot.style.height = '230px';
+        headshot.style.backgroundPosition = '-10px';
+        headshot.style.height = '260px';
         headshot.style.width = '200px';
     }
 
     else if ((e.matches == false) && (oneLine == true)){
         // console.log("greater than 70em and one line");
-        headshot.style.backgroundPosition = '-5px';
-        headshot.style.height = '290px';
+        headshot.style.backgroundPosition = '-20px';
+        headshot.style.height = '310px';
         headshot.style.width = '230px';
     }
 
@@ -93,7 +91,7 @@ function oneLineIntro(e) {
 
     else if ((e.matches == true) && (oneLine == false)){
         // console.log("smaller than 70em and two lines");
-        headshot.style.backgroundPosition = '-40px';
+        headshot.style.backgroundPosition = '-35px';
         headshot.style.height = '290px';
         headshot.style.width = '200px';
     }
