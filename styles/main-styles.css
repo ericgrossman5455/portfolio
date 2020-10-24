@@ -1,6 +1,7 @@
 /* CSS DOCUMENT */
 
-html, body{background-color: #212024;} div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{display:block;}body{line-height:1;}ol, ul{list-style:none;}blockquote, q{quotes:none;}blockquote:before, blockquote:after,q:before, q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}img{width:100%;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{display:block;}body{line-height:1;}ol, ul{list-style:none;}blockquote, q{quotes:none;}blockquote:before, blockquote:after,q:before, q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}img{width:100%;}
+body{background-color: #212024;}
 
 :root{
     --bg-layer-top: #323237;
@@ -18,7 +19,7 @@ h1{
     font-family: proxima-nova, sans-serif;
     font-weight: 800;
     font-style: normal;
-    font-size: 5.5rem;
+    font-size: 5.3rem;
     line-height: .9;
     color: var(--glyph-white);
     padding-bottom: .2em;
@@ -27,8 +28,7 @@ h1{
 h2{
     font-family: depot-new-web, sans-serif;
     font-weight: 300;
-    font-size: 1.5rem;
-    max-width: 25em;
+    font-size: 1.4rem;;
     line-height: 1.8;
     color: var(--glyph-white);  
 }
@@ -257,14 +257,17 @@ main{
 /*---------------------NARRATIONS-----------------------*/
 
 .narration{
-    max-width: 80em;
+    max-width: 85em;
     margin: 0 auto;
-    padding: 0 7em;
+    padding: 0 6em;
     display: flex;
     flex-flow: column;
     justify-content: center;
 }
 
+.narration h2{max-width: 25em}
+
+/* Mountain Peak view */
 .narration-wrapper-hero{
     /* height: 100vh;
     min-height: 30em;
@@ -273,21 +276,12 @@ main{
 }
 
     .narration-hero{
-        animation: fade-in ease 1.5s;
-        height: 89.5vh;
+        /* animation: fade-in ease 1.5s; */
+        height: 90vh;
         min-height: 30em;
-        margin: 0vh auto 0vh auto;
-        display: flex;
-        flex-direction: row;
-        justify-content: start;
     }
 
-    .hero-content{
-        align-self: center;
-        margin-top: 0px;
-        display: flex;
-        flex-direction: row;
-    }
+    .hero-content{display: flex;}
 
     .hero-headshot{
         animation: fade-in ease 1.5s;
@@ -302,19 +296,20 @@ main{
         position: relative;
     }
 
-    .signature{
+    .hero-signature{
         width: 13em;
         position: absolute;
         right: -125px;
         bottom: -35px;
     }
 
-    .signature-alt{
+    .hero-signature-alt{
         display: none;
         width: 10em;
         padding-top: .3em;
     }
 
+/* Sunrise gradient */
 .narration-wrapper-art{
     padding-top: 18vh;
     height: 90vh;
@@ -328,7 +323,7 @@ main{
 
 @media only screen and (max-width: 70em){
     .narration{padding: 0 4em;}
-    .signature{
+    .hero-signature{
         width: 11em !important;
         right: -110px !important;
         bottom: -30px !important;
@@ -343,7 +338,7 @@ main{
 
 @media only screen and (max-width: 60em){
     .hero-headshot{display: none;}
-    .signature-alt{display: block;}
+    .hero-signature-alt{display: block;}
 }
 
 @media only screen and (max-width: 50em){
@@ -357,21 +352,14 @@ main{
     width: max-content;
     margin: 0 auto;
     animation: fade-in ease 4s;
-    /* text-shadow: 0 0 30px rgba(0, 0, 0, 0.25); */
 }
 
 .section-title img{
     margin-top: .7em;
-    width: 1.5em;
+    width: 1.3em;
     -moz-animation: bounce 4s infinite 6s;
     -webkit-animation: bounce 4s infinite 6s;
     animation: bounce 4s infinite 6s;
-}
-
-@media only screen and (max-width: 70rem){
-    .section-title img{
-        width: 1.3rem;
-    }
 }
 
 @media only screen and (max-width: 50rem){
