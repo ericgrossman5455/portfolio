@@ -66,7 +66,7 @@ function heroAlignment(e){
             headshot.style.marginTop = '20px';
             headshot.style.height = '325px';
             headshot.style.backgroundPosition = '-30px';
-            signature.style.bottom = '-40px';
+            signature.style.bottom = '-30px';
         }
         else if ((lineBreak == false) && (ascender == true)){
             headshot.style.marginTop = '5px';
@@ -91,7 +91,7 @@ function heroAlignment(e){
             headshot.style.marginTop = '13px';
             headshot.style.height = '280px';
             headshot.style.backgroundPosition = '-42px';
-            signature.style.bottom = '-30px';
+            signature.style.bottom = '-20px';
         }
         else if ((lineBreak == false) && (ascender == true)){
             headshot.style.marginTop = '5px';

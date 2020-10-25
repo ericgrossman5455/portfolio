@@ -339,7 +339,7 @@ main{
 
 }
 
-@media only screen and (max-width: 60em){
+@media only screen and (max-width: 55em){
     .hero-headshot{display: none;}
     .hero-signature-alt{display: block;}
 }
