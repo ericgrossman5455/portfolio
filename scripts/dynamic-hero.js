@@ -1,101 +1,107 @@
 var date = new Date();
 var hour = date.getHours();
-var h1 = document.querySelector(".hero-content h1");
+var intro = document.querySelector(".hero-content h1");
 var headshot = document.querySelector(".hero-headshot");
-var signature = document.querySelector(".signature");
-var oneLine = false;
+var signature = document.querySelector(".hero-signature");
+var lineBreak = false;
+var ascender = false;
+const mediaQuery = window.matchMedia('(max-width: 70em)');
 
+hour = 23
+
+// Set copy for intro and variables for spacing/alignment
 if (hour > 22){ //after 10PM
-    h1.innerHTML = 'hey<br>night&nbsp;owl.';
-    headshot.style.height = '335px';
-    headshot.style.margin = '4px 30px 0 0';
-    headshot.style.backgroundPosition = '-40px';
-    signature.style.right = '-115px';
-    signature.style.bottom = '-50px';
+    intro.innerHTML = 'hey<br>night&nbsp;owl.';
+    var lineBreak = true;
+    var ascender = true;
 }
-
 else if (hour > 18){ //after 6PM
-    h1.innerHTML = 'good<br>evening.';
-    headshot.style.height = '335px';
-    headshot.style.margin = '20px 30px 0 0';
-    headshot.style.backgroundPosition = '-40px';
-    signature.style.right = '-120px';
-    signature.style.bottom = '-45px';
+    intro.innerHTML = 'good<br>evening.';
+    var lineBreak = true;
+    var ascender = false;
 }
-
 else if (hour > 13){ //after 1PM
-    h1.innerHTML = 'good<br>afternoon.';
-    headshot.style.height = '335px';
-    headshot.style.margin = '20px 30px 0 0';
-    headshot.style.backgroundPosition = '-40px';
-    signature.style.right = '-120px';
-    signature.style.bottom = '-45px';
+    intro.innerHTML = 'good<br>afternoon.';
+    intro.style.paddingBottom = '.1em'
+    var lineBreak = true;
+    var ascender = false; 
 }
-
 else if (hour > 10){ //after 10AM
-    h1.innerHTML = 'hey there.';
-    var oneLine = true;
+    intro.innerHTML = 'hey&nbsp;there.';
+    var lineBreak = false;
+    var ascender = true;
 }
-
 else if (hour > 6){ //after 6AM
-    h1.innerHTML = 'good<br>mornin\’.';
-    headshot.style.height = '335px';
-    headshot.style.margin = '20px 30px 0 0';
-    headshot.style.backgroundPosition = '-40px';
-    signature.style.right = '-120px';
-    signature.style.bottom = '-45px';
+    intro.innerHTML = 'good<br>mornin\’.';
+    intro.style.paddingBottom = '.1em'
+    var lineBreak = true;
+    var ascender = false;
 }
-
 else if (hour > 3){ //after 3AM
-    h1.innerHTML = 'hey<br>early&nbsp;bird.';
-    headshot.style.height = '335px';
-    headshot.style.margin = '4px 30px 0 0';
-    headshot.style.backgroundPosition = '-40px';
-    signature.style.right = '-115px';
-    signature.style.bottom = '-50px';
+    intro.innerHTML = 'hey<br>early&nbsp;bird.';
+    var lineBreak = true;
+    var ascender = true;
 }
-
 else if (hour >= 0){ //after 12AM
-    h1.innerHTML = 'hey<br>night&nbsp;owl.';
-    headshot.style.height = '335px';
-    headshot.style.margin = '4px 30px 0 0';
-    headshot.style.backgroundPosition = '-40px';
-    signature.style.right = '-115px';
-    signature.style.bottom = '-50px';
+    intro.innerHTML = 'hey<br>night&nbsp;owl.';
+    var lineBreak = true;
+    var ascender = true;
 }
 
-const mediaQuery = window.matchMedia('(max-width: 70em)')
 
-function oneLineIntro(e) {
+// Set spacing/alignment for hero
+function heroAlignment(e){
 
-    if ((e.matches == true) && (oneLine == true)) {
-        // console.log("smaller than 70em and one line");
-        headshot.style.backgroundPosition = '-10px';
-        headshot.style.height = '260px';
-        headshot.style.width = '200px';
-    }
-
-    else if ((e.matches == false) && (oneLine == true)){
-        // console.log("greater than 70em and one line");
-        headshot.style.backgroundPosition = '-20px';
-        headshot.style.height = '310px';
+    //Wider than 70em
+    if (e.matches == false){
         headshot.style.width = '230px';
+        signature.style.right = '-120px';
+
+        if ((lineBreak == true) && (ascender == true)){
+            headshot.style.marginTop = '5px';
+            headshot.style.height = '335px';
+            headshot.style.backgroundPosition = '-40px';
+            signature.style.bottom = '-40px';
+        }
+        else if ((lineBreak == true) && (ascender == false)){
+            headshot.style.marginTop = '20px';
+            headshot.style.height = '325px';
+            headshot.style.backgroundPosition = '-30px';
+            signature.style.bottom = '-40px';
+        }
+        else if ((lineBreak == false) && (ascender == true)){
+            headshot.style.marginTop = '5px';
+            headshot.style.height = '300px';
+            headshot.style.backgroundPosition = '-15px';
+            signature.style.bottom = '-25px';
+        }
     }
 
-    else if ((e.matches == false) && (oneLine == false)){
-        // console.log("greater than 70em and two lines");
-        headshot.style.backgroundPosition = '-40px';
-        headshot.style.height = '335px';
-        headshot.style.width = '230px';
-    }
+    //Smaller than 70em
+    else if (e.matches == true){
+        headshot.style.width = '180px';
+        signature.style.right = '-105px';
 
-    else if ((e.matches == true) && (oneLine == false)){
-        // console.log("smaller than 70em and two lines");
-        headshot.style.backgroundPosition = '-35px';
-        headshot.style.height = '290px';
-        headshot.style.width = '200px';
+        if ((lineBreak == true) && (ascender == true)){
+            headshot.style.marginTop = '5px';
+            headshot.style.height = '290px';
+            headshot.style.backgroundPosition = '-50px';
+            signature.style.bottom = '-30px';
+        }
+        else if ((lineBreak == true) && (ascender == false)){
+            headshot.style.marginTop = '13px';
+            headshot.style.height = '280px';
+            headshot.style.backgroundPosition = '-42px';
+            signature.style.bottom = '-30px';
+        }
+        else if ((lineBreak == false) && (ascender == true)){
+            headshot.style.marginTop = '5px';
+            headshot.style.height = '250px';
+            headshot.style.backgroundPosition = '-20px';
+            signature.style.bottom = '-25px';
+        }
     }
 }
 
-mediaQuery.addListener(oneLineIntro)
-oneLineIntro(mediaQuery)
+mediaQuery.addListener(heroAlignment)
+heroAlignment(mediaQuery)
