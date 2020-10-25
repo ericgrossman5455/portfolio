@@ -7,7 +7,6 @@ var lineBreak = false;
 var ascender = false;
 const mediaQuery = window.matchMedia('(max-width: 70em)');
 
-hour = 23
 
 // Set copy for intro and variables for spacing/alignment
 if (hour > 22){ //after 10PM
