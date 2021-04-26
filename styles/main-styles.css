@@ -63,14 +63,12 @@ p{
     font-weight: 300;
     font-size: 1.2rem;
     line-height: 1.7;
-    color:var(--glyph-white);
+    color: var(--glyph-white);
 }
 
-a{text-decoration: none;}
-
-b{
-    font-weight: 600;
-    color: #000;
+a{
+    color: var(--glyph-white);
+    text-decoration: none;
 }
 
 button{
@@ -144,7 +142,6 @@ main{
 .icon-plus{
     position: relative;
     padding-left: 1.15em;
-    color: var(--glyph-white);
     white-space: nowrap;
 }
 

@@ -5,7 +5,7 @@ var headshot = document.querySelector(".hero-headshot");
 var signature = document.querySelector(".hero-signature");
 var lineBreak = false;
 var ascender = false;
-const mediaQuery = window.matchMedia('(max-width: 70em)');
+const mediaQuery = window.matchMedia('(max-width: 70rem)');
 
 
 // Set copy for intro and variables for spacing/alignment
@@ -21,7 +21,7 @@ else if (hour > 18){ //after 6PM
 }
 else if (hour > 13){ //after 1PM
     intro.innerHTML = 'good<br>afternoon.';
-    intro.style.paddingBottom = '.1em'
+    intro.style.paddingBottom = '.1rem'
     var lineBreak = true;
     var ascender = false; 
 }
@@ -32,7 +32,7 @@ else if (hour > 10){ //after 10AM
 }
 else if (hour > 6){ //after 6AM
     intro.innerHTML = 'good<br>mornin\’.';
-    intro.style.paddingBottom = '.1em'
+    intro.style.paddingBottom = '.1rem'
     var lineBreak = true;
     var ascender = false;
 }
@@ -51,7 +51,7 @@ else if (hour >= 0){ //after 12AM
 // Set spacing/alignment for hero
 function heroAlignment(e){
 
-    //Wider than 70em
+    //Wider than 70rem
     if (e.matches == false){
         headshot.style.width = '230px';
         signature.style.right = '-120px';
@@ -76,7 +76,7 @@ function heroAlignment(e){
         }
     }
 
-    //Smaller than 70em
+    //Smaller than 70rem
     else if (e.matches == true){
         headshot.style.width = '180px';
         signature.style.right = '-105px';
