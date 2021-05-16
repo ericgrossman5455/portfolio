@@ -308,13 +308,13 @@ main{
         padding-top: .3em;
     }
 
-/* Sunrise gradient */
-.narration-wrapper-art{
-    padding-top: 18vh;
-    height: 90vh;
-    min-height: 35em;
-    background: linear-gradient(180deg, var(--bg-layer-base) 0%, #2f4375 33%, #425991 45%, #8197da 65%, #DBC6DB 80%, #E2D7E6 85%, #FFFFFF 100%);
-}
+    /* Sunrise gradient */
+    .narration-wrapper-art{
+        padding-top: 18vh;
+        height: 90vh;
+        min-height: 35em;
+        background: linear-gradient(180deg, var(--bg-layer-base) 0%, #2f4375 33%, #425991 45%, #8197da 65%, #DBC6DB 80%, #E2D7E6 85%, #FFFFFF 100%);
+    }
 
     .narration-art{
         margin-bottom: 12vh;
