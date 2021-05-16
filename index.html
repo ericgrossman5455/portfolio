@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <html lang="en">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="/styles/main-styles.css">
+    <link rel="stylesheet" type="text/css" href="/styles/anim-styles.css">
     <link rel="stylesheet" href="https://use.typekit.net/rkj0niw.css">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
@@ -19,7 +20,7 @@
     <meta name="msapplication-config" content="/favicons/browserconfig.xml">
     <meta name="theme-color" content="#212024">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script async src="scripts/dynamic-intro.js"></script>
+    <script async src="/scripts/dynamic-hero.js"></script>
     <script async src="/scripts/smooth-scroll.js"></script>
     <script async src="/scripts/snackbar.js"></script>
     <title>Portfolio | Eric Grossman</title>
@@ -41,31 +42,36 @@
             </div>
         </div>
 
-        <div class="about-wrapper" onclick="noFeature()">
+        <!-- <div class="about-wrapper" onclick="noFeature()">
             <img src="./assets/global/headshot.jpg" title="Go to about page" alt="Headshot of Eric Grossman, click for about page">
             <div class="chat-bubble">
-                <p >Click me to learn more and get in touch</p>
+                <p>Click me to learn more and get in touch</p>
+            </div>
+
+        </div> -->
+
+        <div class="narration-wrapper-hero">
+
+            <div class="narration narration-hero">
+                
+                <div class="hero-content">
+                    <div class="hero-headshot"><img class="hero-signature" src="./assets/index/signature-delayed.gif"></div>
+                    <div><h1>hey&nbsp;there.</h1>
+                    <h2>I'm Eric, a UX designer and front-end web developer. My obsession with how design impacts others is what drives me to create empowering user&nbsp;experiences.&nbsp; <a onclick="noAboutPage()" href="#" title="Go to about page"><span class="icon-plus">Learn more</span></a></h2>
+                    <img class="hero-signature-alt" src="./assets/index/signature-delayed.gif"></div>
+                </div>
+
             </div>
 
         </div>
 
-        <div class="intro">
-            <h1>hey there.</h1>
-            <h2>I'm Eric, a UX designer and front-end developer. I live and breathe digital design, and work to share that passion through engaging user&nbsp;experiences.&nbsp;&nbsp; <a onclick="noFeature()" href="#" title="Go to about page"><span class="icon-plus">Learn&nbsp;more</span></a></h2>
-            <img src="./assets/index/signature.png">
-        </div>
-
-
-        <div class="section-header">
+        <div class="section-title">
             <a href="#scroll-to-mobell">
-                <h4> Featured UX&nbsp;Work</h4>
-                <div class="bounce"><img src="./assets/global/arrow-down.svg"></div>
+                <h4>Featured&nbsp;Work</h4>
+                <img src="./assets/global/arrow-down.svg">
             </a>
         </div>
-            
-        
-        
-        
+
         <!--UXB means User Experience Banner, a preview of the UX study-->
         <div class="mobell-uxb-wrapper" id="scroll-to-mobell">
                 
@@ -79,11 +85,9 @@
                     <!-- <button>Coming soon</button> -->
                 </div>
         </div>
-        
-        
-        
-        
-        <div class="highlight-wrapper">
+
+
+        <!-- <div class="highlight-wrapper">
             <div class="highlight">
                 <a href="https://www.linkedin.com/in/charfarber/"><h4>Prof. Farber, Director of UX at&nbsp;Cal&nbsp;Poly</h4></a>
 
@@ -97,13 +101,13 @@
                     <div class="char-min"><h2><span class="icon-minus">View&nbsp;less</span></h2></div>
                 </div>
             </div>
-        </div>
-        
-        
+        </div> -->
+
+
         <div class="boltabout-uxb-wrapper">
                 
                 <div class="boltabout-uxb-haze"></div>
-                <img class="boltabout-uxb-image" src="./assets/boltabout/boltabout-product-shot.png">
+                <img class="boltabout-uxb-image" data-src="./assets/boltabout/boltabout-product-shot.png">
                 
                 <div class="boltabout-uxb-text">
                     <h4>BoltAbout Dashboard</h4>
@@ -113,7 +117,8 @@
                 </div>
         </div>
 
-        <div class="highlight-wrapper">
+
+        <!-- <div class="highlight-wrapper">
             <div class="highlight">
                 <a href="https://www.linkedin.com/in/kenmacro/"><h4>Dr. Ken Macro, GrC Dept. Chair at&nbsp;Cal&nbsp;Poly</h4></a>
 
@@ -127,12 +132,13 @@
                     <div class="ken-min"><h2><span class="icon-minus">View&nbsp;less</span></h2></div>
                 </div>
             </div>
-        </div>
-        
+        </div> -->
+
+
         <div class="cp-uxb-wrapper">
-                
+
                 <div class="cp-uxb-haze"></div>
-                <img class="cp-uxb-image" src="./assets/cp-events/cp-events-product-shot.png">
+                <img class="cp-uxb-image" data-src="./assets/cp-events/cp-events-product-shot.png">
                 
                 <div class="cp-uxb-text">
                     <h4>Cal Poly Events App</h4>
@@ -141,23 +147,22 @@
                     <!-- <button>Coming soon</button> -->
                 </div>
         </div>
-        
-        
-        <div class="art-intro">
-            <h1>have an<br>extra minute?</h1>
-            <h2>Scroll through to read about my design journey and process. When I’m not designing an interface, I've got my hands on a camera and some design&nbsp;tools. </h2>
+
+        <div class="narration-wrapper-art">
+
+            <div class="narration narration-art">
+                <h1>have an<br>extra minute?</h1>
+                <h2>Keep scrolling to read about my design journey and process. When I’m not designing an interface, I've got my hands on a camera and some design&nbsp;tools. </h2>
+            </div>
+            
+            <div class="section-title">
+                <a href="#scroll-to-art">
+                    <h4>Photos &amp; Graphics</h4>
+                    <img src="./assets/global/arrow-down.svg">
+                </a>
+            </div>
+
         </div>
-        
-        <div class="section-header">
-            <a href="#scroll-to-art">
-                <h4>Photography &amp; Graphic Design</h4>
-                <div class="bounce"><img src="./assets/global/arrow-down.svg"></div>
-            </a>
-        </div>
-        
-        <div class="sunrise"></div>
-        
-        
         
         <div class="art-wrapper" id="scroll-to-art">
             
@@ -184,7 +189,7 @@
             
             <div class="highlight-wrapper">
             <div class="highlight">
-                <h4>How I Create Imagery</h4>
+                <h4>Creating Imagery for Designs</h4>
                 <h3>Each piece of digital art is original, meaning every element comes from my trusty&nbsp;camera.</h3>
             </div>
             </div>
@@ -198,8 +203,8 @@
             
             <div class="highlight-wrapper">
             <div class="highlight">
-                <h4>How I Edit Shots</h4>
-                <h3>Handcrafted color profiles for each shoot ensure that a client's photos feel coherent and&nbsp;unique.</h3>
+                <h4>Editing Photo Shoots</h4>
+                <h3>Handcrafted color profiles for each shoot ensure that a client's photos feel coherent, yet&nbsp;unique.</h3>
             </div>
             </div>
             
@@ -242,7 +247,7 @@
             <div class="social">
             <a href="mailto:contact@ericgrossman.me"><img src="./assets/global/email-icon.svg" alt="Email button." title="Send Eric an email"></a>
             <a href="https://www.linkedin.com/in/eric-grossman-277a27bb/"><img src="./assets/global/linkedin-icon.svg" alt="LinkedIn profile button." title="View Eric's LinkedIn profile"></a>
-            <a href="https://www.instagram.com/eric-grossman/"><img src="./assets/global/instagram-icon.svg" alt="Instagram profile button." title="View Eric's Instagram profile"></a>    
+            <a href="https://www.instagram.com/eric_grossman/"><img src="./assets/global/instagram-icon.svg" alt="Instagram profile button." title="View Eric's Instagram profile"></a>    
         </div>
             
             <p>© Designed &amp; Developed by Eric Grossman<br>This site is in development!</p>
