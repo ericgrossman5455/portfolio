@@ -4,6 +4,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 body{background-color: #212024;}
 
 :root{
+    color-scheme: dark;
     --bg-layer-top: #323237;
     --bg-layer1: #28282d;
     --bg-layer-base: #212024;
