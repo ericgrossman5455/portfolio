@@ -1,11 +1,8 @@
-var date = new Date();
-var hour = date.getHours();
-var intro = document.querySelector(".hero-content h1");
-var headshot = document.querySelector(".hero-headshot");
-var signature = document.querySelector(".hero-signature");
-var lineBreak = false;
-var ascender = false;
-const mediaQuery = window.matchMedia('(max-width: 70rem)');
+let hour = new Date().getHours();
+let intro = document.querySelector(".hero-content h1");
+let headshot = document.querySelector(".hero-headshot");
+let signature = document.querySelector(".hero-signature");
+let mediaQuery = window.matchMedia('(max-width: 70rem)');
 
 
 // Set copy for intro and variables for spacing/alignment
@@ -23,7 +20,7 @@ else if (hour > 13){ //after 1PM
     intro.innerHTML = 'good<br>afternoon.';
     intro.style.paddingBottom = '.1rem'
     var lineBreak = true;
-    var ascender = false; 
+    var ascender = false;
 }
 else if (hour > 10){ //after 10AM
     intro.innerHTML = 'hey&nbsp;there.';
@@ -59,19 +56,19 @@ function heroAlignment(e){
         if ((lineBreak == true) && (ascender == true)){
             headshot.style.marginTop = '5px';
             headshot.style.height = '335px';
-            headshot.style.backgroundPosition = '-40px';
+            headshot.style.backgroundPosition = '-50px';
             signature.style.bottom = '-40px';
         }
         else if ((lineBreak == true) && (ascender == false)){
             headshot.style.marginTop = '20px';
             headshot.style.height = '325px';
-            headshot.style.backgroundPosition = '-30px';
+            headshot.style.backgroundPosition = '-40px';
             signature.style.bottom = '-30px';
         }
         else if ((lineBreak == false) && (ascender == true)){
             headshot.style.marginTop = '5px';
             headshot.style.height = '300px';
-            headshot.style.backgroundPosition = '-15px';
+            headshot.style.backgroundPosition = '-25px';
             signature.style.bottom = '-25px';
         }
     }
@@ -84,23 +81,23 @@ function heroAlignment(e){
         if ((lineBreak == true) && (ascender == true)){
             headshot.style.marginTop = '5px';
             headshot.style.height = '290px';
-            headshot.style.backgroundPosition = '-50px';
+            headshot.style.backgroundPosition = '-55px';
             signature.style.bottom = '-30px';
         }
         else if ((lineBreak == true) && (ascender == false)){
             headshot.style.marginTop = '13px';
             headshot.style.height = '280px';
-            headshot.style.backgroundPosition = '-42px';
+            headshot.style.backgroundPosition = '-47px';
             signature.style.bottom = '-20px';
         }
         else if ((lineBreak == false) && (ascender == true)){
             headshot.style.marginTop = '5px';
             headshot.style.height = '250px';
-            headshot.style.backgroundPosition = '-20px';
+            headshot.style.backgroundPosition = '-25px';
             signature.style.bottom = '-25px';
         }
     }
 }
 
-mediaQuery.addListener(heroAlignment)
-heroAlignment(mediaQuery)
+mediaQuery.addEventListener("change", heroAlignment);
+heroAlignment(mediaQuery);
