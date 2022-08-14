@@ -1001,7 +1001,7 @@ main{
 
 /*---------------------QUOTE SLIDER-----------------------*/
 
-.slider-wrapper{
+/* .slider-wrapper{
     padding: 7em 2em 6em;
     text-align: center;
     background-color: #F8F8F8;
@@ -1074,11 +1074,11 @@ main{
 
 .slider-content-three{display: none;}
 
-.slider-content-four{display: none;}
+.slider-content-four{display: none;} */
 
 /*For Javascript to activate*/
-.slider-content-inactive{display: none;}
-.slider-content-active{display: inline;}
+/* .slider-content-inactive{display: none;}
+.slider-content-active{display: inline;} */
 
 
 /*----------------FOOTER-----------------*/
