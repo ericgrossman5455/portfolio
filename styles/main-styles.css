@@ -31,7 +31,7 @@ h2{
     font-weight: 300;
     font-size: 1.4rem;;
     line-height: 1.8;
-    color: var(--glyph-white);  
+    color: var(--glyph-white);
 }
 
 h3{
@@ -950,7 +950,7 @@ main{
 
 /*---------------------QUOTE SLIDER-----------------------*/
 
-.slider-wrapper{
+/* .slider-wrapper{
     padding: 7em 2em 6em;
     text-align: center;
     background-color: #F8F8F8;
@@ -1023,11 +1023,11 @@ main{
 
 .slider-content-three{display: none;}
 
-.slider-content-four{display: none;}
+.slider-content-four{display: none;} */
 
 /*For Javascript to activate*/
-.slider-content-inactive{display: none;}
-.slider-content-active{display: inline;}
+/* .slider-content-inactive{display: none;}
+.slider-content-active{display: inline;} */
 
 
 /*----------------FOOTER-----------------*/
