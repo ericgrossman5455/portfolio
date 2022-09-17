@@ -201,8 +201,6 @@ main{
     right: -31.25rem;
     white-space: nowrap;
     padding: .25rem 1rem;
-    -moz-animation: slide-left 15s ease-in-out 12s 1;
-    -webkit-animation: slide-left 15s ease-in-out 12s 1;
     animation: slide-left 15s ease-in-out 12s 1;
 }
 
@@ -234,8 +232,6 @@ main{
     .chat-bubble{
         top: -6rem;
         right: 0;
-        -moz-animation: slide-down 15s ease 12s 1;
-        -webkit-animation: slide-down 15s ease 12s 1;
         animation: slide-down 15s ease-in-out 12s 1;
     }
 
@@ -358,8 +354,6 @@ main{
 .section-title img{
     margin-top: .7em;
     width: 1.3em;
-    -moz-animation: bounce 4s infinite 6s;
-    -webkit-animation: bounce 4s infinite 6s;
     animation: bounce 4s infinite 6s;
 }
 
@@ -908,8 +902,6 @@ main{
     box-shadow: 0 .2em .4em rgba(0, 0, 0, 0.2);
     margin-left: 2em;
     transition: ease .3s;
-    -moz-animation: pop-up 5s ease-out 0s 1;
-    -webkit-animation: pop-up 5s ease-out 0s 1;
     animation: pop-up 5s ease-out 0s 1;
 }
 
