@@ -14,7 +14,12 @@ body{background-color: #212024;}
 
     --glyph-white: #f8f8f8;
     --glyph-gray: #cacaca;
-  }
+}
+
+main{
+    background-color: var(--bg-layer-base);
+    overflow-x: hidden;
+}
 
 h1{
     font-family: proxima-nova, sans-serif;
@@ -111,34 +116,7 @@ button:focus{outline: none;}
     button{font-size: .9rem;}
 }
 
-/*---------------------ARTICLES-----------------------*/
-
-.content-wrapper{
-    max-width: 45em;
-    margin: 5em auto;
-    padding: 0 5em;
-}
-
-@media only screen and (max-width: 60em){
-    .content-wrapper{
-        padding: 0 2.5em;
-        margin: 2.5em auto;
-    }
-}
-
-@media only screen and (max-width: 40em){
-    .content-wrapper{
-        padding: 0 2em;
-        margin: 2em auto;
-    }
-}
-
-/*---------------------TBD-----------------------*/
-
-main{
-    background-color: var(--bg-layer-base);
-    overflow-x: hidden;
-}
+/*---------------------ICONS-----------------------*/
 
 .icon-plus{
     position: relative;
@@ -176,78 +154,6 @@ main{
     padding: 0 .9em;
 }
 
-.about-wrapper{
-    z-index: 99;
-    position: fixed;
-    top: 1.875rem;
-    right: 1.875rem;
-}
-
-/*---------------------ABOUT BUBBLE-----------------------*/
-
-.about-wrapper img{
-    height: 3em;
-    width: 3em;
-    border-radius: 50%;
-    box-shadow: 0 .3em 1em rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-}
-
-.chat-bubble{
-    position: absolute;
-    background: var(--bg-blue);
-    border-radius: 1.3em;
-    top: .3rem;
-    right: -31.25rem;
-    white-space: nowrap;
-    padding: .25rem 1rem;
-    animation: slide-left 15s ease-in-out 12s 1;
-}
-
-.chat-bubble:after{
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 50%;
-    width: 0;
-    height: 0;
-    border: .6em solid transparent;
-    border-left-color: var(--bg-blue);
-    border-right: 0;
-    margin-top: -.6em;
-    margin-right: -.35em;
-}
-
-@media only screen and (max-width: 35em){
-    .about-wrapper img{
-        height: 2.5rem;
-        width: 2.5rem;
-    }
-
-    .about-wrapper{
-        top: 1.25rem;
-        right: 1.25rem;
-    }
-
-    .chat-bubble{
-        top: -6rem;
-        right: 0;
-        animation: slide-down 15s ease-in-out 12s 1;
-    }
-
-    .chat-bubble:after{
-        top: 0;
-        left: 95%;
-        width: 0;
-        height: 0;
-        border: .6rem solid transparent;
-        border-bottom-color: var(--bg-blue);
-        border-top: 0;
-        margin-left: -.8rem;
-        margin-top: -.4rem;
-    }
-}
-
 /*---------------------NARRATIONS-----------------------*/
 
 .narration{
@@ -261,61 +167,53 @@ main{
 
 .narration h2{max-width: 25em}
 
-/* Mountain Peak view */
-/* .narration-wrapper-hero{
-    height: 100vh;
+.narration-hero{
+    animation: fade-in ease 1.5s;
+    height: 90vh;
     min-height: 30em;
-    background-image: url(/assets/index/hero-banner.jpg);
+}
+
+.hero-content{display: flex;}
+
+.hero-headshot{
+    animation: fade-in ease 1.5s;
+    background-image: url(/assets/global/headshot.png), radial-gradient(circle, rgba(128,145,166,1) 0%, rgba(157,174,194,1) 100%);
     background-size: cover;
-} */
+    background-position: -15px;
+    border-radius: .4em;
+    box-shadow: 0 1em 2.5em rgba(0, 0, 0, .4);
+    position: relative;
+    /* These values are reset in dynamic-hero.js */
+    height: 300px;
+    width: 230px;
+    margin: 5px 30px 0 0;
+}
 
-    .narration-hero{
-        animation: fade-in ease 1.5s;
-        height: 90vh;
-        min-height: 30em;
-    }
+.hero-signature{
+    width: 13em;
+    position: absolute;
+    /* These values are reset in dynamic-hero.js */
+    right: -120px;
+    bottom: -25px;
+}
 
-    .hero-content{display: flex;}
+.hero-signature-alt{
+    display: none;
+    width: 10em;
+    padding-top: .3em;
+}
 
-    .hero-headshot{
-        animation: fade-in ease 1.5s;
-        background-image: url(/assets/global/headshot.png), radial-gradient(circle, rgba(128,145,166,1) 0%, rgba(157,174,194,1) 100%);
-        background-size: cover;
-        background-position: -15px;
-        border-radius: .4em;
-        box-shadow: 0 1em 2.5em rgba(0, 0, 0, .4);
-        position: relative;
-        /* These values are reset in dynamic-hero.js */
-        height: 300px;
-        width: 230px;
-        margin: 5px 30px 0 0;
-    }
+/* Sunrise gradient */
+.narration-wrapper-art{
+    padding-top: 18vh;
+    height: 90vh;
+    min-height: 35em;
+    background: linear-gradient(180deg, var(--bg-layer-base) 0%, #2f4375 33%, #425991 45%, #8197da 65%, #DBC6DB 80%, #E2D7E6 85%, #FFFFFF 100%);
+}
 
-    .hero-signature{
-        width: 13em;
-        position: absolute;
-        /* These values are reset in dynamic-hero.js */
-        right: -120px;
-        bottom: -25px;
-    }
-
-    .hero-signature-alt{
-        display: none;
-        width: 10em;
-        padding-top: .3em;
-    }
-
-    /* Sunrise gradient */
-    .narration-wrapper-art{
-        padding-top: 18vh;
-        height: 90vh;
-        min-height: 35em;
-        background: linear-gradient(180deg, var(--bg-layer-base) 0%, #2f4375 33%, #425991 45%, #8197da 65%, #DBC6DB 80%, #E2D7E6 85%, #FFFFFF 100%);
-    }
-
-    .narration-art{
-        margin-bottom: 12vh;
-    }
+.narration-art{
+    margin-bottom: 12vh;
+}
 
 @media only screen and (max-width: 70em){
     .narration{padding: 0 4em;}
@@ -377,28 +275,12 @@ main{
     margin: 0 auto;
 }
 
-/*This helps visually match long quotes (h2) to short quote's font (h3)*/
-.highlight h2{
-    margin: 0 auto .3em;
-    max-width: 35em;
-    font-weight: 500;
-}
-
-/* SMACSS this with .hero h2 img class*/
-.highlight h2 img{
-    width: .9em;
-    display: inline-block;
-    margin: 0 5px 5px 0px;
-    vertical-align: middle;
-}
-
 .highlight h3{
     margin: 0 auto .3em;
     max-width: 23em;
 }
 
 .highlight h4{
-    display: inline-block;
     margin: 0 auto 1em auto;
 }
 
@@ -414,22 +296,6 @@ main{
 }
 
 @media only screen and (max-width: 70em){.highlight{padding: 15vh 2em 14.5vh;}}
-
-/*----------HIGHLIGHT QUOTES---------*/
-
-/*This is targeting the quote "buttons"*/
-.ken-min h2, .ken-expand h2, .char-min h2, .char-expand h2{
-    font-weight: 300;
-    cursor: pointer;
-    width: 8em;
-}
-
-.ken-long, .char-long{display: none;}
-
-/*For Javascript actions*/
-.quote-inactive{display: none;}
-.quote-active{display: block;}
-
 
 /*---------------------UX BANNERS-----------------------*/
 
@@ -571,7 +437,6 @@ main{
         transform: translateX(0);
     }
 }
-
 
 /*--------------*/
 
@@ -889,7 +754,6 @@ main{
     grid-column-gap: 5px;
 }
 
-
 /*---------------------SNACKBAR-----------------------*/
 
 .snackbar-wrapper{
@@ -940,88 +804,6 @@ main{
     transform: translateY(200%);
 }
 
-/*---------------------QUOTE SLIDER-----------------------*/
-
-/* .slider-wrapper{
-    padding: 7em 2em 6em;
-    text-align: center;
-    background-color: #F8F8F8;
-    margin: 3em 0;
-}
-
-.slider{
-    margin: 0 auto;
-    max-width: 45em;
-}
-
-.slider h3{
-    font-size: 1.5em;
-}
-
-.slider h4{
-    color: #A7A7A7;
-    margin-bottom: 1em;
-}
-
-@media only screen and (max-width: 70em){
-    .slider{max-width: 35em;}
-    .slider h3{font-size: 1.3em}
-}
-
-.slider-nav{
-    display: flex;
-    justify-content: center; 
-}
-
-.left-arrow{
-    width: 25px;
-    height: 25px;
-    cursor: pointer;
-    padding: 1.43em .8em;
-    
-}
-
-.right-arrow{
-    width: 25px;
-    height: 25px;
-    cursor: pointer;
-    padding: 1.43em .8em;
-}
-
-.dots{
-    margin-top: 2em;
-    display: flex; 
-}
-
-.dot-active{
-    border-radius: 50%;
-    width: 7px;
-    height: 7px;
-    background-color: #000;
-    margin: 0 .5em;
-}
-
-.dot-inactive{
-    border-radius: 50%;
-    width: 7px;
-    height: 7px;
-    background-color: #A7A7A7;
-    margin: 0 .5em;
-}
-
-.slider-content-one{display: inline;}
-
-.slider-content-two{display: none;}
-
-.slider-content-three{display: none;}
-
-.slider-content-four{display: none;} */
-
-/*For Javascript to activate*/
-/* .slider-content-inactive{display: none;}
-.slider-content-active{display: inline;} */
-
-
 /*----------------FOOTER-----------------*/
 
 footer{
@@ -1051,9 +833,7 @@ footer p{
     color: #5555;
 }
 
-
 /*--------------------404.HTML-----------------------*/
-
 
 .doh{
     max-width: 68em;
