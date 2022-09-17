@@ -3,13 +3,24 @@
 @keyframes fade-in {
     0% {
         opacity: 0;
+        
+        -webkit-opacity: 0;
+        -moz-opacity: 0;
     }
     20% {
         transform: translateY(-50px);
         opacity: 0;
+
+        -webkit-transform: translateY(-50px);
+        -webkit-opacity: 0;
+        -moz-transform: translateY(-50px);
+        -moz-opacity: 0;
     }
     100% {
         opacity: 1;
+
+        -webkit-opacity: 1;
+        -moz-opacity: 1;
     }
 }
 
