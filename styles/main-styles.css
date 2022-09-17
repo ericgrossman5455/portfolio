@@ -275,6 +275,8 @@ main{
 
     .narration-hero{
         animation: fade-in ease 1.5s;
+        -moz-animation: fade-in ease 1.5s;
+        -webkit-animation: fade-in ease 1.5s;
         height: 90vh;
         min-height: 30em;
     }
@@ -283,6 +285,8 @@ main{
 
     .hero-headshot{
         animation: fade-in ease 1.5s;
+        -moz-animation: fade-in ease 1.5s;
+        -webkit-animation: fade-in ease 1.5s;
         background-image: url(/assets/global/headshot.png), radial-gradient(circle, rgba(128,145,166,1) 0%, rgba(157,174,194,1) 100%);
         background-size: cover;
         background-position: -15px;
