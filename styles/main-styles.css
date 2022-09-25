@@ -617,7 +617,7 @@ button:focus{outline: none;}
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
-    margin: 21vh auto 0;
+    margin: 21vh auto 10vh;
     max-width: 100em;
     max-height: 100em;
     min-height: 40em;
@@ -755,6 +755,57 @@ button:focus{outline: none;}
             background: linear-gradient(0deg, var(--bg-layer-base) 0%, var(--bg-layer-base) 80%, rgba(225, 225, 225,.8) 90%, rgba(225, 225, 225,.5) 94%, rgba(225, 225, 225,0.3) 96%, rgba(225, 225, 225,0) 100%);
         }
     }
+}
+
+/*--------------------CAROUSEL-----------------------*/
+
+.carousel-wrapper{
+    position: relative;
+    max-width: 1300px;
+    margin: 0 auto;
+    /* padding: 0 100px; */
+}
+
+.carousel-fadeout{
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(33,32,36,0) 0%, rgba(33,32,36,0) 5%, rgba(33,32,36,0) 10%, rgba(33,32,36,0) 90%, rgba(33,32,36,0.8032894547878773) 95%, rgba(33,32,36,1) 100%);
+}
+
+.carousel{
+    display: flex;
+    gap: 2em;
+    padding: 0 100px;
+    overflow-x: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.project-tile{
+    background-color: var(--bg-layer-top);
+    padding: 20px;
+    text-align: left;
+    
+    min-width: 250px;
+    height: 400px;
+    border-radius: .4em;
+    transition: min-width .2s ease-in-out;
+}
+
+.project-tile.active {
+    min-width: 400px;
+}
+
+.project-tile:hover{
+    cursor: pointer;
 }
 
 /*--------------------ART-----------------------*/
