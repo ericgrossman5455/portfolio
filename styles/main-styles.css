@@ -4,33 +4,44 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 :root{
     color-scheme: light dark;
-
     --bg-layer-top: #323237;
     --bg-layer1: #28282d;
     --bg-layer-base: #212024;
 
     --glyph-standard: #e1e1e1;
     --glyph-blue: #9bc5ec;
+    background-color: var(--bg-layer-base);
 }
 
 @media (prefers-color-scheme: light) {
     :root{
-        --bg-layer-top: #323237;
-        --bg-layer1: #28282d;
+        --bg-layer-top: #ffffff;
+        --bg-layer1: #eeeded;
         --bg-layer-base: #e1e1e1;
 
         --glyph-standard: #4b4b4b;
-        --glyph-blue: #9bc5ec;
+        --glyph-blue: #61a1dc;
+        background-color: var(--bg-layer-base);
     }
-}
-
-main{
-    background-color: var(--bg-layer-base);
-    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, p, a, button {
     color: var(--glyph-standard);
+}
+
+main{
+    /* background-color: var(--bg-layer-base); */
+    overflow-x: hidden;
+}
+
+.material-symbols-outlined {
+    font-size: .9em!important;
+    vertical-align: middle;
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 800,
+        'GRAD' 0,
+        'opsz' 48
 }
 
 h1{
@@ -120,45 +131,37 @@ button:focus{outline: none;}
 
 /*---------------------ICONS-----------------------*/
 
-.icon-plus{
+/* .icon-plus{
     position: relative;
-    padding-left: 1em;
+    padding-left: 1.15em;
+    color: var(--glyph-white);
     white-space: nowrap;
 }
 
 .icon-plus::before{
     position: absolute;
-    content:'';
-    mask: url(/assets/global/icon-plus.svg) no-repeat center;
-    mask-size: contain;
-    -webkit-mask: url(/assets/global/icon-plus.svg) no-repeat center;
-    -webkit-mask-size: contain;
-    width: .9em;
-    height: .9em;
-    top: .22em;
+    content: url(/assets/global/icon-plus.svg);
+    width: 1em;
+    height: 1em;
+    top: 1px;
     left: 0;
-    background-color: var(--glyph-standard);
+    filter: brightness(.3);
 }
 
 .icon-minus{
     position: relative;
-    padding-left: 1em;
+    padding-left: 1.15em;
+    color: var(--glyph-white);
     white-space: nowrap;
 }
 
 .icon-minus::before{
     position: absolute;
-    content:'';
-    mask: url(/assets/global/icon-minus.svg) no-repeat center;
-    mask-size: contain;
-    -webkit-mask: url(/assets/global/icon-minus.svg) no-repeat center;
-    -webkit-mask-size: contain;
+    content: url(/assets/global/icon-minus.svg);
     width: .9em;
     height: .9em;
-    top: .22em;
-    left: 0;
-    background-color: var(--glyph-standard);
-}
+    top: -.15em;
+    left: 0; */
 
 /*---------------------NARRATIONS-----------------------*/
 
@@ -273,24 +276,15 @@ button:focus{outline: none;}
     animation: fade-in ease 4s;
 }
 
-.section-title img{
-    margin-top: .7em;
-    width: 1.3em;
+.section-title .material-symbols-outlined{
     animation: bounce 4s infinite 6s;
+    margin-top: 5px;
+    font-size: 1.3em!important;
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 400
 }
 
-@media only screen and (max-width: 50rem){
-    .section-title img{
-        margin-top: .5em;
-        width: 1.2rem;
-    }
-}
-
-@media (prefers-color-scheme: light) {
-    .section-title img{
-        filter: brightness(.3);
-    }
-}
 
 /*---------------------HIGHLIGHTS-----------------------*/
 
@@ -864,10 +858,10 @@ button:focus{outline: none;}
     right: 2em;
     z-index: 10;
     border-radius: .25rem;
-    box-shadow: 0 .2em .4em rgba(0, 0, 0, 0.2);
+    box-shadow: 0 .4em 1em rgba(0, 0, 0, 0.2);
     margin-left: 2em;
-    transition: ease .3s;
-    animation: pop-up 5s ease-out 0s 1;
+    transition: ease .5s;
+    animation: slide-left 10s ease-out 0s 1;
 }
 
 .snackbar-content{
@@ -877,7 +871,6 @@ button:focus{outline: none;}
 }
 
 .snackbar-wrapper p{
-    color: white;
     line-height: 1.3em;
     padding-right: 2em;
     font-size: 1em
@@ -890,19 +883,24 @@ button:focus{outline: none;}
     cursor: pointer;
 }
 
+.snackbar-inactive{
+    transform: translateX(120%);
+}
+
 @media only screen and (max-width: 35em){
     .snackbar-wrapper{
-        box-shadow: 0 -.2em .4em rgba(0, 0, 0, 0.1);
-        border-radius: 0;
+        box-shadow: 0 .4em 1em rgba(0, 0, 0, 0.2);
+        animation: slide-up 10s ease-out 0s 1;
+        transition: ease .3s;
         bottom: 0;
         right: 0;
         left: 0;
         margin: 0;
     }
-}
 
-.snackbar-inactive{
-    transform: translateY(200%);
+    .snackbar-inactive{
+        transform: translateY(120%);
+    }
 }
 
 /*----------------FOOTER-----------------*/

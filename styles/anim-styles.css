@@ -27,8 +27,23 @@
     }
 }
 
-@keyframes pop-up {
+@keyframes slide-left {
     0% {
+        transform: translateX(1000px);
+    }
+    80% {
+        transform: translateX(1000px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(1000px);
+    }
+    60% {
         transform: translateY(1000px);
     }
     100% {

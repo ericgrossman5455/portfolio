@@ -28,220 +28,215 @@
     <script async src="/scripts/snackbar.js"></script>
     <title>Portfolio | Eric Grossman</title>
     <meta name="author" content="Eric Grossman">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body>
+<main>
 
-    <!-----------------------CONTENT------------------------->
+<div class="snackbar-wrapper">
+    <div class="snackbar-content">
+        <p>This site is extremely unfinished! Content and layout will&nbsp;change.</p>
+        <div class="snackbar-button">
+            <h4>Got&nbsp;it</h4>
+        </div>
+    </div>
+</div>
 
-    <main>
+<div class="narration-wrapper-hero">
+
+    <div class="narration narration-hero">
         
-        <div class="snackbar-wrapper">
-            <div class="snackbar-content">
-                <p>This site is extremely unfinished! Content and layout will&nbsp;change.</p>
-                <div class="snackbar-button">
-                    <h4>Got&nbsp;it</h4>
-                </div>
-            </div>
+        <div class="hero-content">
+            <div class="hero-headshot"><img class="hero-signature" src="./assets/index/signature-delayed.gif"></div>
+            <div><h1>hey&nbsp;there.</h1>
+            <h2>I&rsquo;m Eric, a UX designer and front-end web developer. My fascination with how design impacts others is what drives me to create empowering user experiences. <nobr><a onclick="noAboutPage()" href="#" title="Go to about page"><span class="material-symbols-outlined" style="margin: 0 3px 4px 1px;">add_circle</span>Learn more</a></nobr></h2>
+            <img class="hero-signature-no-headshot" src="./assets/index/signature-delayed.gif"></div>
         </div>
 
-        <div class="narration-wrapper-hero">
+    </div>
 
-            <div class="narration narration-hero">
-                
-                <div class="hero-content">
-                    <div class="hero-headshot"><img class="hero-signature" src="./assets/index/signature-delayed.gif"></div>
-                    <div><h1>hey&nbsp;there.</h1>
-                    <h2>I&rsquo;m Eric, a UX designer and front-end web developer. My fascination with how design impacts others is what drives me to create empowering user experiences. <a onclick="noAboutPage()" href="#" title="Go to about page"><span class="icon-plus">Learn more</span></a></h2>
-                    <img class="hero-signature-no-headshot" src="./assets/index/signature-delayed.gif"></div>
-                </div>
+</div>
 
-            </div>
+<div class="section-title">
+    <a href="#scroll-to-mobell">
+        <h4>Featured&nbsp;Work</h4>
+        <span class="material-symbols-outlined">arrow_downward</span>
+    </a>
+</div>
 
+<!--UXB means User Experience Banner, a preview of the UX study-->
+<div class="mobell-uxb-wrapper" id="scroll-to-mobell">
+
+    <div class="mobell-uxb-glow"></div>
+    <img class="mobell-uxb-image" src="./assets/mobell/mobell-product-shot.png">
+    
+    <div class="mobell-uxb-text">
+        <h4>Mobell Service</h4>
+        <h5>Improving accessibility, from hackathon idea to&nbsp;product</h5>
+        <p>Mobell aims to make society more inclusive to people with disabilities and, as a result, make greater independence accessible to all. This service suite for businesses and their customers was conceived during the 2019 Camp PolyHacks Hackathon, winning 1st Place and “Best Use of Satellite Technology by&nbsp;Northrop&nbsp;Grumman”.</p>
+    </div>
+</div>
+
+<div class="boltabout-uxb-wrapper">
+
+    <div class="boltabout-uxb-glow"></div>
+    <img class="boltabout-uxb-image" data-src="./assets/boltabout/boltabout-product-shot.png">
+
+    <div class="boltabout-uxb-text">
+        <h4>BoltAbout Dashboard</h4>
+        <h5>Streamlining the employee UX via Lean/6σ methodologies</h5>
+        <p>Driven by a pursuit of constant improvement, my team and I were tasked with identifying inefficiencies to streamline BoltAbout&rsquo;s internal processes. This work utilized Lean/Six Sigma and UX Design methodologies to implement changes that not only drastically improve the employee experience, but also continue to save the&nbsp;company&nbsp;money.</p>
+    </div>
+</div>
+
+<div class="cp-uxb-wrapper">
+
+    <div class="cp-uxb-glow"></div>
+    <img class="cp-uxb-image" data-src="./assets/cp-events/cp-events-product-shot.png">
+
+    <div class="cp-uxb-text">
+        <h4>Cal Poly Events App</h4>
+        <h5>Facilitating event discovery via research &amp;&nbsp;design</h5>
+        <p>The end goal for this project was to re-envision Cal Poly&rsquo;s brand in an authentic and modern way by incorporating Material Design language in conjunction with user research and Cal Poly’s branding guidelines. This work and its associated insights were later used for inspiration by the Cal Poly app design team for development of their redesigned student&nbsp;application.</p>
+    </div>
+</div>
+
+<div class="carousel-wrapper">
+    <div class="carousel-fadeout"></div>
+    <div class="carousel">
+        <div class="project-tile js-card">
+            <h3>Project title! Click to EXPAND!</h3>
+            <p>Quick description!</p>
         </div>
-
-        <div class="section-title">
-            <a href="#scroll-to-mobell">
-                <h4>Featured&nbsp;Work</h4>
-                <img src="./assets/global/icon-arrow-down.svg">
-            </a>
+        <div class="project-tile">
+            <h3>Project title!</h3>
+            <p>Quick description!</p>
         </div>
-
-        <!--UXB means User Experience Banner, a preview of the UX study-->
-        <div class="mobell-uxb-wrapper" id="scroll-to-mobell">
-
-            <div class="mobell-uxb-glow"></div>
-            <img class="mobell-uxb-image" src="./assets/mobell/mobell-product-shot.png">
-            
-            <div class="mobell-uxb-text">
-                <h4>Mobell Service</h4>
-                <h5>Improving accessibility, from hackathon idea to&nbsp;product</h5>
-                <p>Mobell aims to make society more inclusive to people with disabilities and, as a result, make greater independence accessible to all. This service suite for businesses and their customers was conceived during the 2019 Camp PolyHacks Hackathon, winning 1st Place and “Best Use of Satellite Technology by&nbsp;Northrop&nbsp;Grumman”.</p>
-            </div>
+        <div class="project-tile">
+            <h3>Project title!</h3>
+            <p>Quick description!</p>
         </div>
-
-        <div class="boltabout-uxb-wrapper">
-
-            <div class="boltabout-uxb-glow"></div>
-            <img class="boltabout-uxb-image" data-src="./assets/boltabout/boltabout-product-shot.png">
-
-            <div class="boltabout-uxb-text">
-                <h4>BoltAbout Dashboard</h4>
-                <h5>Streamlining the employee UX via Lean/6σ methodologies</h5>
-                <p>Driven by a pursuit of constant improvement, my team and I were tasked with identifying inefficiencies to streamline BoltAbout&rsquo;s internal processes. This work utilized Lean/Six Sigma and UX Design methodologies to implement changes that not only drastically improve the employee experience, but also continue to save the&nbsp;company&nbsp;money.</p>
-            </div>
+        <div class="project-tile">
+            <h3>Project title!</h3>
+            <p>Quick description!</p>
         </div>
-
-        <div class="cp-uxb-wrapper">
-
-            <div class="cp-uxb-glow"></div>
-            <img class="cp-uxb-image" data-src="./assets/cp-events/cp-events-product-shot.png">
-
-            <div class="cp-uxb-text">
-                <h4>Cal Poly Events App</h4>
-                <h5>Facilitating event discovery via research &amp;&nbsp;design</h5>
-                <p>The end goal for this project was to re-envision Cal Poly&rsquo;s brand in an authentic and modern way by incorporating Material Design language in conjunction with user research and Cal Poly’s branding guidelines. This work and its associated insights were later used for inspiration by the Cal Poly app design team for development of their redesigned student&nbsp;application.</p>
-            </div>
+        <div class="project-tile">
+            <h3>Project title!</h3>
+            <p>Quick description!</p>
         </div>
+    </div>
+</div>
 
-        <div class="carousel-wrapper">
-            <div class="carousel-fadeout"></div>
-            <div class="carousel">
-                <div class="project-tile js-card">
-                    <h3>Project title! Click to EXPAND!</h3>
-                    <p>Quick description!</p>
-                </div>
-                <div class="project-tile">
-                    <h3>Project title!</h3>
-                    <p>Quick description!</p>
-                </div>
-                <div class="project-tile">
-                    <h3>Project title!</h3>
-                    <p>Quick description!</p>
-                </div>
-                <div class="project-tile">
-                    <h3>Project title!</h3>
-                    <p>Quick description!</p>
-                </div>
-                <div class="project-tile">
-                    <h3>Project title!</h3>
-                    <p>Quick description!</p>
-                </div>
-            </div>
-            
-        </div>
+<div class="narration-wrapper-art">
 
-        <div class="narration-wrapper-art">
+    <div class="narration narration-art">
+        <h1>have an<br>extra minute?</h1>
+        <h2>Keep scrolling to read about my design journey and process. When I’m not designing an interface, I&rsquo;ve got my hands on a camera and some design&nbsp;tools. </h2>
+    </div>
 
-            <div class="narration narration-art">
-                <h1>have an<br>extra minute?</h1>
-                <h2>Keep scrolling to read about my design journey and process. When I’m not designing an interface, I&rsquo;ve got my hands on a camera and some design&nbsp;tools. </h2>
-            </div>
-            
-            <div class="section-title">
-                <a href="#scroll-to-art">
-                    <h4>Photos &amp; Graphics</h4>
-                    <img src="./assets/global/icon-arrow-down.svg">
-                </a>
-            </div>
+    <div class="section-title">
+        <a href="#scroll-to-art">
+            <h4>Photos &amp; Graphics</h4>
+            <span class="material-symbols-outlined">arrow_downward</span>
+        </a>
+    </div>
 
-        </div>
-        
-        <div class="art-wrapper" id="scroll-to-art">
+</div>
 
-            <div class="full-width"><img data-src="./assets/art/eric-grossman-1.jpg"></div>
+<div class="art-wrapper" id="scroll-to-art">
 
-            <div class=side-by-side1>
-                <div><img data-src="./assets/art/eric-grossman-2.jpg"></div>
-                <div><img data-src="./assets/art/eric-grossman-3.jpg"></div>
-            </div>
-            
-            <div class="highlight-wrapper">
-            <div class="highlight">
-                <h4>Where I Began</h4>
-                <h3>My love for technology and design began with making art like this. This passion now drives my UX design&nbsp;work.</h3>
-            </div>
-            </div>
+    <div class="full-width"><img data-src="./assets/art/eric-grossman-1.jpg"></div>
 
-            <div class="full-width"><img data-src="./assets/art/eric-grossman-4.jpg"></div>
-            
-            <div class=side-by-side>
-                <div><img data-src="./assets/art/eric-grossman-5.jpg"></div>
-                <div><img data-src="./assets/art/eric-grossman-8.jpg"></div>
-            </div>
+    <div class=side-by-side1>
+        <div><img data-src="./assets/art/eric-grossman-2.jpg"></div>
+        <div><img data-src="./assets/art/eric-grossman-3.jpg"></div>
+    </div>
+    
+    <div class="highlight-wrapper">
+    <div class="highlight">
+        <h4>Where I Began</h4>
+        <h3>My love for technology and design began with making art like this. This passion now drives my UX design&nbsp;work.</h3>
+    </div>
+    </div>
 
-            <div class="highlight-wrapper">
-            <div class="highlight">
-                <h4>Creating Imagery for Designs</h4>
-                <h3>Each piece of digital art is original, meaning every element comes from my trusty&nbsp;camera.</h3>
-            </div>
-            </div>
+    <div class="full-width"><img data-src="./assets/art/eric-grossman-4.jpg"></div>
+    
+    <div class=side-by-side>
+        <div><img data-src="./assets/art/eric-grossman-5.jpg"></div>
+        <div><img data-src="./assets/art/eric-grossman-8.jpg"></div>
+    </div>
 
-            <div class=side-by-side>
-                <div><img data-src="./assets/art/eric-grossman-6.jpg"></div>
-                <div><img data-src="./assets/art/eric-grossman-7.jpg"></div>
-            </div>
+    <div class="highlight-wrapper">
+    <div class="highlight">
+        <h4>Creating Imagery for Designs</h4>
+        <h3>Each piece of digital art is original, meaning every element comes from my trusty&nbsp;camera.</h3>
+    </div>
+    </div>
 
-            <div class="full-width"><img data-src="./assets/art/eric-grossman-15.jpg"></div>
+    <div class=side-by-side>
+        <div><img data-src="./assets/art/eric-grossman-6.jpg"></div>
+        <div><img data-src="./assets/art/eric-grossman-7.jpg"></div>
+    </div>
 
-            <div class="highlight-wrapper">
-            <div class="highlight">
-                <h4>Editing Photo Shoots</h4>
-                <h3>Handcrafted color profiles for each shoot ensure that a client&rsquo;s photos feel coherent, yet&nbsp;unique.</h3>
-            </div>
-            </div>
+    <div class="full-width"><img data-src="./assets/art/eric-grossman-15.jpg"></div>
 
-            <div class="full-width"><img data-src="./assets/art/eric-grossman-18.jpg"></div>
+    <div class="highlight-wrapper">
+    <div class="highlight">
+        <h4>Editing Photo Shoots</h4>
+        <h3>Handcrafted color profiles for each shoot ensure that a client&rsquo;s photos feel coherent, yet&nbsp;unique.</h3>
+    </div>
+    </div>
 
-            <div class=side-by-side>
-                <div><img data-src="./assets/art/eric-grossman-21.jpg"></div>
-                <div><img data-src="./assets/art/eric-grossman-22.jpg"></div>
-            </div>
+    <div class="full-width"><img data-src="./assets/art/eric-grossman-18.jpg"></div>
 
-            <div class="full-width"><img data-src="./assets/art/eric-grossman-19.jpg"></div>
-            
-            <div class="highlight-wrapper">
-            <div class="highlight">
-                <h4>How I Use These Skills</h4>
-                <h3>Creating digital art taught me the foundational skills needed to design visually appealing user&nbsp;interfaces.</h3>
-            </div>
-            </div>
+    <div class=side-by-side>
+        <div><img data-src="./assets/art/eric-grossman-21.jpg"></div>
+        <div><img data-src="./assets/art/eric-grossman-22.jpg"></div>
+    </div>
 
-            <div class=side-by-side2>
-                <div><img data-src="./assets/art/eric-grossman-10.jpg"></div>
-                <div><img data-src="./assets/art/eric-grossman-11.jpg"></div>
-            </div>
-            
-            <div class="full-width"><img data-src="./assets/art/eric-grossman-12.jpg"></div>
-            
-            <div class=side-by-side>
-                <div><img data-src="./assets/art/eric-grossman-13.jpg"></div>
-                <div><img data-src="./assets/art/eric-grossman-14.jpg"></div>
-            </div>
+    <div class="full-width"><img data-src="./assets/art/eric-grossman-19.jpg"></div>
+    
+    <div class="highlight-wrapper">
+    <div class="highlight">
+        <h4>How I Use These Skills</h4>
+        <h3>Creating digital art taught me the foundational skills needed to design visually appealing user&nbsp;interfaces.</h3>
+    </div>
+    </div>
 
-        </div>
+    <div class=side-by-side2>
+        <div><img data-src="./assets/art/eric-grossman-10.jpg"></div>
+        <div><img data-src="./assets/art/eric-grossman-11.jpg"></div>
+    </div>
+    
+    <div class="full-width"><img data-src="./assets/art/eric-grossman-12.jpg"></div>
+    
+    <div class=side-by-side>
+        <div><img data-src="./assets/art/eric-grossman-13.jpg"></div>
+        <div><img data-src="./assets/art/eric-grossman-14.jpg"></div>
+    </div>
 
-        <!----------------FOOTER----------------->
+</div>
 
-        <footer>
-            <h4>Let’s connect &amp; create</h4>
-            
-            <div class="social">
-            <a href="mailto:contact@eric-grossman.com?subject=Reaching out via Portfolio"><img src="./assets/global/email-icon.svg" alt="Email button." title="Send Eric an email"></a>
-            <a href="https://www.linkedin.com/in/eric-grossman-277a27bb/"><img src="./assets/global/linkedin-icon.svg" alt="LinkedIn profile button." title="View Eric's LinkedIn profile"></a>
-            <a href="https://www.instagram.com/eric_grossman/"><img src="./assets/global/instagram-icon.svg" alt="Instagram profile button." title="View Eric's Instagram profile"></a>    
-        </div>
-            
-            <p>© Designed &amp; Developed by Eric Grossman<br>This site is in development!</p>
-        </footer>
-        
-    </main>
+<!----------------FOOTER----------------->
 
-    <!-------------------JAVASCRIPT(more scripts in head)--------------------->
+<footer>
+    <h4>Let’s connect &amp; create</h4>
 
-    <script src="/scripts/lazy-load.js"></script>
-    <script src="/scripts/quote-expand.js"></script>
-    <script src="/scripts/messages.js"></script>
-        
+    <div class="social">
+        <a href="mailto:contact@eric-grossman.com?subject=Reaching out via Portfolio"><img src="./assets/global/email-icon.svg" alt="Email button." title="Send Eric an email"></a>
+        <a href="https://www.linkedin.com/in/eric-grossman-277a27bb/"><img src="./assets/global/linkedin-icon.svg" alt="LinkedIn profile button." title="View Eric's LinkedIn profile"></a>
+        <a href="https://www.instagram.com/eric_grossman/"><img src="./assets/global/instagram-icon.svg" alt="Instagram profile button." title="View Eric's Instagram profile"></a>    
+    </div>
+
+    <p>© Designed &amp; Developed by Eric Grossman<br>This site is in development!</p>
+</footer>
+
+
+</main>
+
+<script src="/scripts/lazy-load.js"></script>
+<script src="/scripts/messages.js"></script>
+
 </body>
 </html>
