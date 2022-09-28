@@ -855,8 +855,11 @@ button:focus{outline: none;}
     cursor: pointer;
 }
 
-.snackbar-inactive{
-    transform: translateX(120%);
+#snackbar-btn {display: none;}
+
+#snackbar-btn:checked ~ .snackbar-wrapper {
+    transform: translateX(100%);
+    filter: opacity(0);
 }
 
 @media only screen and (max-width: 35em){
@@ -870,8 +873,9 @@ button:focus{outline: none;}
         margin: 0;
     }
 
-    .snackbar-inactive{
-        transform: translateY(120%);
+    #snackbar-btn:checked ~ .snackbar-wrapper {
+        transform: translateY(100%);
+        filter: opacity(0);
     }
 }
 
