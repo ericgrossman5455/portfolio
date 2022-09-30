@@ -6,39 +6,39 @@ let mediaQuery = window.matchMedia('(max-width: 70rem)');
 
 
 // Set copy for intro and variables for spacing/alignment
-if (hour > 22){ //after 10PM
+if (hour > 22){ //starts at 10PM
     intro.innerHTML = 'hey<br>night&nbsp;owl.';
     var lineBreak = true;
     var ascender = true;
 }
-else if (hour > 18){ //after 6PM
+else if (hour > 16){ //starts at 5PM
     intro.innerHTML = 'good<br>evening.';
     var lineBreak = true;
     var ascender = false;
 }
-else if (hour > 13){ //after 1PM
+else if (hour > 13){ //starts at 2PM
     intro.innerHTML = 'good<br>afternoon.';
     intro.style.paddingBottom = '.1rem'
     var lineBreak = true;
     var ascender = false;
 }
-else if (hour > 10){ //after 10AM
+else if (hour > 10){ //starts at 11AM
     intro.innerHTML = 'hey&nbsp;there.';
     var lineBreak = false;
     var ascender = true;
 }
-else if (hour > 6){ //after 6AM
+else if (hour > 6){ //starts at 7AM
     intro.innerHTML = 'good<br>mornin\’.';
     intro.style.paddingBottom = '.1rem'
     var lineBreak = true;
     var ascender = false;
 }
-else if (hour > 3){ //after 3AM
+else if (hour > 3){ //starts at 4AM
     intro.innerHTML = 'hey<br>early&nbsp;bird.';
     var lineBreak = true;
     var ascender = true;
 }
-else if (hour >= 0){ //after 12AM
+else if (hour >= 0){ //starts at 1AM
     intro.innerHTML = 'hey<br>night&nbsp;owl.';
     var lineBreak = true;
     var ascender = true;
