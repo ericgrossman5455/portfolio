@@ -1,5 +1,5 @@
 let hour = new Date().getHours();
-let intro = document.querySelector(".hero-content h1");
+let intro = document.querySelector(".hero h1");
 let headshot = document.querySelector(".hero-headshot");
 let signature = document.querySelector(".hero-signature");
 let mediaQuery = window.matchMedia('(max-width: 70rem)');
