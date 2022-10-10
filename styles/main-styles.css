@@ -84,6 +84,7 @@ p{
 }
 
 a{
+    font-family: proxima-nova, sans-serif;
     text-decoration: none;
 }
 
@@ -121,7 +122,17 @@ a{
 
 .flex{display: flex;}
 
-/*---------------------HERO/ART-----------------------*/
+@media only screen and (max-width: 70em){
+    .narration{padding: 0 4em;}
+    .narration p{font-size: 1.3rem}
+}
+
+@media only screen and (max-width: 50em){
+    .narration{padding: 0 2em;}
+    .narration p{font-size: 1.2rem}
+}
+
+/*---------------------HERO-----------------------*/
 
 .hero{
     animation: fade-in ease 1.5s;
@@ -168,27 +179,7 @@ a{
     }
 }
 
-.sunrise{
-    padding-top: 18vh;
-    height: 90vh;
-    min-height: 35em;
-    background: linear-gradient(180deg, var(--bg-layer-base) 0%, #2f4375 33%, #425991 45%, #8197da 65%, #DBC6DB 80%, #E2D7E6 85%, #FFFFFF 100%);
-}
-
-@media (prefers-color-scheme: light) {
-    .sunrise{
-        background: linear-gradient(180deg, var(--bg-layer-base) 0%, #FFFFFF 100%);
-        height: 80vh;
-    }
-}
-
-.art-intro{
-    margin-bottom: 12vh;
-}
-
 @media only screen and (max-width: 70em){
-    .narration{padding: 0 4em;}
-    .narration p{font-size: 1.3rem}
     .hero-headshot{
         background-position: -20px;
         height: 250px;
@@ -200,17 +191,11 @@ a{
         right: -105px;
         bottom: -25px;
     }
-
 }
 
 @media only screen and (max-width: 55em){
     .hero-headshot{display: none;}
     .hero-signature-no-headshot{display: block;}
-}
-
-@media only screen and (max-width: 50em){
-    .narration{padding: 0 2em;}
-    .narration p{font-size: 1.2rem}
 }
 
 /*---------------------SECTION TITLES-----------------------*/
@@ -267,7 +252,25 @@ a{
 
 @media only screen and (max-width: 70em){.highlight{padding: 15vh 2em 14.5vh;}}
 
-/*--------------------ART-GRID-----------------------*/
+/*--------------------ART/GRID-----------------------*/
+
+.sunrise{
+    padding-top: 18vh;
+    height: 90vh;
+    min-height: 35em;
+    background: linear-gradient(180deg, var(--bg-layer-base) 0%, #2f4375 33%, #425991 45%, #8197da 65%, #DBC6DB 80%, #E2D7E6 85%, #FFFFFF 100%);
+}
+
+@media (prefers-color-scheme: light) {
+    .sunrise{
+        background: linear-gradient(180deg, var(--bg-layer-base) 0%, #FFFFFF 100%);
+        height: 80vh;
+    }
+}
+
+.art-intro{
+    margin-bottom: 12vh;
+}
 
 .art-grid{
     display: grid;
@@ -282,30 +285,18 @@ a{
     object-fit: cover;
 }
 
-/* Try using nth child here */
-
-.side-by-side{
+.columns{
     display: grid;
     grid-template-columns: auto auto;
     grid-column-gap: 5px;
 }
 
-.side-by-side1{
-    display: grid;
+.custom-columns-1{
     grid-template-columns: 1.2fr 1fr;
-    grid-column-gap: 5px;
 }
 
-.side-by-side2{
-    display: grid;
+.custom-columns-2{
     grid-template-columns: 1.15fr 1fr;
-    grid-column-gap: 5px;
-}
-
-.side-by-side3{
-    display: grid;
-    grid-template-columns: 3fr 0fr;
-    grid-column-gap: 5px;
 }
 
 /*---------------------SNACKBAR-----------------------*/
@@ -417,7 +408,6 @@ a.btn{
     border-radius: 7px;
     border-top: var(--bg-layer1) 1.5px solid;
     cursor: pointer;
-    font-family: proxima-nova, sans-serif;
     font-size: 16px;
     padding: 12px 16px;
     transition: ease .2s;
@@ -451,7 +441,6 @@ a.btn:active{
         padding: 10px 14px;
     }
 }
-
 
 /*--------------------404.HTML-----------------------*/
 
