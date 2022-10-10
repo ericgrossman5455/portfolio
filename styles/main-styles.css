@@ -119,13 +119,15 @@ a{
     line-height: 1.5;
 }
 
-.hero-wrapper{
+.flex{display: flex;}
+
+/*---------------------HERO/ART-----------------------*/
+
+.hero{
     animation: fade-in ease 1.5s;
     height: 90vh;
     min-height: 30em;
 }
-
-.hero{display: flex;}
 
 .hero-headshot{
     animation: fade-in ease 1.5s;
@@ -166,8 +168,7 @@ a{
     }
 }
 
-/* Sunrise gradient */
-.narration-wrapper-art{
+.sunrise{
     padding-top: 18vh;
     height: 90vh;
     min-height: 35em;
@@ -175,13 +176,13 @@ a{
 }
 
 @media (prefers-color-scheme: light) {
-    .narration-wrapper-art{
+    .sunrise{
         background: linear-gradient(180deg, var(--bg-layer-base) 0%, #FFFFFF 100%);
         height: 80vh;
     }
 }
 
-.narration-art{
+.art-intro{
     margin-bottom: 12vh;
 }
 
@@ -253,28 +254,28 @@ a{
     margin: 0 auto 1em auto;
 }
 
-.art-wrapper .highlight h4{color: #777777;}
+.art-grid .highlight h4{color: #777777;}
 
-.art-wrapper .highlight-wrapper{
+.art-grid .highlight-wrapper{
     margin: 0;
     background-color: #F8F8F8;
 }
 
-.art-wrapper .highlight h3{
+.art-grid .highlight h3{
     color: #333333;
 }
 
 @media only screen and (max-width: 70em){.highlight{padding: 15vh 2em 14.5vh;}}
 
-/*--------------------ART-----------------------*/
+/*--------------------ART-GRID-----------------------*/
 
-.art-wrapper{
+.art-grid{
     display: grid;
     grid-gap: 5px;
     background-color: #F8F8F8;
 }
 
-.art-wrapper img{
+.art-grid img{
     display: block;
     width: 100%;
     height: 100%;
