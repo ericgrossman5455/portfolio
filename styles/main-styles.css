@@ -27,7 +27,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     }
 }
 
-h1, h2, h3, h4, h5, p, a {
+h1, h3, h4, h5, p, a {
     color: var(--glyph-standard);
 }
 
@@ -52,13 +52,6 @@ h1{
     font-weight: 800;
     line-height: .9;
     padding-bottom: .2em;
-}
-
-h2{
-    font-family: depot-new-web, sans-serif;
-    font-size: 1.4rem;
-    font-weight: 300;
-    line-height: 1.5;
 }
 
 h3{
@@ -96,14 +89,12 @@ a{
 
 @media only screen and (max-width: 70rem){
     h1{font-size: 4rem}
-    h2{font-size: 1.3rem}
     h3{font-size: 1.7rem}
     h4{font-size: .9rem}
 }
 
 @media only screen and (max-width: 50rem){
     h1{font-size: 3.3rem}
-    h2{font-size: 1.2rem}
     h3{font-size: 1.4rem}
     h4{font-size: .85rem}
     h5{font-size: 2.2rem}
@@ -121,7 +112,12 @@ a{
     justify-content: center;
 }
 
-.narration h2{max-width: 24em}
+.narration p{
+    max-width: 24em;
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.5;
+}
 
 .hero-wrapper{
     animation: fade-in ease 1.5s;
@@ -191,6 +187,7 @@ a{
 
 @media only screen and (max-width: 70em){
     .narration{padding: 0 4em;}
+    .narration p{font-size: 1.3rem}
     .hero-headshot{
         background-position: -20px;
         height: 250px;
@@ -212,6 +209,7 @@ a{
 
 @media only screen and (max-width: 50em){
     .narration{padding: 0 2em;}
+    .narration p{font-size: 1.2rem}
 }
 
 /*---------------------SECTION TITLES-----------------------*/
@@ -461,7 +459,7 @@ a.btn:active{
     padding-top: 25vh;
 }
 
-.doh h2{
+.doh p{
     margin-bottom: 1em;
     max-width: 27em;
 }
