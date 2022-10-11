@@ -76,25 +76,23 @@ function heroAlignment(e){
     //Smaller than 70rem
     else if (e.matches == true){
         headshot.style.width = '180px';
-        signature.style.right = '-105px';
+        signature.style.right = '-90px';
+        signature.style.bottom = '-25px';
 
         if ((lineBreak == true) && (ascender == true)){
             headshot.style.marginTop = '5px';
             headshot.style.height = '290px';
             headshot.style.backgroundPosition = '-55px';
-            signature.style.bottom = '-30px';
         }
         else if ((lineBreak == true) && (ascender == false)){
             headshot.style.marginTop = '13px';
             headshot.style.height = '280px';
             headshot.style.backgroundPosition = '-47px';
-            signature.style.bottom = '-20px';
         }
         else if ((lineBreak == false) && (ascender == true)){
             headshot.style.marginTop = '5px';
             headshot.style.height = '250px';
             headshot.style.backgroundPosition = '-25px';
-            signature.style.bottom = '-25px';
         }
     }
 }
