@@ -220,7 +220,7 @@ a{
     margin: 0 auto;
 }
 
-.highlight h3{
+.highlight p{
     margin: 0 auto .3em;
     max-width: 23em;
     font-family: depot-new-web, sans-serif;
@@ -240,7 +240,7 @@ a{
     background-color: #F8F8F8;
 }
 
-.art-grid .highlight h3{
+.art-grid .highlight p{
     color: #333333;
 }
 
@@ -249,13 +249,13 @@ a{
         padding: 15vh 2em 14.5vh;
     }
 
-    .highlight h3{
+    .highlight p{
         font-size: 1.7rem
     }
 }
 
 @media only screen and (max-width: 50rem){
-    .highlight h3{
+    .highlight p{
         font-size: 1.4rem
     }
 }
