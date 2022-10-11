@@ -46,26 +46,26 @@ else if (hour >= 0){ //starts at 1AM
 
 
 // Set spacing/alignment for hero
-function heroAlignment(e){
+function heroAlignment(e) {
 
     //Wider than 70rem
-    if (e.matches == false){
+    if (e.matches == false) {
         headshot.style.width = '230px';
         signature.style.right = '-120px';
 
-        if ((lineBreak == true) && (ascender == true)){
+        if ((lineBreak == true) && (ascender == true)) {
             headshot.style.marginTop = '5px';
             headshot.style.height = '335px';
             headshot.style.backgroundPosition = '-50px';
             signature.style.bottom = '-40px';
         }
-        else if ((lineBreak == true) && (ascender == false)){
+        else if ((lineBreak == true) && (ascender == false)) {
             headshot.style.marginTop = '20px';
             headshot.style.height = '325px';
             headshot.style.backgroundPosition = '-40px';
             signature.style.bottom = '-30px';
         }
-        else if ((lineBreak == false) && (ascender == true)){
+        else if ((lineBreak == false) && (ascender == true)) {
             headshot.style.marginTop = '5px';
             headshot.style.height = '300px';
             headshot.style.backgroundPosition = '-25px';
@@ -74,22 +74,22 @@ function heroAlignment(e){
     }
 
     //Smaller than 70rem
-    else if (e.matches == true){
+    else if (e.matches == true) {
         headshot.style.width = '180px';
         signature.style.right = '-90px';
         signature.style.bottom = '-25px';
 
-        if ((lineBreak == true) && (ascender == true)){
+        if ((lineBreak == true) && (ascender == true)) {
             headshot.style.marginTop = '5px';
             headshot.style.height = '290px';
             headshot.style.backgroundPosition = '-55px';
         }
-        else if ((lineBreak == true) && (ascender == false)){
+        else if ((lineBreak == true) && (ascender == false)) {
             headshot.style.marginTop = '13px';
             headshot.style.height = '280px';
             headshot.style.backgroundPosition = '-47px';
         }
-        else if ((lineBreak == false) && (ascender == true)){
+        else if ((lineBreak == false) && (ascender == true)) {
             headshot.style.marginTop = '5px';
             headshot.style.height = '250px';
             headshot.style.backgroundPosition = '-25px';
