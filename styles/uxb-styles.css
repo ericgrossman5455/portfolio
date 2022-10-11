@@ -124,7 +124,7 @@
         background: linear-gradient(0deg, var(--bg-layer-base) 0%, var(--bg-layer-base) 80%, rgba(33,32,36,.8) 90%, rgba(33,32,36,.5) 94%, rgba(33,32,36,0.3) 96%, rgba(33,32,36,0) 100%);
     }
 
-    .mobell-uxb-text p, .mobell-uxb-text h5 {
+    .mobell-uxb-text p, .mobell-uxb-text h2 {
         max-width: 550px
     }
 
@@ -275,7 +275,7 @@
         background: linear-gradient(0deg, var(--bg-layer-base) 0%, var(--bg-layer-base) 80%, rgba(33,32,36,.8) 90%, rgba(33,32,36,.5) 94%, rgba(33,32,36,0.3) 96%, rgba(33,32,36,0) 100%);
     }
 
-    .boltabout-uxb-text p, .boltabout-uxb-text h5 {
+    .boltabout-uxb-text p, .boltabout-uxb-text h2 {
         max-width: 550px
     }
 
@@ -436,7 +436,7 @@
         background: linear-gradient(0deg, var(--bg-layer-base) 0%, var(--bg-layer-base) 80%, rgba(33,32,36,.8) 90%, rgba(33,32,36,.5) 94%, rgba(33,32,36,0.3) 96%, rgba(33,32,36,0) 100%);
     }
 
-    .cp-uxb-text p, .cp-uxb-text h5 {
+    .cp-uxb-text p, .cp-uxb-text h2 {
         max-width: 550px
     }
 

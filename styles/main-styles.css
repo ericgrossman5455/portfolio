@@ -27,7 +27,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     }
 }
 
-h1, h3, h4, h5, p, a {
+h1, h2, h4, p, a {
     color: var(--glyph-standard);
 }
 
@@ -54,13 +54,6 @@ h1{
     padding-bottom: .2em;
 }
 
-h3{
-    font-family: depot-new-web, sans-serif;
-    font-size: 2rem;
-    font-weight: 500;
-    line-height: 1.3;
-}
-
 h4{
     font-family: proxima-nova, sans-serif;
     font-size: 1rem;
@@ -68,7 +61,7 @@ h4{
     text-transform: uppercase;
 }
 
-h5{
+h2{
     font-family: depot-new-web, sans-serif;
     font-size: 2.7rem;
     font-weight: 600;
@@ -90,15 +83,13 @@ a{
 
 @media only screen and (max-width: 70rem){
     h1{font-size: 4rem}
-    h3{font-size: 1.7rem}
     h4{font-size: .9rem}
 }
 
 @media only screen and (max-width: 50rem){
     h1{font-size: 3.3rem}
-    h3{font-size: 1.4rem}
     h4{font-size: .85rem}
-    h5{font-size: 2.2rem}
+    h2{font-size: 2.2rem}
     p{font-size: 1.1rem; line-height: 1.6}
 }
 
@@ -216,7 +207,6 @@ a{
     'wght' 400
 }
 
-
 /*---------------------HIGHLIGHTS-----------------------*/
 
 .highlight-wrapper{
@@ -233,6 +223,10 @@ a{
 .highlight h3{
     margin: 0 auto .3em;
     max-width: 23em;
+    font-family: depot-new-web, sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.3;
 }
 
 .highlight h4{
@@ -250,7 +244,21 @@ a{
     color: #333333;
 }
 
-@media only screen and (max-width: 70em){.highlight{padding: 15vh 2em 14.5vh;}}
+@media only screen and (max-width: 70em){
+    .highlight{
+        padding: 15vh 2em 14.5vh;
+    }
+
+    .highlight h3{
+        font-size: 1.7rem
+    }
+}
+
+@media only screen and (max-width: 50rem){
+    .highlight h3{
+        font-size: 1.4rem
+    }
+}
 
 /*--------------------ART/GRID-----------------------*/
 
