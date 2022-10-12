@@ -379,35 +379,64 @@ a {
 /*----------------FOOTER-----------------*/
 
 footer {
-    margin-top: -1px;
+    padding-top: 6em;
+    overflow-y: hidden;
     text-align: center;
-    background: #f8f8f8;
+    background: linear-gradient(180deg, var(--bg-layer1) 50%, rgba(225, 225, 225,0) 100%);
+    background-color: var(--bg-layer1);
 }
 
-footer h3 {
-    color: #888888;
-    padding: 6em 0 2em 0;
-    
-}
-
-footer .social {
-    margin: 0 auto;
-    max-width: 25em;
+footer .footer-icons {
+    border-top: 1px solid var(--glyph-standard);
+    display: flex;
+    filter: opacity(.8);
+    gap: 10px;
+    justify-content: center;
+    margin: 28px auto 0;
+    max-width: 300px;
+    padding: 20px 0 80px;
     width: 70%;
-    position: static;
-    border-top: 1px solid #B3B3B3;
-    padding: 2.2em 0 5em;
 }
 
-.social img {
-    width: 1.1em;
-    padding: 0 .9em;
+.footer-icons a {
+    height: 40px;
+    width: 40px;
+}
+
+.icon-email, .icon-linkedin, .icon-instagram {
+    position: relative;
+}
+.icon-email::before, .icon-linkedin::before, .icon-instagram::before {
+     background-color: var(--glyph-standard);
+     content:'';
+     height: 18px;
+     left: 11px;
+     mask-size: contain;
+     -webkit-mask-size: contain;
+     position: absolute;
+     top: 11px;
+     width: 18px;
+}
+
+.icon-email::before {
+    mask: url(/assets/global/email-icon.svg) no-repeat center;
+    -webkit-mask: url(/assets/global/email-icon.svg) no-repeat center;
+}
+
+.icon-linkedin::before {
+    mask: url(/assets/global/linkedin-icon.svg) no-repeat center;
+    -webkit-mask: url(/assets/global/linkedin-icon.svg) no-repeat center;
+}
+
+.icon-instagram::before {
+    mask: url(/assets/global/instagram-icon.svg) no-repeat center;
+    -webkit-mask: url(/assets/global/instagram-icon.svg) no-repeat center;
 }
 
 footer p {
-    padding-bottom: 2em;
+    filter: opacity(.3);
     font-size: .8em;
-    color: #5555;
+    padding-bottom: 2em;
 }
 
 /*--------------------BUTTONS-----------------------*/
@@ -460,8 +489,12 @@ a.btn:active {
 }
 
 .doh p {
-    margin-bottom: 1em;
-    max-width: 27em;
+    margin-bottom: 10px;
+    max-width: 42ch;
+}
+
+.doh .btn-row {
+    margin-top: 10px
 }
 
 .homer {
