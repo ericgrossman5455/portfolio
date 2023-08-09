@@ -284,7 +284,9 @@ a {
 .art-grid {
     display: grid;
     grid-gap: 5px;
-    background-color: #F8F8F8;
+    margin-bottom: 32px;
+    background: linear-gradient(180deg, #ffffff 0%, #ffffff 90%, var(--bg-layer-base) 100%);
+    
 }
 
 .art-grid img {
@@ -314,9 +316,9 @@ a {
     animation: slide-left 10s ease-out 0s 1;
     background: var(--bg-layer-top);
     border-radius: .25rem;
-    bottom: 2em;
+    bottom: 32px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    margin-left: 2em;
+    margin-left: 32px;
     position: fixed;
     right: 2em;
     transition: ease .5s;
@@ -378,11 +380,15 @@ a {
 
 /*----------------FOOTER-----------------*/
 
-footer {
+footer {padding: 0 32px 32px;}
+
+.footer-content {
+    max-width: 900px;
     padding-top: 6em;
-    overflow-y: hidden;
+    margin: 0 auto 30px;
+    border-radius: 8px;
+    border: var(--bg-layer-top) 1px solid;
     text-align: center;
-    background: linear-gradient(180deg, var(--bg-layer1) 50%, rgba(225, 225, 225,0) 100%);
     background-color: var(--bg-layer1);
 }
 
@@ -410,7 +416,7 @@ footer .footer-icons {
      background-color: var(--glyph-standard);
      content:'';
      height: 18px;
-     left: 11px;
+     left: -9px;
      mask-size: contain;
      -webkit-mask-size: contain;
      position: absolute;
@@ -437,6 +443,12 @@ footer p {
     filter: opacity(.3);
     font-size: .8em;
     padding-bottom: 2em;
+}
+
+@media only screen and (max-width: 35em) {
+    footer {
+        padding: 0 20px 20px;
+    }
 }
 
 /*--------------------BUTTONS-----------------------*/
@@ -499,12 +511,24 @@ a.btn:active {
 
 .homer {
     line-height: 0;
-    margin: 50px 10% 1px auto;
-    max-width: 25em;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 900px;
+    text-align: right;
+}
+
+.homer img {
+    margin: 50px 10% 0 auto;
+    max-width: 20em;
+
 }
 
 @media only screen and (max-width: 80em) {
     .homer {
-        width: 15em
+        width: 100%
+    }
+
+    .homer img {
+        max-width: 15em;
     }
 }
