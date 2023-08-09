@@ -380,12 +380,12 @@ a {
 
 /*----------------FOOTER-----------------*/
 
-footer {padding: 0 32px;}
+footer {padding: 0 32px 32px;}
 
 .footer-content {
     max-width: 900px;
     padding-top: 6em;
-    margin: 0 auto 30px;
+    margin: 0 auto;
     border-radius: 8px;
     border: var(--bg-layer-top) 1px solid;
     text-align: center;
@@ -447,7 +447,7 @@ footer p {
 
 @media only screen and (max-width: 35em) {
     footer {
-        padding: 0 20px;
+        padding: 0 20px 20px;
     }
 }
 
