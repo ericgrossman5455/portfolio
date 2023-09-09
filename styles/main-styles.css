@@ -127,6 +127,7 @@ a {
 .hero {
     animation: fade-in ease 1.5s;
     height: 90vh;
+    height: 90svh;
     min-height: 30em;
 }
 
