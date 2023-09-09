@@ -1,52 +1,67 @@
 /* CSS DOCUMENT */
 
 @keyframes fade-in {
-    0% {
-        transform: translateY(0);
-        opacity: 0;
-    }
-    20% {
-        transform: translateY(-50px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
+	0% {
+		transform: translateY(0);
+		opacity: 0;
+	}
+	20% {
+		transform: translateY(-50px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
 }
 
 @keyframes bounce {
-    0% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(10px);
-    }
-    100% {
-      transform: translateY(0);
-    }
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(10px);
+	}
+	100% {
+		transform: translateY(0);
+	}
 }
 
 @keyframes slide-left {
-    0% {
-        transform: translateX(1000px);
-    }
-    80% {
-        transform: translateX(1000px);
-    }
-    100% {
-        transform: translateX(0);
-    }
+	0% {
+		transform: translateX(1000px);
+	}
+	80% {
+		transform: translateX(1000px);
+	}
+	100% {
+		transform: translateX(0);
+	}
 }
 
 @keyframes slide-up {
-    0% {
-        transform: translateY(1000px);
-    }
-    60% {
-        transform: translateY(1000px);
-    }
-    100% {
-        transform: translateY(0);
-    }
+	0% {
+		transform: translateY(1000px);
+	}
+	60% {
+		transform: translateY(1000px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes loading-pulse {
+	0% {
+		background-position: 100% 100%;
+	}
+	50% {
+		background-position: 0% 0%;
+	}
+	90% {
+		background-position: 0% 0%;
+	}
+	100% {
+		background-position: 100% 100%;
+	}
 }
