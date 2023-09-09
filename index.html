@@ -40,7 +40,7 @@
 					right: 5px;
 					font-size: 10px;
 				">
-				v0.2
+				v0.3
 			</p>
 			<!-- DELETE BEFORE MERGING WITH MAIN -->
 
@@ -99,12 +99,12 @@
 				</a>
 			</div>
 
-			<!--UXB means User Experience Banner, a preview of the UX study-->
 			<div class="mobell-uxb-wrapper" id="scroll-to-mobell">
 				<div class="mobell-uxb-glow"></div>
 				<img
 					class="mobell-uxb-image"
-					src="./assets/mobell/mobell-product-shot.png" />
+					src="./assets/mobell/mobell-product-shot.png"
+					loading="eager" />
 				<div class="mobell-uxb-text">
 					<h3>Mobell Service</h3>
 					<h2>
@@ -127,7 +127,8 @@
 				<div class="boltabout-uxb-glow"></div>
 				<img
 					class="boltabout-uxb-image"
-					data-src="./assets/boltabout/boltabout-product-shot.png" />
+					src="./assets/boltabout/boltabout-product-shot.png"
+					loading="lazy" />
 				<div class="boltabout-uxb-text">
 					<h3>BoltAbout Dashboard</h3>
 					<h2>
@@ -149,7 +150,8 @@
 				<div class="cp-uxb-glow"></div>
 				<img
 					class="cp-uxb-image"
-					data-src="./assets/cp-events/cp-events-product-shot.png" />
+					src="./assets/cp-events/cp-events-product-shot.png"
+					loading="lazy" />
 				<div class="cp-uxb-text">
 					<h3>Cal Poly Events App</h3>
 					<h2>
@@ -195,12 +197,24 @@
 
 			<div class="art-grid" id="scroll-to-art">
 				<div class="full-width">
-					<img data-src="./assets/art/eric-grossman-1.jpg" />
+					<div class="loading-indicator">
+						<img
+							src="./assets/art/eric-grossman-1.jpg"
+							loading="eager" />
+					</div>
 				</div>
 
 				<div class="columns custom-columns-1">
-					<img data-src="./assets/art/eric-grossman-2.jpg" />
-					<img data-src="./assets/art/eric-grossman-3.jpg" />
+					<div class="loading-indicator">
+						<img
+							src="./assets/art/eric-grossman-2.jpg"
+							loading="lazy" />
+					</div>
+					<div class="loading-indicator">
+						<img
+							src="./assets/art/eric-grossman-3.jpg"
+							loading="lazy" />
+					</div>
 				</div>
 
 				<div class="highlight-wrapper">
@@ -215,12 +229,24 @@
 				</div>
 
 				<div class="full-width">
-					<img data-src="./assets/art/eric-grossman-4.jpg" />
+					<div class="loading-indicator">
+						<img
+							src="./assets/art/eric-grossman-4.jpg"
+							loading="lazy" />
+					</div>
 				</div>
 
 				<div class="columns">
-					<img data-src="./assets/art/eric-grossman-5.jpg" />
-					<img data-src="./assets/art/eric-grossman-8.jpg" />
+					<div class="loading-indicator">
+						<img
+							src="./assets/art/eric-grossman-5.jpg"
+							loading="lazy" />
+					</div>
+					<div class="loading-indicator">
+						<img
+							src="./assets/art/eric-grossman-8.jpg"
+							loading="lazy" />
+					</div>
 				</div>
 
 				<div class="highlight-wrapper">
@@ -234,12 +260,24 @@
 				</div>
 
 				<div class="columns">
-					<img data-src="./assets/art/eric-grossman-6.jpg" />
-					<img data-src="./assets/art/eric-grossman-7.jpg" />
+					<div class="loading-indicator">
+						<img
+							src="./assets/art/eric-grossman-6.jpg"
+							loading="lazy" />
+					</div>
+					<div class="loading-indicator">
+						<img
+							src="./assets/art/eric-grossman-7.jpg"
+							loading="lazy" />
+					</div>
 				</div>
 
 				<div class="full-width">
-					<img data-src="./assets/art/eric-grossman-15.jpg" />
+					<div class="loading-indicator">
+						<img
+							src="./assets/art/eric-grossman-15.jpg"
+							loading="lazy" />
+					</div>
 				</div>
 
 				<div class="highlight-wrapper">
@@ -254,16 +292,32 @@
 				</div>
 
 				<div class="full-width">
-					<img data-src="./assets/art/eric-grossman-18.jpg" />
+					<div class="loading-indicator">
+						<img
+							src="./assets/art/eric-grossman-18.jpg"
+							loading="lazy" />
+					</div>
 				</div>
 
 				<div class="columns">
-					<img data-src="./assets/art/eric-grossman-21.jpg" />
-					<img data-src="./assets/art/eric-grossman-22.jpg" />
+					<div class="loading-indicator">
+						<img
+							src="./assets/art/eric-grossman-21.jpg"
+							loading="lazy" />
+					</div>
+					<div class="loading-indicator">
+						<img
+							src="./assets/art/eric-grossman-22.jpg"
+							loading="lazy" />
+					</div>
 				</div>
 
 				<div class="full-width">
-					<img data-src="./assets/art/eric-grossman-19.jpg" />
+					<div class="loading-indicator">
+						<img
+							src="./assets/art/eric-grossman-19.jpg"
+							loading="lazy" />
+					</div>
 				</div>
 
 				<div class="highlight-wrapper">
@@ -278,17 +332,37 @@
 				</div>
 
 				<div class="columns custom-columns-2">
-					<img data-src="./assets/art/eric-grossman-10.jpg" />
-					<img data-src="./assets/art/eric-grossman-11.jpg" />
+					<div class="loading-indicator">
+						<img
+							src="./assets/art/eric-grossman-10.jpg"
+							loading="lazy" />
+					</div>
+					<div class="loading-indicator">
+						<img
+							src="./assets/art/eric-grossman-11.jpg"
+							loading="lazy" />
+					</div>
 				</div>
 
 				<div class="full-width">
-					<img data-src="./assets/art/eric-grossman-12.jpg" />
+					<div class="loading-indicator">
+						<img
+							src="./assets/art/eric-grossman-12.jpg"
+							loading="lazy" />
+					</div>
 				</div>
 
 				<div class="columns">
-					<img data-src="./assets/art/eric-grossman-13.jpg" />
-					<img data-src="./assets/art/eric-grossman-14.jpg" />
+					<div class="loading-indicator">
+						<img
+							src="./assets/art/eric-grossman-13.jpg"
+							loading="lazy" />
+					</div>
+					<div class="loading-indicator">
+						<img
+							src="./assets/art/eric-grossman-14.jpg"
+							loading="lazy" />
+					</div>
 				</div>
 			</div>
 
@@ -323,7 +397,6 @@
 			</footer>
 		</main>
 
-		<script src="/scripts/lazy-load.js"></script>
 		<script src="/scripts/messages.js"></script>
 	</body>
 </html>
