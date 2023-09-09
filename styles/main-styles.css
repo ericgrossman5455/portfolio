@@ -459,34 +459,32 @@ footer .footer-icons {
 	filter: opacity(0.8);
 	gap: 10px;
 	justify-content: center;
-	margin: 28px auto 0;
+	margin: 30px auto 0;
 	max-width: 300px;
 	padding: 20px 0 80px;
 	width: 70%;
 }
 
 .footer-icons a {
-	height: 40px;
-	width: 40px;
+	padding: 20px;
+	height: 0;
 }
 
-.icon-email,
-.icon-linkedin,
-.icon-instagram {
+.footer-icons span {
 	position: relative;
+	display: inline-block;
+	vertical-align: middle;
 }
-.icon-email::before,
-.icon-linkedin::before,
-.icon-instagram::before {
+.footer-icons span::before {
 	background-color: var(--glyph-standard);
+	position: absolute;
 	content: '';
 	height: 18px;
+	width: 18px;
+	top: -18px;
 	left: -9px;
 	mask-size: contain;
 	-webkit-mask-size: contain;
-	position: absolute;
-	top: 11px;
-	width: 18px;
 }
 
 .icon-email::before {
