@@ -347,11 +347,12 @@ a {
 }
 
 .loading-indicator {
-	min-height: 49vw;
-	animation: loading-pulse 3s ease-in-out infinite;
+	width: 100%;
+	animation: loading-pulse 2s ease-in-out infinite;
 	background: linear-gradient(90deg, #d2d2d2, #f4f4f4, #f4f4f4);
 	background-size: 200% 200%;
 	border-radius: 4px;
+	aspect-ratio: 1/1;
 }
 
 .art-grid img {
@@ -364,7 +365,7 @@ a {
 
 .columns {
 	display: grid;
-	grid-template-columns: auto auto;
+	grid-template-columns: 1fr 1fr;
 	grid-column-gap: 5px;
 }
 
