@@ -1,0 +1,470 @@
+---
+const {
+	id = 'lorem-ipsum',
+	copyEyebrow = 'Lorem Ipsum',
+	copyHeadline = 'Lorem Ipsum',
+	imageAlt = 'Lorem Ipsum.',
+	imageLoading = 'lazy',
+} = Astro.props;
+---
+
+<div class=`featured-item-container ${id}` id={id}>
+	<div class="glow"></div>
+
+	<img
+		class="image"
+		alt={imageAlt}
+		src=`./assets/${id}/${id}-product-shot.png`
+		loading={imageLoading}
+	/>
+	<div class="copy">
+		<h3>{copyEyebrow}</h3>
+		<h2>{copyHeadline}</h2>
+		<p>
+			<slot />
+		</p>
+	</div>
+</div>
+
+<style lang="scss">
+	.featured-item-container {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		column-gap: 5%;
+		grid-template-rows: auto;
+		max-width: 100em;
+		max-height: 100em;
+		min-height: 40em;
+
+		@media only screen and (max-width: 70em) {
+			column-gap: 0% !important;
+		}
+	}
+
+	.glow,
+	.copy,
+	.image {
+		transition: ease 1s;
+
+		@media only screen and (max-width: 50em) {
+			grid-column: 1/-1 !important;
+		}
+	}
+
+	.glow {
+		align-self: center;
+		grid-row: 1;
+		width: 30em;
+		height: 30em;
+
+		@media only screen and (max-width: 50em) {
+			width: auto;
+			height: 25em;
+			margin-bottom: -10em;
+		}
+	}
+
+	.copy {
+		grid-row: 1;
+		align-self: center;
+		z-index: 1;
+		max-width: 40em;
+
+		@media only screen and (max-width: 50em) {
+			padding: 3em 2em 0;
+			grid-row: 2;
+			margin: 0;
+			max-width: none;
+			background: linear-gradient(
+				0deg,
+				var(--bg-layer-base) 0%,
+				var(--bg-layer-base) 80%,
+				rgba(33, 32, 36, 0.8) 90%,
+				rgba(33, 32, 36, 0.5) 94%,
+				rgba(33, 32, 36, 0.3) 96%,
+				rgba(33, 32, 36, 0) 100%
+			);
+
+			@media (prefers-color-scheme: light) {
+				background: linear-gradient(
+					0deg,
+					var(--bg-layer-base) 0%,
+					var(--bg-layer-base) 80%,
+					rgba(225, 225, 225, 0.8) 90%,
+					rgba(225, 225, 225, 0.5) 94%,
+					rgba(225, 225, 225, 0.3) 96%,
+					rgba(225, 225, 225, 0) 100%
+				);
+			}
+
+			p,
+			h2 {
+				max-width: 550px;
+			}
+		}
+	}
+
+	.image {
+		grid-row: 1;
+		grid-column: 1/3;
+
+		@media only screen and (max-width: 50em) {
+			width: auto;
+			min-height: 25em;
+		}
+	}
+
+	// MOBELL SPECIFIC
+
+	.mobell {
+		&.featured-item-container {
+			margin: 23vh auto;
+
+			@media only screen and (max-width: 50em) {
+				margin: 0 auto 10vh;
+				grid-template-rows: 31em auto;
+			}
+
+			.glow {
+				grid-column: 1/3;
+				background: radial-gradient(
+					ellipse closest-side,
+					rgb(248, 161, 0) 0%,
+					rgba(248, 181, 0, 0.1) 70%,
+					rgba(248, 181, 0, 0) 100%
+				);
+				opacity: 0.5;
+			}
+
+			.image {
+				@media only screen and (max-width: 50em) {
+					height: 60vh;
+					max-height: 28em;
+					margin: 5em auto -5em;
+				}
+			}
+
+			.copy {
+				grid-column: 3/5;
+				margin-right: 4em;
+
+				@media only screen and (max-width: 70em) {
+					margin-right: 3em;
+				}
+
+				@media only screen and (max-width: 50em) {
+					margin-right: 0;
+				}
+			}
+
+			// MOBELL TRANSFORM EFFECTS
+
+			$glow-scale: 2;
+			$glow-translate: 2em;
+			.glow {
+				transform: scale($glow-scale) translateX($glow-translate);
+			}
+			&:hover .glow {
+				transform: scale(calc(#{$glow-scale} + 0.7)) translateX($glow-translate);
+			}
+
+			$image-scale: 1.3;
+			$image-translate: 0em;
+			.image {
+				transform-origin: right;
+				transform: scale($image-scale) translateX($image-translate);
+			}
+			&:hover .image {
+				transform: scale($image-scale) translateX(calc(#{$image-translate} + 0.3em));
+			}
+
+			&:hover .copy {
+				transform: translateX(-0.3em);
+			}
+
+			@media only screen and (max-width: 70em) {
+				.glow,
+				&:hover .glow {
+					transform: scale(1.7) translateX(-2em);
+				}
+
+				.image,
+				&:hover .image {
+					transform: scale(1.3) translateX(-2em);
+				}
+
+				&:hover .copy {
+					transform: translateX(0);
+				}
+			}
+
+			@media only screen and (max-width: 50em) {
+				.glow,
+				&:hover .glow {
+					transform: scale(1.5) translateX(-1em);
+				}
+
+				.image,
+				&:hover .image {
+					transform-origin: top;
+					transform: scale(1.5) translateX(-1em);
+				}
+			}
+		}
+	}
+
+	// BOLTABOUT SPECIFIC
+
+	.boltabout {
+		&.featured-item-container {
+			margin: 40vh auto 25vh;
+			column-gap: 3%;
+
+			@media only screen and (max-width: 70em) {
+				margin: 15vh auto;
+			}
+
+			@media only screen and (max-width: 50em) {
+				margin: -7vh auto 10vh;
+				grid-template-rows: 33em auto;
+			}
+
+			.glow {
+				grid-column: 4/5;
+				opacity: 0.8;
+				background: radial-gradient(
+					ellipse closest-side,
+					rgba(17, 172, 243, 1) 0%,
+					rgba(17, 172, 243, 0.1) 70%,
+					rgba(17, 172, 243, 0) 100%
+				);
+
+				@media only screen and (max-width: 70em) {
+					width: 25em;
+					height: 25em;
+				}
+
+				@media only screen and (max-width: 50em) {
+					width: auto;
+					height: 25em;
+					margin-bottom: -10em;
+				}
+			}
+
+			.image {
+				grid-column: 3/5;
+
+				@media only screen and (max-width: 70em) {
+					grid-column: 4/5;
+					align-self: center;
+				}
+
+				@media only screen and (max-width: 50em) {
+					height: 50vh;
+					max-height: 30em;
+					margin: 5em auto 2em;
+				}
+			}
+
+			.copy {
+				grid-column: 1/3;
+				margin-left: 3em;
+
+				@media only screen and (max-width: 70em) {
+					grid-column: 1/4;
+				}
+
+				@media only screen and (max-width: 50em) {
+					margin-left: 0;
+				}
+			}
+
+			// BOLTABOUT TRANSFORM EFFECTS
+
+			$glow-scale: 1.8;
+			$glow-translateX: -3em;
+			$glow-translateY: -1em;
+			.glow {
+				transform: scale($glow-scale) translateX($glow-translateX) translateY($glow-translateY);
+			}
+			&:hover .glow {
+				transform: scale(calc(#{$glow-scale} + 0.7)) translateX($glow-translateX)
+					translateY($glow-translateY);
+			}
+
+			$image-scale: 1.5;
+			$image-translateX: 0em;
+			.image {
+				transform-origin: left;
+				transform: scale($image-scale) translateX($image-translateX);
+			}
+			&:hover .image {
+				transform: scale($image-scale) translateX(calc(#{$image-translateX} - 0.3em));
+			}
+
+			&:hover .copy {
+				transform: translateX(0.3em);
+			}
+
+			@media only screen and (max-width: 70em) {
+				.glow,
+				&:hover .glow {
+					transform: scale(2.2) translateX(5em) translateY(1em);
+				}
+
+				.image,
+				&:hover .image {
+					transform: scale(3) translateX(1em);
+				}
+
+				&:hover .copy {
+					transform: translateX(0);
+				}
+			}
+
+			@media only screen and (max-width: 50em) {
+				.glow,
+				&:hover .glow {
+					transform: scale(1.5) translateX(2em);
+				}
+
+				.image,
+				&:hover .image {
+					transform-origin: top;
+					transform: scale(1.5) translateX(4em) translateY(1em);
+				}
+			}
+		}
+	}
+
+	// CP EVENTS SPECIFIC
+
+	.cp-events {
+		&.featured-item-container {
+			margin: 21vh auto 0;
+
+			@media only screen and (max-width: 50em) {
+				margin: -7vh auto 10vh;
+				grid-template-rows: 32em auto;
+			}
+
+			.glow {
+				width: 20em;
+				height: 30em;
+				margin: 0 auto;
+				grid-column: 1/3;
+				background: radial-gradient(
+					ellipse closest-side,
+					rgb(21, 71, 52) 0%,
+					rgba(21, 71, 52, 0.1) 90%,
+					rgba(21, 71, 52, 0) 100%
+				);
+
+				@media (prefers-color-scheme: light) {
+					background: radial-gradient(
+						ellipse closest-side,
+						rgb(32, 124, 89) 0%,
+						rgba(33, 118, 85, 0.066) 90%,
+						rgba(42, 168, 120, 0) 100%
+					);
+				}
+
+				@media only screen and (max-width: 50em) {
+					width: 100%;
+					height: 25em;
+					margin-bottom: -10em;
+				}
+			}
+
+			.image {
+				transform: scale(1.1);
+				transform-origin: center;
+
+				@media only screen and (max-width: 50em) {
+					height: 60vh;
+					max-height: 30em;
+					margin: 5em auto -5em;
+				}
+			}
+
+			.copy {
+				grid-column: 3/5;
+				margin-right: 4em;
+
+				@media only screen and (max-width: 70em) {
+					margin-right: 3em;
+				}
+
+				@media only screen and (max-width: 50em) {
+					margin-right: 0;
+				}
+			}
+
+			// CP EVENTS TRANSFORM EFFECTS
+
+			$glow-scale: 1.5;
+			$glow-translateX: 1em;
+			$glow-translateY: -2em;
+			$glow-rotate: 12deg;
+			.glow {
+				transform: scale($glow-scale) translateX($glow-translateX) translateY($glow-translateY)
+					rotate($glow-rotate);
+			}
+			&:hover .glow {
+				transform: scale(calc(#{$glow-scale} + 1)) translateX(calc(#{$glow-translateX} + 0.4em))
+					translateY($glow-translateY) rotate($glow-rotate);
+			}
+
+			$image-scale: 1.1;
+			$image-translateX: 0em;
+			.image {
+				transform-origin: center;
+				transform: scale($image-scale) translateX($image-translateX);
+			}
+			&:hover .image {
+				transform: scale($image-scale) translateX(calc(#{$image-translateX} + 0.3em));
+			}
+
+			&:hover .copy {
+				transform: translateX(-0.3em);
+			}
+
+			@media only screen and (max-width: 90em) {
+				&:hover .glow {
+					transform: scale(calc(#{$glow-scale} + 0.5))
+						translateX(calc(#{$glow-translateX} + 0.4em)) translateY($glow-translateY)
+						rotate($glow-rotate);
+				}
+			}
+
+			@media only screen and (max-width: 70em) {
+				.glow,
+				&:hover .glow {
+					transform: scale(1.5) translateX(0em) translateY(-2em) rotate(12deg);
+				}
+
+				.image,
+				&:hover .image {
+					transform: scale(1.1) translateX(-2em);
+				}
+
+				&:hover .copy {
+					transform: translateX(0);
+				}
+			}
+
+			@media only screen and (max-width: 50em) {
+				.glow,
+				&:hover .glow {
+					transform: scale(1.3) translateX(-1em);
+				}
+
+				.image,
+				&:hover .image {
+					transform-origin: top;
+					transform: scale(1.4) translateX(-1em);
+				}
+			}
+		}
+	}
+</style>

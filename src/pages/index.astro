@@ -1,0 +1,190 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import SnackBar from '../components/SnackBar.astro';
+import SectionTitle from '../components/SectionTitle.astro';
+import ArtGrid from '../components/page-index/ArtGrid.astro';
+import FeaturedItem from '../components/page-index/FeaturedItem.astro';
+---
+
+<MainLayout title="Portfolio | Eric Grossman" description="Eric Grossman's past work">
+	<SnackBar btnCopy="Got it">
+		This site is a work in progress. Content and design will&nbsp;change.
+	</SnackBar>
+
+	<div class="narration hero">
+		<div class="flex">
+			<div class="hero-headshot">
+				<img class="hero-signature" src="./assets/index/signature-delayed.gif" />
+			</div>
+			<div>
+				<h1>hey&nbsp;there.</h1>
+				<p>
+					I&rsquo;m Eric, a UX designer and front-end web developer. My fascination with how
+					design impacts others is what drives me to create empowering user experiences.
+					<nobr>
+						<a onclick="noAboutPage()" href="#" title="Go to about page">
+							<span class="material-symbols-outlined" style="margin: 0 3px 4px 1px">
+								add_circle
+							</span>
+							 Learn more
+						</a>
+					</nobr>
+				</p>
+				<img class="hero-signature-no-headshot" src="./assets/index/signature-delayed.gif" />
+			</div>
+		</div>
+	</div>
+
+	<SectionTitle scrollDestination="mobell">Featured&nbsp;Work</SectionTitle>
+
+	<FeaturedItem
+		id="mobell"
+		copyEyebrow="Mobell Service"
+		copyHeadline="Improving accessibility, from hackathon idea to product"
+		imageAlt="Three phones displaying various screens from an app called Mobell."
+		imageLoading="eager">
+		Mobell aims to make society more inclusive to people with disabilities and, as a result, make
+		greater independence accessible to all. This service suite for businesses and their customers was
+		conceived during the 2019 Camp PolyHacks Hackathon, winning 1st Place and “Best Use of Satellite
+		Technology by&nbsp;Northrop&nbsp;Grumman”.
+	</FeaturedItem>
+
+	<FeaturedItem
+		id="boltabout"
+		copyEyebrow="BoltAbout Dashboard"
+		copyHeadline="Streamlining the employee UX via Lean/6σ methodologies"
+		imageAlt="iPad displaying people on BoltAbout bikes, with the BoltAbout logo in the corner.">
+		Driven by a pursuit of constant improvement, my team and I were tasked with identifying
+		inefficiencies to streamline BoltAbout&rsquo;s internal processes. This work utilized Lean/Six
+		Sigma and UX Design methodologies to implement changes that not only drastically improve the
+		employee experience, but also continue to save the&nbsp;company&nbsp;money.
+	</FeaturedItem>
+
+	<FeaturedItem
+		id="cp-events"
+		copyEyebrow="Cal Poly Events App"
+		copyHeadline="Facilitating event discovery via research & design"
+		imageAlt="Phone displaying a list of events from a Cal Poly events application.">
+		The goal for this project was to re-envision Cal Poly&rsquo;s brand in an authentic and modern
+		way by incorporating Material Design language in conjunction with user research and Cal Poly’s
+		branding guidelines. This work and its associated insights were later used for inspiration by the
+		Cal Poly app design team for development of their redesigned student&nbsp;application.
+	</FeaturedItem>
+
+	<div class="sunrise">
+		<div class="narration art-intro">
+			<h1>
+				have an
+				<br />
+				 extra minute?
+			</h1>
+			<p>
+				Keep scrolling to read about my design journey and process. When I’m not designing an
+				interface, I&rsquo;ve got my hands on a camera and some design&nbsp;tools.
+			</p>
+		</div>
+
+		<SectionTitle scrollDestination="art">Photos &amp; Graphics</SectionTitle>
+	</div>
+
+	<ArtGrid />
+</MainLayout>
+
+<style lang="scss">
+	.hero {
+		animation: fade-in ease 1.5s;
+		height: 90vh;
+		height: 90svh;
+		min-height: 30em;
+
+		&-headshot {
+			animation: fade-in ease 1.5s;
+			background-image: url(/assets/global/headshot-dark.png),
+				radial-gradient(circle, rgba(128, 145, 166, 1) 0%, rgba(157, 174, 194, 1) 100%);
+			background-size: cover;
+			background-position: -15px;
+			border-radius: 0.6em;
+			box-shadow: 0 1em 2.5em rgba(0, 0, 0, 0.4);
+			position: relative;
+			/* These values are overridden dynamic-greeting.js */
+			height: 300px;
+			width: 230px;
+			margin: 5px 30px 0 0;
+
+			@media only screen and (max-width: 70em) {
+				/* These values are overridden dynamic-greeting.js */
+				background-position: -20px;
+				height: 250px;
+				width: 180px;
+				margin: 5px 25px 0 0;
+			}
+
+			@media only screen and (max-width: 55em) {
+				display: none;
+			}
+		}
+
+		&-signature {
+			width: 13em;
+			position: absolute;
+			/* These values are overridden dynamic-greeting.js */
+			right: -120px;
+			bottom: -25px;
+
+			@media only screen and (max-width: 70em) {
+				/* These values are overridden dynamic-greeting.js */
+				width: 10em;
+				right: -105px;
+				bottom: -25px;
+			}
+
+			&-no-headshot {
+				display: none;
+				width: 10em;
+				padding-top: 0.3em;
+
+				@media only screen and (max-width: 55em) {
+					display: block;
+				}
+			}
+		}
+
+		@media (prefers-color-scheme: light) {
+			&-headshot {
+				background-image: url(/assets/global/headshot-light.png),
+					radial-gradient(circle, rgba(128, 145, 166, 1) 0%, rgba(157, 174, 194, 1) 100%);
+				box-shadow: 0 1em 2.5em rgba(0, 0, 0, 0.2);
+			}
+
+			img.hero-signature-no-headshot,
+			img.hero-signature {
+				filter: brightness(0.3);
+			}
+		}
+	}
+
+	.sunrise {
+		padding-top: 18vh;
+		height: 90vh;
+		min-height: 35em;
+		background: linear-gradient(
+			180deg,
+			var(--bg-layer-base) 0%,
+			#2f4375 33%,
+			#425991 45%,
+			#8197da 65%,
+			#dbc6db 80%,
+			#e2d7e6 85%,
+			#ffffff 100%
+		);
+
+		@media (prefers-color-scheme: light) {
+			background: linear-gradient(180deg, var(--bg-layer-base) 0%, #ffffff 100%);
+			height: 80vh;
+		}
+	}
+
+	.art-intro {
+		margin-bottom: 12vh;
+	}
+</style>

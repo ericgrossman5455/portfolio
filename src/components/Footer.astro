@@ -1,0 +1,96 @@
+<footer>
+	<div class="footer-content">
+		<h3>Let’s connect &amp; create</h3>
+		<div class="footer-icons">
+			<a href="mailto:contact@eric-grossman.com?subject=Reaching out from online portfolio...">
+				<span class="icon-email" title="Send Eric an email"></span>
+			</a>
+			<a href="https://www.linkedin.com/in/eric-grossman-277a27bb/">
+				<span class="icon-linkedin" title="View Eric's LinkedIn profile"></span>
+			</a>
+			<a href="https://www.instagram.com/eric_grossman/">
+				<span class="icon-instagram" title="View Eric's Instagram profile"></span>
+			</a>
+		</div>
+		<p>
+			© Designed &amp; Developed by Eric Grossman
+			<br />
+			 This site is no longer being maintained.
+		</p>
+	</div>
+</footer>
+
+<style lang="scss">
+	footer {
+		padding: 0 32px 32px;
+
+		@media only screen and (max-width: 35em) {
+			padding: 0 20px 20px;
+		}
+
+		p {
+			filter: opacity(0.3);
+			font-size: 0.8em;
+			padding-bottom: 2em;
+		}
+
+		.footer-content {
+			max-width: 900px;
+			padding-top: 6em;
+			margin: 0 auto;
+			border-radius: 8px;
+			border: var(--bg-layer-top) 1px solid;
+			text-align: center;
+			background-color: var(--bg-layer1);
+		}
+
+		.footer-icons {
+			border-top: 1px solid var(--glyph-standard);
+			display: flex;
+			filter: opacity(0.8);
+			gap: 10px;
+			justify-content: center;
+			margin: 30px auto 0;
+			max-width: 300px;
+			padding: 20px 0 80px;
+			width: 70%;
+
+			a {
+				padding: 20px;
+				height: 0;
+			}
+
+			span {
+				position: relative;
+				display: inline-block;
+				vertical-align: middle;
+			}
+			span::before {
+				background-color: var(--glyph-standard);
+				position: absolute;
+				content: '';
+				height: 18px;
+				width: 18px;
+				top: -18px;
+				left: -9px;
+				mask-size: contain;
+				-webkit-mask-size: contain;
+			}
+
+			.icon-email::before {
+				mask: url(/assets/global/email-icon.svg) no-repeat center;
+				-webkit-mask: url(/assets/global/email-icon.svg) no-repeat center;
+			}
+
+			.icon-linkedin::before {
+				mask: url(/assets/global/linkedin-icon.svg) no-repeat center;
+				-webkit-mask: url(/assets/global/linkedin-icon.svg) no-repeat center;
+			}
+
+			.icon-instagram::before {
+				mask: url(/assets/global/instagram-icon.svg) no-repeat center;
+				-webkit-mask: url(/assets/global/instagram-icon.svg) no-repeat center;
+			}
+		}
+	}
+</style>

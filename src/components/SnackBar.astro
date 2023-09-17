@@ -1,0 +1,83 @@
+---
+const { btnCopy = 'Lorem Ipsum' } = Astro.props;
+---
+
+<div>
+	<input id="snackbar-btn" type="checkbox" />
+	<div class="snackbar-wrapper">
+		<div class="snackbar">
+			<p><slot /></p>
+			<label for="snackbar-btn">{btnCopy}</label>
+		</div>
+	</div>
+</div>
+
+<style lang="scss">
+	.snackbar-wrapper {
+		animation: slide-left 10s ease-out 0s 1;
+		background: var(--bg-layer-top);
+		border-radius: 0.25rem;
+		bottom: 32px;
+		box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+		margin-left: 32px;
+		position: fixed;
+		right: 2em;
+		transition: ease 0.5s;
+		z-index: 10;
+	}
+
+	.snackbar {
+		align-items: center;
+		display: flex;
+		margin: 18px 24px;
+		justify-content: space-between;
+	}
+
+	.snackbar p {
+		font-size: 1em;
+		line-height: 1.3em;
+		padding-right: 35px;
+	}
+
+	.snackbar label {
+		color: var(--glyph-blue);
+		cursor: pointer;
+		font-family: proxima-nova, sans-serif;
+		font-size: 16px;
+		font-weight: 400;
+		font-weight: 600;
+		padding: 5px 0;
+		letter-spacing: 0.5px;
+		text-transform: uppercase;
+	}
+
+	#snackbar-btn {
+		display: none;
+	}
+
+	#snackbar-btn:checked ~ .snackbar-wrapper {
+		filter: opacity(0);
+		transform: translateX(120%);
+	}
+
+	@media only screen and (max-width: 35em) {
+		.snackbar-wrapper {
+			animation: slide-up 10s ease-out 0s 1;
+			border-radius: 0;
+			bottom: 0;
+			left: 0;
+			margin: 0;
+			right: 0;
+			transition: ease 0.3s;
+		}
+
+		.snackbar label {
+			font-size: 14px;
+		}
+
+		#snackbar-btn:checked ~ .snackbar-wrapper {
+			filter: opacity(0);
+			transform: translateY(100%);
+		}
+	}
+</style>

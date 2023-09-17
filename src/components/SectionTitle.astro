@@ -1,0 +1,28 @@
+---
+const {scrollDestination} = Astro.props
+---
+
+<div class="section-title">
+	<a href=`#${scrollDestination}`>
+		<h3><slot /></h3>
+		<span class="material-symbols-outlined">arrow_downward</span>
+	</a>
+</div>
+
+<style lang="scss">
+	.section-title {
+		text-align: center;
+		width: max-content;
+		margin: 0 auto;
+		animation: fade-in ease 4s;
+
+		.material-symbols-outlined {
+			animation: bounce 4s infinite 6s;
+			margin-top: 7px;
+			font-size: 1.3em !important;
+			font-variation-settings:
+				'FILL' 1,
+				'wght' 400;
+		}
+	}
+</style>

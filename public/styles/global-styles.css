@@ -1,0 +1,192 @@
+/* CSS DOCUMENT */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{display:block;}body{line-height:1;}ol, ul{list-style:none;}blockquote, q{quotes:none;}blockquote:before, blockquote:after,q:before, q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}img{width:100%;}
+
+:root {
+	scroll-behavior: smooth;
+	color-scheme: light dark;
+	font-family: depot-new-web, sans-serif;
+
+	--bg-layer-top: #404046;
+	--bg-layer1: #33333a;
+	--bg-layer-base: #212024;
+
+	--glyph-standard: #e1e1e1;
+	--glyph-blue: #9bc5ec;
+
+	background-color: var(--bg-layer-base);
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		--bg-layer-top: #ffffff;
+		--bg-layer1: #eeeded;
+		--bg-layer-base: #e1e1e1;
+
+		--glyph-standard: #4b4b4b;
+		--glyph-blue: #61a1dc;
+
+		background-color: var(--bg-layer-base);
+	}
+}
+
+h1,
+h2,
+h3,
+p,
+a {
+	color: var(--glyph-standard);
+}
+
+main {
+	overflow-x: hidden;
+}
+
+.material-symbols-outlined {
+	font-size: 0.9em !important;
+	vertical-align: middle;
+	font-variation-settings: 'FILL' 1, 'wght' 800, 'GRAD' 0, 'opsz' 48;
+}
+
+h1 {
+	font-family: proxima-nova, sans-serif;
+	font-size: 5.3rem;
+	font-style: normal;
+	font-weight: 800;
+	line-height: 0.9;
+	padding-bottom: 0.2em;
+}
+
+h2 {
+	font-family: depot-new-web, sans-serif;
+	font-size: 2.7rem;
+	font-weight: 600;
+	line-height: 1.1;
+	margin-bottom: 0.4em;
+}
+
+h3 {
+	font-family: proxima-nova, sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+p {
+	font-family: depot-new-web, sans-serif;
+	font-size: 1.2rem;
+	font-weight: 300;
+	line-height: 1.5;
+}
+
+a {
+	text-decoration: none;
+}
+
+@media only screen and (max-width: 70rem) {
+	h1 {
+		font-size: 4rem;
+	}
+	h3 {
+		font-size: 0.9rem;
+	}
+}
+
+@media only screen and (max-width: 50rem) {
+	h1 {
+		font-size: 3.3rem;
+	}
+	h2 {
+		font-size: 2.2rem;
+	}
+	h3 {
+		font-size: 0.85rem;
+	}
+	p {
+		font-size: 1.1rem;
+		line-height: 1.6;
+	}
+}
+
+/*---------------------NARRATIONS-----------------------*/
+
+.narration {
+	max-width: 85em;
+	margin: 0 auto;
+	padding: 0 6em;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+}
+
+.narration p {
+	max-width: 24em;
+	font-size: 1.4rem;
+	font-weight: 300;
+	line-height: 1.5;
+}
+
+.flex {
+	display: flex;
+}
+
+@media only screen and (max-width: 70em) {
+	.narration {
+		padding: 0 4em;
+	}
+	.narration p {
+		font-size: 1.3rem;
+	}
+}
+
+@media only screen and (max-width: 50em) {
+	.narration {
+		padding: 0 2em;
+	}
+	.narration p {
+		font-size: 1.2rem;
+	}
+}
+
+/*--------------------BUTTONS-----------------------*/
+
+a.btn {
+	background: var(--bg-layer1);
+	border-radius: 7px;
+	border-top: var(--bg-layer1) 1.5px solid;
+	cursor: pointer;
+	font-family: proxima-nova, sans-serif;
+	font-size: 16px;
+	font-weight: 500;
+	padding: 12px 16px;
+	transition: ease 0.2s;
+}
+
+a.btn:hover {
+	border-top: var(--bg-layer-top) 1.5px solid;
+	box-shadow: 0 16px 16px rgba(0, 0, 0, 0.15);
+	transform: translateY(-3px);
+}
+
+a.btn:active {
+	background: var(--bg-layer-top);
+}
+
+.btn-row {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+@media (prefers-color-scheme: light) {
+	a.btn:hover {
+		box-shadow: 0 16px 16px rgba(0, 0, 0, 0.05);
+	}
+}
+
+@media only screen and (max-width: 50rem) {
+	a.btn {
+		font-size: 14px;
+		padding: 10px 14px;
+	}
+}
